@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image : url("../images/game-background.jpg");
+    background-color: #CE3A08;
+    background-size: cover;
+    overflow: hidden;
+    font-family: 'Acme', sans-serif;
+    color: beige;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: auto;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    background-color: #FF2A22;
+    font-size: 170%;
+    line-height: 0;
+}
+
+.introduction {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    background: #FF2A22;
+    margin: auto;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    min-height: 30px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    background-color: #FF2A22;
+}
