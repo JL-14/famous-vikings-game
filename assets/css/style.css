@@ -88,7 +88,7 @@ h1, h2 {
     text-transform: uppercase;
     font-size: 150%;
     padding: 10px;
-    margin-top: 60px;
+    margin-top: 40px;
     height: 80px;
     width: 30%;
     border-radius: 7px;
@@ -116,10 +116,49 @@ h1, h2 {
     justify-content: space-around;
     align-items: center;
     position: absolute;
-    min-height: 30px;
+    height: 50px;
     width: 100%;
     left: 0;
     bottom: 0;
     text-align: center;
     background-color: #FF2A22;
+}
+
+footer>span {
+    color: beige;
+}
+
+footer>a {
+    color: beige;
+    text-decoration: none;
+    padding: 0 15px;
+    font-size: 1rem;
+}
+
+footer a:hover {
+    border-bottom: 2px solid #fffb00;
+    color: #fffb00;
+}
+
+#socialmedia {
+    color: beige;
+}
+
+#socialmedia dd {
+    color: beige;
+    font-size: 80%;
+    list-style-type: none;
+    justify-content: space-around;
+    display: inline-flex;
+    margin-left: 5px;
+}
+
+#socialmedia dd a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#socialmedia dd a:hover {
+    border-bottom: 2px solid #fffb00;
+    color: #fffb00;
 }
