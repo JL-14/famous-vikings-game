@@ -19,7 +19,7 @@ body {
 }
 
 header {
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
     justify-content: flex-end;
     position: absolute;
@@ -30,11 +30,14 @@ header {
     text-align: center;
     background-color: #FF2A22;
     font-size: 170%;
-
 }
 
 h1, h2 {
     line-height: 20px;
+}
+
+.title {
+    margin-right: 25%;
 }
 
 /* Nav Bar */
@@ -45,7 +48,6 @@ h1, h2 {
 
 .nav-links li {
     list-style-type: none;
-    float: right;
     margin-right: 30px;
 }
 
