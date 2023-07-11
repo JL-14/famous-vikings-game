@@ -66,7 +66,7 @@ h1, h2 {
 
 /* Visibility of Home Screen */
 .home-screen {
-    display: block;
+    display: none;
 }
 
 .introduction {
@@ -130,21 +130,29 @@ h1, h2 {
 
 /* Visibility of Game Screen */
 .game-screen {
-    display: none;
+    display: block;
 }
 
 .grid {
-  display: grid;
-  gap: 1px;
-  grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 50%;
+    margin-left: auto;
+    margin-right: 3%;
+    margin-top: 40px;
+    align-content: center;
 }
 
 .cell {
-  flex: 0 0 20%;
-  height: 100px;
-  width: 100px;
-  margin-bottom: 5px;
+    flex: 0 0 32%;
+    height: 150px;
+    width: 150px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    background-color: beige;
 }
+
 
 /* Footer */
 .footer {
