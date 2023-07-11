@@ -113,6 +113,11 @@ h1, h2 {
     box-shadow: 0 6px 20px #5f4c4c;
 }
 
+/* Instructions */
+.instructions {
+    display: none;
+}
+
 /* Footer */
 .footer {
     display: flex;
