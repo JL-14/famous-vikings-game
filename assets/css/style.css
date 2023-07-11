@@ -118,6 +118,24 @@ h1, h2 {
     display: none;
 }
 
+/* Game Page */
+.game-screen {
+    display: none;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.cell {
+  flex: 0 0 20%;
+  height: 100px;
+  width: 100px;
+  margin-bottom: 5px;
+}
+
 /* Footer */
 .footer {
     display: flex;
