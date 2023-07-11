@@ -10,7 +10,7 @@ body {
     background-size: cover;
     overflow: hidden;
     font-family: 'Acme', sans-serif;
-    color: beige;
+    color: #fff0db;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,7 +45,7 @@ h1, h2 {
 /* Nav Bar */
 .nav-links {
     font-size: 80%;
-    color: beige;
+    color: #fff0db;
     padding: 5px;
 }
 
@@ -130,17 +130,43 @@ h1, h2 {
 
 /* Visibility of Game Screen */
 .game-screen {
-    display: block;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.question {
+    display: inline-flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 80px;
+    width: 45%;
+    height: 80%;
+    background-color: rgba(255, 240, 219, 0.9);
+    color: black;
+    padding: 10px;
+    margin-left: 3%;
+    text-align: center;
+}
+
+.viking-name {
+    font-size: 125%;
+    line-height: 0;
+}
+
+.question-image {
+    width: 30%;
+    height: auto;
+    margin: 0 auto;
 }
 
 .grid {
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
     justify-content: flex-end;
     width: 50%;
     margin-left: auto;
     margin-right: 3%;
-    margin-top: 40px;
+    margin-top: 80px;
     align-content: center;
 }
 
@@ -150,7 +176,7 @@ h1, h2 {
     width: 150px;
     margin-bottom: 5px;
     margin-right: 5px;
-    background-color: beige;
+    background-color: gray;
 }
 
 
@@ -169,11 +195,11 @@ h1, h2 {
 }
 
 footer>span {
-    color: beige;
+    color: #fff0db;
 }
 
 footer>a {
-    color: beige;
+    color: #fff0db;
     text-decoration: none;
     padding: 0 15px;
     font-size: 1rem;
@@ -185,11 +211,11 @@ footer a:hover {
 }
 
 #socialmedia {
-    color: beige;
+    color: #fff0db;
 }
 
 #socialmedia dd {
-    color: beige;
+    color: #fff0db;
     font-size: 80%;
     list-style-type: none;
     justify-content: space-around;
