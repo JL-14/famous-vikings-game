@@ -39,6 +39,7 @@ h1, h2 {
 .viking-shield {
     height:90%;
     padding: 5px;
+    padding-left:20px;
 }
 
 /* Nav Bar */
@@ -61,6 +62,11 @@ h1, h2 {
 .nav-links li:hover {
     color: #fffb00;
     border-bottom: 2px solid #fffb00;
+}
+
+/* Visibility of Home Screen */
+.home-screen {
+    display: block;
 }
 
 .introduction {
@@ -114,19 +120,23 @@ h1, h2 {
 }
 
 /* Instructions */
+
+/* Visibility of Instructions Screen */
 .instructions {
     display: none;
 }
 
 /* Game Page */
+
+/* Visibility of Game Screen */
 .game-screen {
     display: none;
 }
 
 .grid {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .cell {
