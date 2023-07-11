@@ -19,8 +19,9 @@ body {
 }
 
 header {
-    display: flex;
-    flex-direction: column;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-end;
     position: absolute;
     height: auto;
     width: 100%;
@@ -29,17 +30,42 @@ header {
     text-align: center;
     background-color: #FF2A22;
     font-size: 170%;
-    line-height: 0;
+
+}
+
+h1, h2 {
+    line-height: 20px;
+}
+
+/* Nav Bar */
+.nav-links {
+    font-size: 80%;
+    color: beige;
+}
+
+.nav-links li {
+    list-style-type: none;
+    float: right;
+    margin-right: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-links li:hover {
+    color: #fffb00;
 }
 
 .introduction {
     display: flex;
     text-align: center;
     flex-direction: column;
-
     width: 90%;
     background: rgba(255, 42, 34, 0.75);
     margin: auto;
+    margin-top: 10%;
     font-size: 130%;
     padding: 5px;
 }
