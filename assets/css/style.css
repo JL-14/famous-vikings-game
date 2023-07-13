@@ -160,6 +160,27 @@ h1, h2 {
     margin: 0 auto;
 }
 
+/* Individual Viking visibility */
+#rollo {
+    display: inline-flex;
+}
+
+#olav-haraldsson {
+    display: none;
+}
+
+#leif-erikson {
+    display: none;
+}
+
+#harald-hardrada {
+    display: none;
+}
+
+#cnut-the-great {
+    display: none;
+}
+
 .game-area {
     display: flex;
     justify-content: center;
