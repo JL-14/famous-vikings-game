@@ -261,6 +261,12 @@ h1, h2 {
     font-weight: bold;
 }
 
+.quit-button:hover {
+    background: rgba(255, 248, 240, 1);
+    color: #FF2A22;
+    box-shadow: 0 6px 20px #5f4c4c;
+}
+
 /* Footer */
 .footer {
     display: flex;
