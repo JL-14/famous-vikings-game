@@ -24,3 +24,21 @@ quitButton.onclick = function goHome() {
         homeDisplay.style.display = "none";
     }
 };
+
+/* Randomise options in question grid */
+let firstOption = document.getElementById("button1");
+let secondOption = document.getElementById("button2");
+let thirdOption = document.getElementById("button3");
+let fourthOption = document.getElementById("button4");
+let fifthOption = document.getElementById("button5");
+let sixthOption = document.getElementById("button6");
+let seventhOption = document.getElementById("button7");
+let eighthOption = document.getElementById("button8");
+let ninthOption = document.getElementById("button9");
+
+const optionArray = [firstOption, secondOption, thirdOption, fourthOption, 
+    fifthOption, sixthOption, seventhOption, eighthOption, ninthOption];
+
+function randomArray() {
+    Math.floor(Math.random(optionArray));
+}
