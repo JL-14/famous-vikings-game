@@ -65,8 +65,8 @@ h1, h2 {
 }
 
 /* Visibility of Home Screen */
-.home-screen {
-    display: none;
+#home-screen {
+    display: block;
 }
 
 .introduction {
@@ -86,7 +86,7 @@ h1, h2 {
     justify-content: center;
 }
 
-.start-button {
+#start-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,7 +113,7 @@ h1, h2 {
         box-shadow 0.2s ease;
 }
         
-.start-button:hover {
+#start-button:hover {
     background: rgba(255, 248, 240, 1);
     color: #FF2A22;
     box-shadow: 0 6px 20px #5f4c4c;
@@ -129,8 +129,8 @@ h1, h2 {
 /* Game Page */
 
 /* Visibility of Game Screen */
-.game-screen {
-    display: inline-flex;
+#game-screen {
+    display: none;
     justify-content: center;
 }
 
