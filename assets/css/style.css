@@ -221,6 +221,8 @@ h1, h2 {
     margin-bottom: 5px;
     margin-right: 5px;
     background-color: gray;
+    color: #fff0db;
+    font-weight: bold;
 }
 
 /* Scores */
@@ -255,13 +257,13 @@ h1, h2 {
     padding-left: 10px;
 }
 
-.quit-button {
+#quit-button {
     background-color:#FF2A22;
     color: #fff0db;
     font-weight: bold;
 }
 
-.quit-button:hover {
+#quit-button:hover {
     background: rgba(255, 248, 240, 1);
     color: #FF2A22;
     box-shadow: 0 6px 20px #5f4c4c;
