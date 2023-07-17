@@ -48,7 +48,7 @@
  
     <main>
     <!--Introduction screen -->
-        <section id="home-screen">
+        <div id="home-screen">
             <div class="introduction">
                 <p>
                         The Vikings travelled far and wide during the Viking Age (793 AD–1066 AD). The original stories about 
@@ -70,11 +70,11 @@
             </div>
 
             <div class="start-position">
-                <button onclick="start()" data-type="submit" id="start-button" href="index.html">
+                <button data-type="submit" id="start-button">
                     Start!
                 </button>
             </div>
-        </section>
+        </div>
 
     <!-- Instructions -->
         <div class="instructions">    
@@ -95,7 +95,7 @@
         </div>
 
     <!-- Game Screen -->
-        <section id="game-screen">
+        <div id="game-screen">
             <!-- Vikings section -->
                 <!-- Rollo -->
                 <div class="viking-details" id="rollo">
@@ -242,10 +242,10 @@
                 <div class="score-area">
                         <p class="score">Right Answers: <span id="right">0</span></p>
                         <p class="score">Wrong Answers: <span id="wrong">0</span></p>
-                        <button class="quit-button">Quit</button>
+                        <button id="quit-button">Quit</button>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <!-- Score pop-up -->
