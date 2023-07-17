@@ -36,9 +36,5 @@ let seventhOption = document.getElementById("button7");
 let eighthOption = document.getElementById("button8");
 let ninthOption = document.getElementById("button9");
 
-const optionArray = [firstOption, secondOption, thirdOption, fourthOption, 
-    fifthOption, sixthOption, seventhOption, eighthOption, ninthOption];
+randomArray = [firstOption, secondOption, thirdOption, fourthOption, fifthOption, sixthOption, seventhOption, eighthOption, ninthOption];
 
-function randomArray() {
-    Math.floor(Math.random(optionArray));
-}
