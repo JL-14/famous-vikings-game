@@ -1,3 +1,30 @@
+
+/* Randomise options in question grid */
+let options = [];
+
+function main() {
+    options = ["Became Duke of Normandy", "Discovered America", "Established North Sea Empire", "The Last Great Viking", "Made London Bridge fall down", "Carried a 6 foot axe", "Had a blue tooth", "Conquered St Petersburg", "Invented the compass"];
+    alert(options);
+}
+
+function randomOptions() {
+    window.alert("The current order is: " + options);
+
+    for (let i = 0; i < options.length; i++) {
+        let randomNum = Math.floor(Math.random() * options.length);
+        let tempOptions = "";
+        let currentOptions = options[i];
+        let shuffledOptions = options[randomNum];
+
+        tempOptions = currentOptions;
+        options[i] = shuffledOptions;
+        options[randomNum] = tempOptions;
+    }
+    window.alert("The shuffled options are: ");
+}
+
+
+
 /* Start button launching game */
 let gameDisplay = document.getElementById("game-screen");
 let homeDisplay = document.getElementById("home-screen");
@@ -20,21 +47,9 @@ quitButton.onclick = function goHome() {
     if (homeDisplay.style.display === "none") {
         gameDisplay.style.display = "none";
         homeDisplay.style.display = "block";
+        shuffle(arr);
     } else {
         homeDisplay.style.display = "none";
     }
 };
-
-/* Randomise options in question grid */
-let firstOption = document.getElementById("button1");
-let secondOption = document.getElementById("button2");
-let thirdOption = document.getElementById("button3");
-let fourthOption = document.getElementById("button4");
-let fifthOption = document.getElementById("button5");
-let sixthOption = document.getElementById("button6");
-let seventhOption = document.getElementById("button7");
-let eighthOption = document.getElementById("button8");
-let ninthOption = document.getElementById("button9");
-
-randomArray = [firstOption, secondOption, thirdOption, fourthOption, fifthOption, sixthOption, seventhOption, eighthOption, ninthOption];
 
