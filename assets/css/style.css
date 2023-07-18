@@ -220,9 +220,10 @@ h1, h2 {
     height: 17.5vh;
     margin-bottom: 5px;
     margin-right: 5px;
-    background-color: gray;
+    background-color: rgba(255, 42, 34, 0.85);
     color: #fff0db;
     font-weight: bold;
+    font-size: 140%;
 }
 
 /* Scores */
