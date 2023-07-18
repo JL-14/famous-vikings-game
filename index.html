@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
 
-    <title>Viking Facts Game</title>
+    <title>Famous Vikings Game</title>
 </head>
 <body>
     <header>
@@ -22,7 +22,7 @@
         </div>
 
         <div class="title">
-        <h1>Viking Facts Game!</h1>
+        <h1>Famous Vikings Game!</h1>
         <h2>-How well do you know your Vikings?</h2>
         </div>
         
@@ -79,12 +79,11 @@
     <!-- Instructions -->
         <div class="instructions">    
             <h2>
-                Instructions how to play the Viking Facts Game
+                Instructions how to play the Famous Viking Game
             </h2>
             <p>
                 The game is very simple. The object is to match the correct tile from the 
-                9 options on the right to the Viking or Fact given on the left. You have 3 lives,
-                and lose 1 life for each wrong answer, until you have no lives left and the game ends.
+                9 options on the right of the Viking described on the left.
                 Every right answer gives you 1 point, and if you score 9 points you are officially fit
                 to be a Viking!
             <div class="close-instructions">
@@ -242,13 +241,23 @@
                 <div class="score-area">
                         <p class="score">Right Answers: <span id="right">0</span></p>
                         <p class="score">Wrong Answers: <span id="wrong">0</span></p>
-                        <button id="quit-button">Quit</button>
+                        <button id="quit-button" class="quit-button">Quit</button>
                 </div>
             </div>
+
+    <!-- Correct Answer pop-up -->
+        <div id="correct-answer" class="modal-popup">
+            <h2 id ="correct-text">
+                Correct!
+            </h2>
+            <img src="assets/images/viking-thumbs-up.gif" id="thumbs-up-gif">
+            <button id="next-question-button">
+                Next Question!
+            </button>
+            <button id="next-quit-button" class="quit-button">Quit</button>
+        </div>
         </div>
     </main>
-
-    <!-- Score pop-up -->
 
     <!-- Footer -->
     <footer class="footer">

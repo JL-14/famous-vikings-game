@@ -258,17 +258,79 @@ h1, h2 {
     padding-left: 10px;
 }
 
-#quit-button {
+.quit-button {
     background-color:#FF2A22;
     color: #fff0db;
     font-weight: bold;
 }
 
-#quit-button:hover {
+.quit-button:hover {
     background: rgba(255, 248, 240, 1);
     color: #FF2A22;
     box-shadow: 0 6px 20px #5f4c4c;
 }
+
+#correct-answer {
+    color: #000;
+    font-size: 100%;
+    text-align: center;
+}
+
+#correct-text {
+    font-size: 300%;
+}
+
+ /* Modal (background) pop-up box */
+ .modal-popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    margin-left: 0;
+    margin-top: 0;
+    width: 50%;
+    height: 65%;
+    overflow: auto;
+    background-color: #fff0db;
+  }
+  
+  /* Next Question Button */
+  #next-question-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background: #fffb00;
+    border: 2px solid #5f4c4c;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 120%;
+    padding: 10px;
+    margin-top: 80px;
+    margin-left: 30%;
+    margin-bottom: 20px;
+    height: 80px;
+    width: 40%;
+    border-radius: 7px;
+    border: 2px solid #402e32;
+    text-decoration: none;
+    outline: 0;
+    cursor: pointer;
+    box-shadow: 0 4px 14px 0 #402e32;
+    transition: background 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+  }
+  
+  #next-question-button:hover,
+  #next-question-button:focus {
+    background: rgba(255, 248, 240, 1);
+    color: #FF2A22;
+    box-shadow: 0 6px 20px #5f4c4c;
+    cursor: pointer;
+}
+
+
 
 /* Footer */
 .footer {
