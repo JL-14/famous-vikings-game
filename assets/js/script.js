@@ -80,23 +80,21 @@ nextButton.onclick = function() {
   
     // Function to show the next list item
     function showNextViking() {
-      if (vikingIndex <= vikingBiogs.length) {
-        // Hide all list items
+      if (vikingIndex < vikingBiogs.length) {
+        // Hiding all Vikings apart from current
         for (let i = 0; i < vikingBiogs.length; i++) {
           vikingBiogs[i].style.display = 'none';
         }
-  
-        // Show the next list item
+        // Showing the next list item
         vikingIndex++;
         vikingBiogs[vikingIndex].style.display = 'inline-flex';
-
       }
     }
   
-    // Add event listener to the next button
+    // Adding event listener to the next button
     nextButton.addEventListener('click', showNextViking);
   
-    // Show the first list item initially
+    // Showing the first list item initially
     showNextViking();
 }
 
@@ -112,4 +110,3 @@ nextQuitButton.onclick = function goHome() {
         homeDisplay.style.display = "none";
     }
 }
-
