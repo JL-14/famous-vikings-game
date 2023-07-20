@@ -160,6 +160,10 @@ h1, h2 {
     margin: 0 auto;
 }
 
+.viking-biographies {
+    list-style-type: none;
+}
+
 /* Individual Viking visibility */
 #rollo {
     display: inline-flex;

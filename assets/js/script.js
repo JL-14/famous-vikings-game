@@ -56,32 +56,60 @@ quitButton.onclick = function goHome() {
 
 /* Correct answer popup */
 var modal = document.getElementById("correct-answer");
-
-// Get the button that opens the modal
 var correctOption = document.getElementById("button1");
-
-// Get the button that closes the modal
 var nextButton = document.getElementById("next-question-button");
 
-// When the user clicks on the button, open the modal
 correctOption.onclick = function() {
   modal.style.display = "block";
 }
 
-// When the user clicks on <span> (x), close the modal
+/* Creating Viking list for next question */
+let viking1 = document.getElementById("rollo");
+let viking2 = document.getElementById("olav-haraldsson");
+let viking3 = document.getElementById("leif-erikson");
+let viking4 = document.getElementById("harald-hardrada");
+let viking5 = document.getElementById("cnut-the-great");
+
+let vikingBiogs = [viking1, viking2, viking3, viking4, viking5];
+
+// When the user clicks on Next Question button, close the modal and go to next question
 nextButton.onclick = function() {
-  modal.style.display = "none";
+    modal.style.display = "none";
+  
+    let vikingIndex = 0;
+  
+    // Function to show the next list item
+    function showNextViking() {
+      if (vikingIndex <= vikingBiogs.length) {
+        // Hide all list items
+        for (let i = 0; i < vikingBiogs.length; i++) {
+          vikingBiogs[i].style.display = 'none';
+        }
+  
+        // Show the next list item
+        vikingIndex++;
+        vikingBiogs[vikingIndex].style.display = 'inline-flex';
+
+      }
+    }
+  
+    // Add event listener to the next button
+    nextButton.addEventListener('click', showNextViking);
+  
+    // Show the first list item initially
+    showNextViking();
 }
 
-/* Quit button to return to Home Page */
+
+/* Quit button on popup to return to Home Page */
 let nextQuitButton = document.getElementById("next-quit-button");
 nextQuitButton.onclick = function goHome() {
     if (homeDisplay.style.display === "none") {
+        modal.style.display = "none";
         gameDisplay.style.display = "none";
         homeDisplay.style.display = "block";
-        shuffle(arr);
     } else {
         homeDisplay.style.display = "none";
     }
-};
- 
+}
+
