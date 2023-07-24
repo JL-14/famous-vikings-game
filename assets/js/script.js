@@ -57,11 +57,16 @@ quitButton.onclick = function goHome() {
 /* Correct answer popup */
 var modal = document.getElementById("correct-answer");
 var correctOption = document.getElementById("button1");
+var modalIncorrect = document.getElementById("incorrect-answer");
+var incorrectOption = document.getElementById("button2");
 var nextButton = document.getElementById("next-question-button");
-
 
 correctOption.onclick = function() {
   modal.style.display = "block";
+}
+
+incorrectOption.onclick = function() {
+    modalIncorrect.style.display = "block";
 }
 
 /* Creating Viking list for next question */
