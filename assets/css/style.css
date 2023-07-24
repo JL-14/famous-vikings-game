@@ -270,6 +270,8 @@ h1, h2 {
     box-shadow: 0 6px 20px #5f4c4c;
 }
 
+
+/* Correct and incorrect Answer popups */
 #correct-answer {
     color: #000;
     font-size: 100%;
@@ -277,6 +279,16 @@ h1, h2 {
 }
 
 #correct-text {
+    font-size: 300%;
+}
+
+#incorrect-answer {
+    color: #000;
+    font-size: 100%;
+    text-align: center;
+}
+
+#incorrect-text {
     font-size: 300%;
 }
 
@@ -330,6 +342,42 @@ h1, h2 {
     cursor: pointer;
 }
 
+/* Next Question Button for incorrect answers */
+#incorrect-next-question-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background: #fffb00;
+    border: 2px solid #5f4c4c;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 120%;
+    padding: 10px;
+    margin-top: 80px;
+    margin-left: 30%;
+    margin-bottom: 20px;
+    height: 80px;
+    width: 40%;
+    border-radius: 7px;
+    border: 2px solid #402e32;
+    text-decoration: none;
+    outline: 0;
+    cursor: pointer;
+    box-shadow: 0 4px 14px 0 #402e32;
+    transition: background 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+  }
+  
+  #incorrect-next-question-button:hover,
+  #incorrect-next-question-button:focus {
+    background: rgba(255, 248, 240, 1);
+    color: #FF2A22;
+    box-shadow: 0 6px 20px #5f4c4c;
+    cursor: pointer;
+}
 
 
 /* Footer */

@@ -75,29 +75,32 @@ let vikingBiogs = [viking1, viking2, viking3, viking4, viking5];
 // When the user clicks on Next Question button, close the modal and go to next question
 nextButton.onclick = function() {
     modal.style.display = "none";
-  
+
     let vikingIndex = 0;
-  
+
     // Function to show the next list item
     function showNextViking() {
       if (vikingIndex < vikingBiogs.length) {
+        
         // Hiding all Vikings apart from current
         for (let i = 0; i < vikingBiogs.length; i++) {
+            console.log(i)
+            
           vikingBiogs[i].style.display = 'none';
         }
+    }
         // Showing the next list item
         vikingIndex++;
         vikingBiogs[vikingIndex].style.display = 'inline-flex';
-      }
+
     }
-  
-    // Adding event listener to the next button
-    nextButton.addEventListener('click', showNextViking);
-  
+
     // Showing the first list item initially
     showNextViking();
 }
 
+    // Adding event listener to the next button
+    nextButton.addEventListener('click', showNextViking);
 
 /* Quit button on popup to return to Home Page */
 let nextQuitButton = document.getElementById("next-quit-button");
