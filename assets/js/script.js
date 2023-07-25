@@ -69,7 +69,7 @@ incorrectOption.onclick = function() {
     modalIncorrect.style.display = "block";
 }
 
-/* Creating Viking list for next question */
+/* Creating Viking list for next question function */
 let viking1 = document.getElementById("rollo");
 let viking2 = document.getElementById("olav-haraldsson");
 let viking3 = document.getElementById("leif-erikson");
@@ -84,31 +84,37 @@ let vikingIndex = 0;
 function showNextViking() {
     if (vikingIndex < vikingBiogs.length) {      
       // Hiding all Vikings apart from current
-      for (let i = 0; i < vikingBiogs.length; i++) {
-        console.log(i);
-          
+      for (let i = 0; i < vikingBiogs.length; i++) {         
         vikingBiogs[i].style.display = 'none';
       }
-  }
-  
+  } 
       // Showing the next list item
       vikingBiogs[vikingIndex].style.display = 'inline-flex';
       vikingIndex++;
   }
-
 // When the user clicks on Next Question button, close the modal and go to next question
     nextButton.onclick = function() {
     modal.style.display = "none";
 }
     // Showing the first list item initially
     showNextViking();
-
     // Adding event listener to the next button
     nextButton.addEventListener('click', showNextViking);
 
-/* Quit button on popup to return to Home Page */
+/* Quit button on popups to return to Home Page */
 let nextQuitButton = document.getElementById("next-quit-button");
 nextQuitButton.onclick = function goHome() {
+    if (homeDisplay.style.display === "none") {
+        modal.style.display = "none";
+        gameDisplay.style.display = "none";
+        homeDisplay.style.display = "block";
+    } else {
+        homeDisplay.style.display = "none";
+    }
+}
+
+let nextIncorrectQuitButton = document.getElementById("incorrect-next-quit-button");
+nextIncorrectQuitButton.onclick = function goHome() {
     if (homeDisplay.style.display === "none") {
         modal.style.display = "none";
         gameDisplay.style.display = "none";
