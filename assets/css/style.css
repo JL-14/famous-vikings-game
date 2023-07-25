@@ -298,10 +298,11 @@ h1, h2 {
     z-index: 1;
     margin-left: 0;
     margin-top: 0;
-    width: 50%;
+    width: 30%;
     height: 65%;
     overflow: auto;
     background-color: #fff0db;
+    border: 5px solid #402e32;
   }
   
   /* Next Question Button */

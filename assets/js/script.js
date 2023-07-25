@@ -55,11 +55,12 @@ quitButton.onclick = function goHome() {
 };
 
 /* Correct answer popup */
-var modal = document.getElementById("correct-answer");
-var correctOption = document.getElementById("button1");
-var modalIncorrect = document.getElementById("incorrect-answer");
-var incorrectOption = document.getElementById("button2");
-var nextButton = document.getElementById("next-question-button");
+let modal = document.getElementById("correct-answer");
+let correctOption = document.getElementById("button1");
+let modalIncorrect = document.getElementById("incorrect-answer");
+let incorrectOption = document.getElementById("button2");
+let nextButton = document.getElementById("next-question-button");
+let incorrectNextButton = document.getElementById("incorrect-next-question-button");
 
 correctOption.onclick = function() {
   modal.style.display = "block";
@@ -91,15 +92,19 @@ function showNextViking() {
       // Showing the next list item
       vikingBiogs[vikingIndex].style.display = 'inline-flex';
       vikingIndex++;
-  }
+}
 // When the user clicks on Next Question button, close the modal and go to next question
     nextButton.onclick = function() {
     modal.style.display = "none";
+}
+    incorrectNextButton.onclick = function() {
+    modalIncorrect.style.display = "none";
 }
     // Showing the first list item initially
     showNextViking();
     // Adding event listener to the next button
     nextButton.addEventListener('click', showNextViking);
+    incorrectNextButton.addEventListener('click', showNextViking);
 
 /* Quit button on popups to return to Home Page */
 let nextQuitButton = document.getElementById("next-quit-button");
