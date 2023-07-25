@@ -136,8 +136,8 @@ h1, h2 {
 
 .viking-details {
     display: inline-flex;
-    justify-content: flex-start;
     flex-direction: column;
+    justify-content: flex-start;
     margin-top: 80px;
     width: 45%;
     height: 80%;
@@ -163,20 +163,35 @@ h1, h2 {
 #rollo {
     display: inline-flex;
 }
+#rollo-question {
+    display: inline-flex;
+}
 
 #olav-haraldsson {
+    display: none;
+}
+#olav-haraldsson-question {
     display: none;
 }
 
 #leif-erikson {
     display: none;
 }
+#leif-erikson-question {
+    display: none;
+}
 
 #harald-hardrada {
     display: none;
 }
+#harald-hardrada-question {
+    display: none;
+}
 
 #cnut-the-great {
+    display: none;
+}
+#cnut-the-great-question {
     display: none;
 }
 

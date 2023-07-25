@@ -1,10 +1,39 @@
+/* Const variables */
+const gameDisplay = document.getElementById("game-screen");
+const homeDisplay = document.getElementById("home-screen");
+const startButton = document.getElementById("start-button");
 
-/* Randomise options in question grid */
+const modal = document.getElementById("correct-answer");
+const correctOption = document.getElementById("button1");
+const modalIncorrect = document.getElementById("incorrect-answer");
+const incorrectOption = document.getElementById("button2");
+const nextButton = document.getElementById("next-question-button");
+const incorrectNextButton = document.getElementById("incorrect-next-question-button");
+
+const viking1 = document.getElementById("rollo");
+const viking2 = document.getElementById("olav-haraldsson");
+const viking3 = document.getElementById("leif-erikson");
+const viking4 = document.getElementById("harald-hardrada");
+const viking5 = document.getElementById("cnut-the-great");
+
+/* Let variables */
 
 let options = ["Became Duke of Normandy", "Discovered America", "Established North Sea Empire", "The Last Great Viking", "Made London Bridge fall down", "Carried a 6 foot axe", "Had a blue tooth", "Conquered St Petersburg", "Invented the compass"];
+let quitButton = document.getElementById("quit-button");
+let vikingBiogs = [viking1, viking2, viking3, viking4, viking5];
+let vikingIndex = 0;
+let nextQuitButton = document.getElementById("next-quit-button");
+let nextIncorrectQuitButton = document.getElementById("incorrect-next-quit-button");
+let initialStart = false;
+
+/**
+ * Event listeners 
+ *  Start Button:
+*/
+startButton.addEventListener('click', (e) => startGame(e));
+quitButton.addEventListener('click', (e) => goHome(e));
 
 function randomOptions() {
-
     for (let i = 0; i < options.length; i++) {
         let randomNum = Math.floor(Math.random() * options.length);
         let tempOptions = "";
@@ -15,7 +44,6 @@ function randomOptions() {
         options[i] = shuffledOptions;
         options[randomNum] = tempOptions;
     }
-
     document.querySelector('#button1').textContent = options[0];
     document.querySelector('#button2').textContent = options[1];
     document.querySelector('#button3').textContent = options[2];
@@ -27,13 +55,10 @@ function randomOptions() {
     document.querySelector('#button9').textContent = options[8];
 }
 
-/* Start button launching game */
-let gameDisplay = document.getElementById("game-screen");
-let homeDisplay = document.getElementById("home-screen");
-let startButton = document.getElementById("start-button");
-
-startButton.onclick = function startGame() {
-    if (gameDisplay.style.display === "none") {
+const startGame = function (e) {
+    e.preventDefault();
+    if (gameDisplay.style.display === "none" || initialStart === false) {
+        initialStart === true;
         homeDisplay.style.display = "none";
         gameDisplay.style.display = "inline-flex";
         randomOptions();
@@ -42,25 +67,17 @@ startButton.onclick = function startGame() {
     }
 }
 
-/* Quit button to return to Home Page */
-let quitButton = document.getElementById("quit-button");
-quitButton.onclick = function goHome() {
-    if (homeDisplay.style.display === "none") {
+const goHome = function (e) {
+    e.preventDefault();
+    if (homeDisplay.style.display === "none" || initialStart === false) {
+        initialStart === true;
         gameDisplay.style.display = "none";
         homeDisplay.style.display = "block";
-        shuffle(arr);
+        randomOptions();
     } else {
         homeDisplay.style.display = "none";
     }
-};
-
-/* Correct answer popup */
-let modal = document.getElementById("correct-answer");
-let correctOption = document.getElementById("button1");
-let modalIncorrect = document.getElementById("incorrect-answer");
-let incorrectOption = document.getElementById("button2");
-let nextButton = document.getElementById("next-question-button");
-let incorrectNextButton = document.getElementById("incorrect-next-question-button");
+}
 
 correctOption.onclick = function() {
   modal.style.display = "block";
@@ -70,18 +87,7 @@ incorrectOption.onclick = function() {
     modalIncorrect.style.display = "block";
 }
 
-/* Creating Viking list for next question function */
-let viking1 = document.getElementById("rollo");
-let viking2 = document.getElementById("olav-haraldsson");
-let viking3 = document.getElementById("leif-erikson");
-let viking4 = document.getElementById("harald-hardrada");
-let viking5 = document.getElementById("cnut-the-great");
-
-let vikingBiogs = [viking1, viking2, viking3, viking4, viking5];
-
-let vikingIndex = 0;
-
-// Function to show the next list item
+// Function to show the next viking
 function showNextViking() {
     if (vikingIndex < vikingBiogs.length) {      
       // Hiding all Vikings apart from current
@@ -89,7 +95,7 @@ function showNextViking() {
         vikingBiogs[i].style.display = 'none';
       }
   } 
-      // Showing the next list item
+      // Showing the next viking
       vikingBiogs[vikingIndex].style.display = 'inline-flex';
       vikingIndex++;
 }
@@ -100,14 +106,20 @@ function showNextViking() {
     incorrectNextButton.onclick = function() {
     modalIncorrect.style.display = "none";
 }
-    // Showing the first list item initially
+// Showing the first list item initially
     showNextViking();
-    // Adding event listener to the next button
+// Adding event listener to the next button
     nextButton.addEventListener('click', showNextViking);
     incorrectNextButton.addEventListener('click', showNextViking);
 
+/* Linking Viking to the question */
+let vikingQuestion = getElementById("rollo-question");
+if (vikingBiogs[0]) {
+
+}
+
 /* Quit button on popups to return to Home Page */
-let nextQuitButton = document.getElementById("next-quit-button");
+
 nextQuitButton.onclick = function goHome() {
     if (homeDisplay.style.display === "none") {
         modal.style.display = "none";
@@ -118,7 +130,7 @@ nextQuitButton.onclick = function goHome() {
     }
 }
 
-let nextIncorrectQuitButton = document.getElementById("incorrect-next-quit-button");
+
 nextIncorrectQuitButton.onclick = function goHome() {
     if (homeDisplay.style.display === "none") {
         modal.style.display = "none";
