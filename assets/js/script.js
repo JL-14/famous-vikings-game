@@ -33,6 +33,8 @@ let initialStart = false;
 document.addEventListener('DOMContentLoaded', () => {
 startButton.addEventListener('click', (e) => startGame(e));
 quitButton.addEventListener('click', (e) => goHome(e));
+nextButton.addEventListener('click', showNextViking);
+incorrectNextButton.addEventListener('click', showNextViking);
 nextQuitButton.addEventListener('click', (e) => goHome(e));
 nextIncorrectQuitButton.addEventListener('click', (e) => goHome(e));
 });
@@ -89,9 +91,15 @@ const goHome = function (e) {
 correctOption.onclick = function() {
   modal.style.display = "block";
 }
-
 incorrectOption.onclick = function() {
     modalIncorrect.style.display = "block";
+}
+// When the user clicks on Next Question button, close the modal and go to next question
+nextButton.onclick = function() {
+modal.style.display = "none";
+}
+incorrectNextButton.onclick = function() {
+modalIncorrect.style.display = "none";
 }
 
 // Function to show the next viking
@@ -106,21 +114,20 @@ function showNextViking() {
       vikingBiogs[vikingIndex].style.display = 'inline-flex';
       vikingIndex++;
 }
-// When the user clicks on Next Question button, close the modal and go to next question
-    nextButton.onclick = function() {
-    modal.style.display = "none";
-}
-    incorrectNextButton.onclick = function() {
-    modalIncorrect.style.display = "none";
-}
+
 // Showing the first list item initially
     showNextViking();
-// Adding event listener to the next button
-    nextButton.addEventListener('click', showNextViking);
-    incorrectNextButton.addEventListener('click', showNextViking);
 
 /* Linking Viking to the question */
 let vikingQuestion = getElementById("rollo-question");
 if (vikingBiogs[0]) {
 
 }
+
+let answers = [
+    {
+        question: document.getElementById("rollo-question"),
+        correctAnswer: document.getElementById("button1")
+    },
+    
+]
