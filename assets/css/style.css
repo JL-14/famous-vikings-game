@@ -141,55 +141,109 @@ h1, h2 {
     margin-top: 80px;
     width: 45%;
     height: 80%;
-    background-color: rgba(255, 240, 219, 0.9);
-    color: black;
     padding: 10px;
     margin-left: 3%;
     text-align: center;
 }
 
 .viking-name {
+    display: block;
     font-size: 125%;
     line-height: 0;
 }
 
 .viking-image {
+    display: block;
     width: 30%;
     height: auto;
     margin: 0 auto;
 }
 
+.individual-viking-description {
+    display: block;
+}
+
 /* Individual Viking visibility */
 #rollo {
     display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 80px;
+    width: 100%;
+    height: 80%;
+    background-color: rgba(255, 240, 219, 0.9);
+    color: black;
+    padding: 10px;
+    margin-left: 3%;
+    text-align: center;
 }
 #rollo-question {
     display: inline-flex;
 }
 
 #olav-haraldsson {
-    display: none;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 80px;
+    width: 100%;
+    height: 80%;
+    background-color: rgba(255, 240, 219, 0.9);
+    color: black;
+    padding: 10px;
+    margin-left: 3%;
+    text-align: center;
 }
 #olav-haraldsson-question {
     display: none;
 }
 
 #leif-erikson {
-    display: none;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 80px;
+    width: 100%;
+    height: 80%;
+    background-color: rgba(255, 240, 219, 0.9);
+    color: black;
+    padding: 10px;
+    margin-left: 3%;
+    text-align: center;
 }
 #leif-erikson-question {
     display: none;
 }
 
 #harald-hardrada {
-    display: none;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 80px;
+    width: 100%;
+    height: 80%;
+    background-color: rgba(255, 240, 219, 0.9);
+    color: black;
+    padding: 10px;
+    margin-left: 3%;
+    text-align: center;
 }
 #harald-hardrada-question {
     display: none;
 }
 
 #cnut-the-great {
-    display: none;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 80px;
+    width: 100%;
+    height: 80%;
+    background-color: rgba(255, 240, 219, 0.9);
+    color: black;
+    padding: 10px;
+    margin-left: 3%;
+    text-align: center;
 }
 #cnut-the-great-question {
     display: none;
@@ -202,6 +256,7 @@ h1, h2 {
     align-content: center;
     flex-direction: column;
     width: 45%;
+    height: auto;
     margin-right: 30px;
     margin-left: auto;
 }
@@ -215,6 +270,7 @@ h1, h2 {
     height: 40px;
     margin-left: 2px;
     margin-top: auto;
+    padding: 20px;
     width: 90%;
 }
 

@@ -35,6 +35,9 @@ startButton.addEventListener('click', (e) => startGame(e));
 quitButton.addEventListener('click', (e) => goHome(e));
 });
 
+/** Functions
+ * 
+ */
 function randomOptions() {
     for (let i = 0; i < options.length; i++) {
         let randomNum = Math.floor(Math.random() * options.length);
