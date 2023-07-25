@@ -33,6 +33,8 @@ let initialStart = false;
 document.addEventListener('DOMContentLoaded', () => {
 startButton.addEventListener('click', (e) => startGame(e));
 quitButton.addEventListener('click', (e) => goHome(e));
+nextQuitButton.addEventListener('click', (e) => goHome(e));
+nextIncorrectQuitButton.addEventListener('click', (e) => goHome(e));
 });
 
 /** Functions
@@ -121,26 +123,4 @@ function showNextViking() {
 let vikingQuestion = getElementById("rollo-question");
 if (vikingBiogs[0]) {
 
-}
-
-/* Quit button on popups to return to Home Page */
-
-nextQuitButton.onclick = function goHome() {
-    if (homeDisplay.style.display === "none") {
-        modal.style.display = "none";
-        gameDisplay.style.display = "none";
-        homeDisplay.style.display = "block";
-    } else {
-        homeDisplay.style.display = "none";
-    }
-}
-
-nextIncorrectQuitButton.onclick = function goHome() {
-    if (homeDisplay.style.display === "none") {
-        modalIncorrect.style.display = "none";
-        gameDisplay.style.display = "none";
-        homeDisplay.style.display = "block";
-    } else {
-        homeDisplay.style.display = "none";
-    }
 }
