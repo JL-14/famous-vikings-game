@@ -30,8 +30,10 @@ let initialStart = false;
  * Event listeners 
  *  Start Button:
 */
+document.addEventListener('DOMContentLoaded', () => {
 startButton.addEventListener('click', (e) => startGame(e));
 quitButton.addEventListener('click', (e) => goHome(e));
+});
 
 function randomOptions() {
     for (let i = 0; i < options.length; i++) {
@@ -130,10 +132,9 @@ nextQuitButton.onclick = function goHome() {
     }
 }
 
-
 nextIncorrectQuitButton.onclick = function goHome() {
     if (homeDisplay.style.display === "none") {
-        modal.style.display = "none";
+        modalIncorrect.style.display = "none";
         gameDisplay.style.display = "none";
         homeDisplay.style.display = "block";
     } else {
