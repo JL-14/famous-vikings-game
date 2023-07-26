@@ -38,6 +38,8 @@ incorrectNextButton.addEventListener('click', showNextViking);
 nextQuitButton.addEventListener('click', (e) => goHome(e));
 nextIncorrectQuitButton.addEventListener('click', (e) => goHome(e));
 });
+correctOption.addEventListener('click', correctPopup);
+incorrectOption.addEventListener('click', incorrectPopup);
 
 /** Functions
  * 
@@ -88,12 +90,15 @@ const goHome = function (e) {
     }
 }
 
-correctOption.onclick = function() {
-  modal.style.display = "block";
+function correctPopup () {
+    modal.style.display = "block";
 }
-incorrectOption.onclick = function() {
+
+function incorrectPopup () {
     modalIncorrect.style.display = "block";
 }
+
+
 // When the user clicks on Next Question button, close the modal and go to next question
 nextButton.onclick = function() {
 modal.style.display = "none";
@@ -105,18 +110,20 @@ modalIncorrect.style.display = "none";
 // Function to show the next viking
 function showNextViking() {
     if (vikingIndex < vikingBiogs.length) {      
-      // Hiding all Vikings apart from current
-      for (let i = 0; i < vikingBiogs.length; i++) {         
-        vikingBiogs[i].style.display = 'none';
-      }
-  } 
-      // Showing the next viking
-      vikingBiogs[vikingIndex].style.display = 'inline-flex';
-      vikingIndex++;
+    // Hiding all Vikings apart from current
+    for (let i = 0; i < vikingBiogs.length; i++) {         
+    vikingBiogs[i].style.display = 'none';
+    }
+} 
+    // Showing the next viking
+    vikingBiogs[vikingIndex].style.display = 'inline-flex';
+    vikingIndex++;
 }
-
 // Showing the first list item initially
     showNextViking();
+
+
+
 
 /* Linking Viking to the question */
 let vikingQuestion = getElementById("rollo-question");
