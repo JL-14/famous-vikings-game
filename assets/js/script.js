@@ -4,7 +4,7 @@ const homeDisplay = document.getElementById("home-screen");
 const startButton = document.getElementById("start-button");
 
 const modal = document.getElementById("correct-answer");
-const correctOption = document.getElementById("button1");
+// const correctOption = document.getElementById("button1");
 const modalIncorrect = document.getElementById("incorrect-answer");
 const incorrectOption = document.getElementById("button2");
 const nextButton = document.getElementById("next-question-button");
@@ -38,8 +38,8 @@ incorrectNextButton.addEventListener('click', showNextViking);
 nextQuitButton.addEventListener('click', (e) => goHome(e));
 nextIncorrectQuitButton.addEventListener('click', (e) => goHome(e));
 });
-correctOption.addEventListener('click', correctPopup);
-incorrectOption.addEventListener('click', incorrectPopup);
+// correctOption.addEventListener('click', correctPopup);
+// incorrectOption.addEventListener('click', incorrectPopup);
 
 /** Functions
  * 
@@ -93,11 +93,9 @@ const goHome = function (e) {
 function correctPopup () {
     modal.style.display = "block";
 }
-
 function incorrectPopup () {
     modalIncorrect.style.display = "block";
 }
-
 
 // When the user clicks on Next Question button, close the modal and go to next question
 nextButton.onclick = function() {
@@ -126,15 +124,52 @@ function showNextViking() {
 
 
 /* Linking Viking to the question */
-let vikingQuestion = getElementById("rollo-question");
-if (vikingBiogs[0]) {
+// let vikingQuestion = getElementById("rollo-question");
+// if (vikingBiogs[0]) {
 
-}
+// }
 
-let answers = [
-    {
-        question: document.getElementById("rollo-question"),
-        correctAnswer: document.getElementById("button1")
-    },
+// let answers = [
+//     {
+//         question: document.getElementById("rollo-question"),
+//         correctAnswer: document.getElementById("button1")
+//     },
     
-]
+// ]
+
+/* Linking correct answer to tile for each question*/
+const questionBox = document.getElementsByClassName("question-area").children;
+console.log(questionBox);
+
+const rolloQuestion = document.getElementById("rollo-question");
+console.log(rolloQuestion);
+
+const rolloOption = document.getElementById("button1");
+const olavOption = document.getElementById("button2");
+const leifOption = document.getElementById("button3");
+const haraldOption = document.getElementById("button4");
+const cnutOption = document.getElementById("button5");
+const otherOption1 = document.getElementById("button6");
+const otherOption2 = document.getElementById("button7");
+const otherOption3 = document.getElementById("button8");
+const otherOption4 = document.getElementById("button9");
+
+rolloOption.addEventListener('click',rolloCheck);
+
+function rolloCheck (questionBox = rolloQuestion) {
+    if (questionBox = true) {
+        correctPopup;
+    } else {
+        incorrectPopup;
+    }
+}
+        leifOption.addEventListener('click', incorrectPopup)
+//         document.getElementById("button3").addEventListener('click', incorrectPopup);
+//         document.getElementById("button4").addEventListener('click', incorrectPopup);
+//         document.getElementById("button5").addEventListener('click', incorrectPopup);
+//         document.getElementById("button6").addEventListener('click', incorrectPopup);
+//         document.getElementById("button7").addEventListener('click', incorrectPopup);
+//         document.getElementById("button8").addEventListener('click', incorrectPopup);
+//         document.getElementById("button9").addEventListener('click', incorrectPopup);
+//     }
+// }
