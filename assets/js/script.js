@@ -44,17 +44,17 @@ nextIncorrectQuitButton.addEventListener('click', (e) => goHome(e));
 /** Functions
  * 
  */
-function randomOptions() {
-    for (let i = 0; i < options.length; i++) {
-        let randomNum = Math.floor(Math.random() * options.length);
-        let tempOptions = "";
-        let currentOptions = options[i];
-        let shuffledOptions = options[randomNum];
+// function randomOptions() {
+//     for (let i = 0; i < options.length; i++) {
+//         let randomNum = Math.floor(Math.random() * options.length);
+//         let tempOptions = "";
+//         let currentOptions = options[i];
+//         let shuffledOptions = options[randomNum];
 
-        tempOptions = currentOptions;
-        options[i] = shuffledOptions;
-        options[randomNum] = tempOptions;
-    }
+//         tempOptions = currentOptions;
+//         options[i] = shuffledOptions;
+//         options[randomNum] = tempOptions;
+//     }
     document.querySelector('#button1').textContent = options[0];
     document.querySelector('#button2').textContent = options[1];
     document.querySelector('#button3').textContent = options[2];
@@ -64,7 +64,7 @@ function randomOptions() {
     document.querySelector('#button7').textContent = options[6];
     document.querySelector('#button8').textContent = options[7];
     document.querySelector('#button9').textContent = options[8];
-}
+// }
 
 const startGame = function (e) {
     e.preventDefault();
@@ -121,29 +121,6 @@ function showNextViking() {
     showNextViking();
 
 
-
-
-/* Linking Viking to the question */
-// let vikingQuestion = getElementById("rollo-question");
-// if (vikingBiogs[0]) {
-
-// }
-
-// let answers = [
-//     {
-//         question: document.getElementById("rollo-question"),
-//         correctAnswer: document.getElementById("button1")
-//     },
-    
-// ]
-
-/* Linking correct answer to tile for each question*/
-const questionBox = document.getElementsByClassName("question-area").children;
-console.log(questionBox);
-
-const rolloQuestion = document.getElementById("rollo-question");
-console.log(rolloQuestion);
-
 const rolloOption = document.getElementById("button1");
 const olavOption = document.getElementById("button2");
 const leifOption = document.getElementById("button3");
@@ -154,22 +131,98 @@ const otherOption2 = document.getElementById("button7");
 const otherOption3 = document.getElementById("button8");
 const otherOption4 = document.getElementById("button9");
 
-rolloOption.addEventListener('click',rolloCheck);
+// let answerGrid = [rolloOption, olavOption, leifOption, haraldOption, cnutOption, otherOption1, otherOption2, otherOption3, otherOption4];
+// console.log(answerGrid);
 
-function rolloCheck (questionBox = rolloQuestion) {
-    if (questionBox = true) {
-        correctPopup;
-    } else {
-        incorrectPopup;
-    }
-}
-        leifOption.addEventListener('click', incorrectPopup)
-//         document.getElementById("button3").addEventListener('click', incorrectPopup);
-//         document.getElementById("button4").addEventListener('click', incorrectPopup);
-//         document.getElementById("button5").addEventListener('click', incorrectPopup);
-//         document.getElementById("button6").addEventListener('click', incorrectPopup);
-//         document.getElementById("button7").addEventListener('click', incorrectPopup);
-//         document.getElementById("button8").addEventListener('click', incorrectPopup);
-//         document.getElementById("button9").addEventListener('click', incorrectPopup);
+// const correctAnswer = rolloOption;
+// const incorrectAnswer = answerGrid.slice(0-8);
+
+// function findCorrectAnswer (answerGrid) {
+//     for (let i = 0; i < answerGrid.length; i++) {
+//         const correctButton = answerGrid[i];
+//         if (correctButton.textContent === "Became Duke of Normandy") {
+//             correctPopup;
+//         }
 //     }
 // }
+
+
+// console.log(correctAnswer);
+// console.log(correctButton);
+// console.log(incorrectAnswer);
+
+// correctButton.addEventListener('click', correctPopup);
+// incorrectAnswer.addEventListener('click', incorrectPopup);
+
+// function checkAnswer(rolloOption) {
+//     const rolloAnswer = "Became Duke of Normandy";
+//     const userAnswer = answerGrid.addEventListener('click', );
+
+
+
+//     if (userAnswer === rolloAnswer) {
+//         correctPopup();
+//     } else {
+//         incorrectPopup();
+//     }
+// }
+
+/**
+ * Rollo Correct Answer Popup
+ */
+if (document.getElementsByClassName("viking-details") === document.getElementById("rollo")) {
+rolloOption.addEventListener('click', correctPopup);
+olavOption.addEventListener('click', incorrectPopup);
+leifOption.addEventListener('click', incorrectPopup);
+haraldOption.addEventListener('click', incorrectPopup);
+cnutOption.addEventListener('click', incorrectPopup);
+otherOption1.addEventListener('click', incorrectPopup);
+otherOption2.addEventListener('click', incorrectPopup);
+otherOption3.addEventListener('click', incorrectPopup);
+otherOption4.addEventListener('click', incorrectPopup);
+} else if (document.getElementsByClassName("viking-details") === document.getElementById("olav-haraldsson")) {
+rolloOption.addEventListener('click', incorrectPopup);
+olavOption.addEventListener('click', correctPopup);
+leifOption.addEventListener('click', incorrectPopup);
+haraldOption.addEventListener('click', incorrectPopup);
+cnutOption.addEventListener('click', incorrectPopup);
+otherOption1.addEventListener('click', incorrectPopup);
+otherOption2.addEventListener('click', incorrectPopup);
+otherOption3.addEventListener('click', incorrectPopup);
+otherOption4.addEventListener('click', incorrectPopup);
+} else if (document.getElementsByClassName("viking-details") === document.getElementById("leif-erikson")) {
+    rolloOption.addEventListener('click', incorrectPopup);
+    olavOption.addEventListener('click', incorrectPopup);
+    leifOption.addEventListener('click', correctPopup);
+    haraldOption.addEventListener('click', incorrectPopup);
+    cnutOption.addEventListener('click', incorrectPopup);
+    otherOption1.addEventListener('click', incorrectPopup);
+    otherOption2.addEventListener('click', incorrectPopup);
+    otherOption3.addEventListener('click', incorrectPopup);
+    otherOption4.addEventListener('click', incorrectPopup);
+} else if (document.getElementsByClassName("viking-details") === document.getElementById("harald-hardrada")) {
+    rolloOption.addEventListener('click', incorrectPopup);
+    olavOption.addEventListener('click', incorrectPopup);
+    leifOption.addEventListener('click', incorrectPopup);
+    haraldOption.addEventListener('click', correctPopup);
+    cnutOption.addEventListener('click', incorrectPopup);
+    otherOption1.addEventListener('click', incorrectPopup);
+    otherOption2.addEventListener('click', incorrectPopup);
+    otherOption3.addEventListener('click', incorrectPopup);
+    otherOption4.addEventListener('click', incorrectPopup); 
+} else if (document.getElementsByClassName("viking-details") === document.getElementById("cnut-the-great")) {
+    rolloOption.addEventListener('click', incorrectPopup);
+    olavOption.addEventListener('click', incorrectPopup);
+    leifOption.addEventListener('click', incorrectPopup);
+    haraldOption.addEventListener('click', incorrectPopup);
+    cnutOption.addEventListener('click', correctPopup);
+    otherOption1.addEventListener('click', incorrectPopup);
+    otherOption2.addEventListener('click', incorrectPopup);
+    otherOption3.addEventListener('click', incorrectPopup);
+    otherOption4.addEventListener('click', incorrectPopup); 
+} else {
+    otherOption1.addEventListener('click', incorrectPopup);
+    otherOption2.addEventListener('click', incorrectPopup);
+    otherOption3.addEventListener('click', incorrectPopup);
+    otherOption4.addEventListener('click', incorrectPopup); 
+}
