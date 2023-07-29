@@ -6,7 +6,7 @@ const startButton = document.getElementById("start-button");
 const modal = document.getElementById("correct-answer");
 // const correctOption = document.getElementById("button1");
 const modalIncorrect = document.getElementById("incorrect-answer");
-const incorrectOption = document.getElementById("button2");
+// const incorrectOption = document.getElementById("button2");
 const nextButton = document.getElementById("next-question-button");
 const incorrectNextButton = document.getElementById("incorrect-next-question-button");
 
@@ -72,7 +72,7 @@ const startGame = function (e) {
         initialStart === true;
         homeDisplay.style.display = "none";
         gameDisplay.style.display = "inline-flex";
-        randomOptions();
+        // randomOptions();
     } else {
         gameDisplay.style.display = "none";
     }
@@ -84,7 +84,7 @@ const goHome = function (e) {
         initialStart === true;
         gameDisplay.style.display = "none";
         homeDisplay.style.display = "block";
-        randomOptions();
+        // randomOptions();
     } else {
         homeDisplay.style.display = "none";
     }
@@ -131,7 +131,36 @@ const otherOption2 = document.getElementById("button7");
 const otherOption3 = document.getElementById("button8");
 const otherOption4 = document.getElementById("button9");
 
-// let answerGrid = [rolloOption, olavOption, leifOption, haraldOption, cnutOption, otherOption1, otherOption2, otherOption3, otherOption4];
+let answerGrid = [rolloOption, olavOption, leifOption, haraldOption, cnutOption, otherOption1, otherOption2, otherOption3, otherOption4];
+
+const rolloQuestion = document.getElementById("rollo-question");
+const olavQuestion = document.getElementById("olav-haraldsson-question");
+const leifQuestion = document.getElementById("leif-erikson-question");
+const haraldQuestion = document.getElementById("harald-hardrada-question");
+const cnutQuestion = document.getElementById("cnut-the-great-question");
+
+let questions = [rolloQuestion, olavQuestion, leifQuestion, haraldQuestion, cnutQuestion];
+
+function showRolloOption () {
+    rolloQuestion.style.display = 'block';
+    olavQuestion.style.display = 'none';
+    leifQuestion.style.display = 'none';
+    haraldQuestion.style.display = 'none';
+    cnutQuestion.style.display = 'none';
+}
+
+function showOlavOption () {
+    rolloQuestion.style.display = 'none';
+    olavQuestion.style.display = 'block';
+    leifQuestion.style.display = 'none';
+    haraldQuestion.style.display = 'none';
+    cnutQuestion.style.display = 'none';
+}
+
+rolloOption.addEventListener('click', showRolloQuestion);
+olavOption.addEventListener('click', showOlavOption);
+
+
 // console.log(answerGrid);
 
 // const correctAnswer = rolloOption;
@@ -170,7 +199,7 @@ const otherOption4 = document.getElementById("button9");
 /**
  * Rollo Correct Answer Popup
  */
-if (document.getElementsByClassName("viking-details") === document.getElementById("rollo")) {
+if (document.getElements)
 rolloOption.addEventListener('click', correctPopup);
 olavOption.addEventListener('click', incorrectPopup);
 leifOption.addEventListener('click', incorrectPopup);
@@ -180,49 +209,36 @@ otherOption1.addEventListener('click', incorrectPopup);
 otherOption2.addEventListener('click', incorrectPopup);
 otherOption3.addEventListener('click', incorrectPopup);
 otherOption4.addEventListener('click', incorrectPopup);
-} else if (document.getElementsByClassName("viking-details") === document.getElementById("olav-haraldsson")) {
-rolloOption.addEventListener('click', incorrectPopup);
-olavOption.addEventListener('click', correctPopup);
-leifOption.addEventListener('click', incorrectPopup);
-haraldOption.addEventListener('click', incorrectPopup);
-cnutOption.addEventListener('click', incorrectPopup);
-otherOption1.addEventListener('click', incorrectPopup);
-otherOption2.addEventListener('click', incorrectPopup);
-otherOption3.addEventListener('click', incorrectPopup);
-otherOption4.addEventListener('click', incorrectPopup);
-} else if (document.getElementsByClassName("viking-details") === document.getElementById("leif-erikson")) {
-    rolloOption.addEventListener('click', incorrectPopup);
-    olavOption.addEventListener('click', incorrectPopup);
-    leifOption.addEventListener('click', correctPopup);
-    haraldOption.addEventListener('click', incorrectPopup);
-    cnutOption.addEventListener('click', incorrectPopup);
-    otherOption1.addEventListener('click', incorrectPopup);
-    otherOption2.addEventListener('click', incorrectPopup);
-    otherOption3.addEventListener('click', incorrectPopup);
-    otherOption4.addEventListener('click', incorrectPopup);
-} else if (document.getElementsByClassName("viking-details") === document.getElementById("harald-hardrada")) {
-    rolloOption.addEventListener('click', incorrectPopup);
-    olavOption.addEventListener('click', incorrectPopup);
-    leifOption.addEventListener('click', incorrectPopup);
-    haraldOption.addEventListener('click', correctPopup);
-    cnutOption.addEventListener('click', incorrectPopup);
-    otherOption1.addEventListener('click', incorrectPopup);
-    otherOption2.addEventListener('click', incorrectPopup);
-    otherOption3.addEventListener('click', incorrectPopup);
-    otherOption4.addEventListener('click', incorrectPopup); 
-} else if (document.getElementsByClassName("viking-details") === document.getElementById("cnut-the-great")) {
-    rolloOption.addEventListener('click', incorrectPopup);
-    olavOption.addEventListener('click', incorrectPopup);
-    leifOption.addEventListener('click', incorrectPopup);
-    haraldOption.addEventListener('click', incorrectPopup);
-    cnutOption.addEventListener('click', correctPopup);
-    otherOption1.addEventListener('click', incorrectPopup);
-    otherOption2.addEventListener('click', incorrectPopup);
-    otherOption3.addEventListener('click', incorrectPopup);
-    otherOption4.addEventListener('click', incorrectPopup); 
-} else {
-    otherOption1.addEventListener('click', incorrectPopup);
-    otherOption2.addEventListener('click', incorrectPopup);
-    otherOption3.addEventListener('click', incorrectPopup);
-    otherOption4.addEventListener('click', incorrectPopup); 
-}
+
+
+// if (viking2) {
+// olavOption.addEventListener('click', correctPopup);
+// rolloOption.addEventListener('click', incorrectPopup);
+// leifOption.addEventListener('click', incorrectPopup);
+// haraldOption.addEventListener('click', incorrectPopup);
+// cnutOption.addEventListener('click', incorrectPopup);
+// otherOption1.addEventListener('click', incorrectPopup);
+// otherOption2.addEventListener('click', incorrectPopup);
+// otherOption3.addEventListener('click', incorrectPopup);
+// otherOption4.addEventListener('click', incorrectPopup);
+// }
+
+// if (viking3) {
+// leifOption.addEventListener('click', correctPopup);
+// rolloOption.addEventListener('click', incorrectPopup);
+// olavOption.addEventListener('click', incorrectPopup);
+// haraldOption.addEventListener('click', incorrectPopup);
+// cnutOption.addEventListener('click', incorrectPopup);
+// otherOption1.addEventListener('click', incorrectPopup);
+// otherOption2.addEventListener('click', incorrectPopup);
+// otherOption3.addEventListener('click', incorrectPopup);
+// otherOption4.addEventListener('click', incorrectPopup);
+// }
+
+// if (viking4) {
+// haraldOption.addEventListener('click', correctPopup);
+// }
+
+// if (viking5) {
+// cnutOption.addEventListener('click', correctPopup);
+// }
