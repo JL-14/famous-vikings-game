@@ -161,6 +161,13 @@ rolloOption.addEventListener('click', showRolloQuestion);
 olavOption.addEventListener('click', showOlavOption);
 
 
+function showQuestion (vikingBiogs) {
+    if vikingBiogs===viking2 {
+        olavQuestion.style.display = 'block';
+    }
+}
+
+
 // console.log(answerGrid);
 
 // const correctAnswer = rolloOption;
