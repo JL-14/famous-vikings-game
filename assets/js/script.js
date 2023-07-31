@@ -4,9 +4,9 @@ const homeDisplay = document.getElementById("home-screen");
 const startButton = document.getElementById("start-button");
 
 const modal = document.getElementById("correct-answer");
-// const correctOption = document.getElementById("button1");
+const correctOption = document.getElementById("button1");
 const modalIncorrect = document.getElementById("incorrect-answer");
-// const incorrectOption = document.getElementById("button2");
+const incorrectOption = document.getElementById("button2");
 const nextButton = document.getElementById("next-question-button");
 const incorrectNextButton = document.getElementById("incorrect-next-question-button");
 
@@ -15,6 +15,22 @@ const viking2 = document.getElementById("olav-haraldsson");
 const viking3 = document.getElementById("leif-erikson");
 const viking4 = document.getElementById("harald-hardrada");
 const viking5 = document.getElementById("cnut-the-great");
+
+const rolloOption = document.getElementById("button1");
+const olavOption = document.getElementById("button2");
+const leifOption = document.getElementById("button3");
+const haraldOption = document.getElementById("button4");
+const cnutOption = document.getElementById("button5");
+const otherOption1 = document.getElementById("button6");
+const otherOption2 = document.getElementById("button7");
+const otherOption3 = document.getElementById("button8");
+const otherOption4 = document.getElementById("button9");
+
+const rolloQuestion = document.getElementById("rollo-question");
+const olavQuestion = document.getElementById("olav-haraldsson-question");
+const leifQuestion = document.getElementById("leif-erikson-question");
+const haraldQuestion = document.getElementById("harald-hardrada-question");
+const cnutQuestion = document.getElementById("cnut-the-great-question");
 
 /* Let variables */
 
@@ -25,11 +41,20 @@ let vikingIndex = 0;
 let nextQuitButton = document.getElementById("next-quit-button");
 let nextIncorrectQuitButton = document.getElementById("incorrect-next-quit-button");
 let initialStart = false;
+let answerGrid = [rolloOption, olavOption, leifOption, haraldOption, cnutOption, otherOption1, otherOption2, otherOption3, otherOption4];
+let questions = [rolloQuestion, olavQuestion, leifQuestion, haraldQuestion, cnutQuestion];
 
-/**
- * Event listeners 
- *  Start Button:
-*/
+document.querySelector('#button1').textContent = options[0];
+document.querySelector('#button2').textContent = options[1];
+document.querySelector('#button3').textContent = options[2];
+document.querySelector('#button4').textContent = options[3];
+document.querySelector('#button5').textContent = options[4];
+document.querySelector('#button6').textContent = options[5];
+document.querySelector('#button7').textContent = options[6];
+document.querySelector('#button8').textContent = options[7];
+document.querySelector('#button9').textContent = options[8];
+
+/* Event Listeners*/
 document.addEventListener('DOMContentLoaded', () => {
 startButton.addEventListener('click', (e) => startGame(e));
 quitButton.addEventListener('click', (e) => goHome(e));
@@ -38,33 +63,16 @@ incorrectNextButton.addEventListener('click', showNextViking);
 nextQuitButton.addEventListener('click', (e) => goHome(e));
 nextIncorrectQuitButton.addEventListener('click', (e) => goHome(e));
 });
-// correctOption.addEventListener('click', correctPopup);
-// incorrectOption.addEventListener('click', incorrectPopup);
+correctOption.addEventListener('click', correctPopup);
+incorrectOption.addEventListener('click', incorrectPopup);
 
-/** Functions
- * 
+/* Functions */
+/**
+ * Starting Game:
+ * 1. Prevents default setting requiring click before click (i.e. double click) to start game
+ * 2. Identifies whether gameDisplay is active
+ * 3. Sets homeDisplay to inactive and activates gameDisplay
  */
-// function randomOptions() {
-//     for (let i = 0; i < options.length; i++) {
-//         let randomNum = Math.floor(Math.random() * options.length);
-//         let tempOptions = "";
-//         let currentOptions = options[i];
-//         let shuffledOptions = options[randomNum];
-
-//         tempOptions = currentOptions;
-//         options[i] = shuffledOptions;
-//         options[randomNum] = tempOptions;
-//     }
-    document.querySelector('#button1').textContent = options[0];
-    document.querySelector('#button2').textContent = options[1];
-    document.querySelector('#button3').textContent = options[2];
-    document.querySelector('#button4').textContent = options[3];
-    document.querySelector('#button5').textContent = options[4];
-    document.querySelector('#button6').textContent = options[5];
-    document.querySelector('#button7').textContent = options[6];
-    document.querySelector('#button8').textContent = options[7];
-    document.querySelector('#button9').textContent = options[8];
-// }
 
 const startGame = function (e) {
     e.preventDefault();
@@ -72,11 +80,17 @@ const startGame = function (e) {
         initialStart === true;
         homeDisplay.style.display = "none";
         gameDisplay.style.display = "inline-flex";
-        // randomOptions();
     } else {
         gameDisplay.style.display = "none";
     }
 }
+
+/**
+ * Quitting Game:
+ * 1. Prevents default setting requiring click before click (i.e. double click) to quit game
+ * 2. Identifies whether homeDisplay is active
+ * 3. Sets homeDisplay to active and hides gameDisplay
+ */
 
 const goHome = function (e) {
     e.preventDefault();
@@ -90,6 +104,12 @@ const goHome = function (e) {
     }
 }
 
+/**
+ * Answer feedback:
+ * 1. If answer is correct, modal display is activated and correct answer popup appears
+ * 2. If answer is incorrect, modalIncorrect activates incorrect answer popup
+ */
+
 function correctPopup () {
     modal.style.display = "block";
 }
@@ -97,7 +117,11 @@ function incorrectPopup () {
     modalIncorrect.style.display = "block";
 }
 
-// When the user clicks on Next Question button, close the modal and go to next question
+/**
+ * Next question function:
+ * 1. Sets Next question button on answer feedback popup to close the popup and move to the next question
+ */
+
 nextButton.onclick = function() {
 modal.style.display = "none";
 }
@@ -105,7 +129,12 @@ incorrectNextButton.onclick = function() {
 modalIncorrect.style.display = "none";
 }
 
-// Function to show the next viking
+/**
+ * Move to the next Viking in the list of Vikings (vikingBiogs) when the Button Next Question is clicked:
+ * 1. Set display of all vikings to hidden
+ * 2. Activate next Viking when Next Question is clicked through incrementing the vikings (vikingBiogs) using the index (vikingIndex)
+ */
+
 function showNextViking() {
     if (vikingIndex < vikingBiogs.length) {      
     // Hiding all Vikings apart from current
@@ -118,134 +147,38 @@ function showNextViking() {
     vikingIndex++;
 }
 // Showing the first list item initially
-    showNextViking();
-
-
-const rolloOption = document.getElementById("button1");
-const olavOption = document.getElementById("button2");
-const leifOption = document.getElementById("button3");
-const haraldOption = document.getElementById("button4");
-const cnutOption = document.getElementById("button5");
-const otherOption1 = document.getElementById("button6");
-const otherOption2 = document.getElementById("button7");
-const otherOption3 = document.getElementById("button8");
-const otherOption4 = document.getElementById("button9");
-
-let answerGrid = [rolloOption, olavOption, leifOption, haraldOption, cnutOption, otherOption1, otherOption2, otherOption3, otherOption4];
-
-const rolloQuestion = document.getElementById("rollo-question");
-const olavQuestion = document.getElementById("olav-haraldsson-question");
-const leifQuestion = document.getElementById("leif-erikson-question");
-const haraldQuestion = document.getElementById("harald-hardrada-question");
-const cnutQuestion = document.getElementById("cnut-the-great-question");
-
-let questions = [rolloQuestion, olavQuestion, leifQuestion, haraldQuestion, cnutQuestion];
-
-function showRolloOption () {
-    rolloQuestion.style.display = 'block';
-    olavQuestion.style.display = 'none';
-    leifQuestion.style.display = 'none';
-    haraldQuestion.style.display = 'none';
-    cnutQuestion.style.display = 'none';
-}
-
-function showOlavOption () {
-    rolloQuestion.style.display = 'none';
-    olavQuestion.style.display = 'block';
-    leifQuestion.style.display = 'none';
-    haraldQuestion.style.display = 'none';
-    cnutQuestion.style.display = 'none';
-}
-
-rolloOption.addEventListener('click', showRolloQuestion);
-olavOption.addEventListener('click', showOlavOption);
-
-
-function showQuestion (vikingBiogs) {
-    if vikingBiogs===viking2 {
-        olavQuestion.style.display = 'block';
-    }
-}
-
-
-// console.log(answerGrid);
-
-// const correctAnswer = rolloOption;
-// const incorrectAnswer = answerGrid.slice(0-8);
-
-// function findCorrectAnswer (answerGrid) {
-//     for (let i = 0; i < answerGrid.length; i++) {
-//         const correctButton = answerGrid[i];
-//         if (correctButton.textContent === "Became Duke of Normandy") {
-//             correctPopup;
-//         }
-//     }
-// }
-
-
-// console.log(correctAnswer);
-// console.log(correctButton);
-// console.log(incorrectAnswer);
-
-// correctButton.addEventListener('click', correctPopup);
-// incorrectAnswer.addEventListener('click', incorrectPopup);
-
-// function checkAnswer(rolloOption) {
-//     const rolloAnswer = "Became Duke of Normandy";
-//     const userAnswer = answerGrid.addEventListener('click', );
-
-
-
-//     if (userAnswer === rolloAnswer) {
-//         correctPopup();
-//     } else {
-//         incorrectPopup();
-//     }
-// }
+    showNextViking(); 
 
 /**
- * Rollo Correct Answer Popup
+ * Linking Question to the description of the Viking: (DRAFT)
+ * 1. Set first question as the Rollo question
+ * 2. Link the topics (Vikings) to the Questions using the dataset and switch attributes
+ * 3. Change question when the topic (viking1) changes
+ * 4. CURRENTLY GOES STARIGHT TO LAST CASE ON CLICK
  */
-if (document.getElements)
-rolloOption.addEventListener('click', correctPopup);
-olavOption.addEventListener('click', incorrectPopup);
-leifOption.addEventListener('click', incorrectPopup);
-haraldOption.addEventListener('click', incorrectPopup);
-cnutOption.addEventListener('click', incorrectPopup);
-otherOption1.addEventListener('click', incorrectPopup);
-otherOption2.addEventListener('click', incorrectPopup);
-otherOption3.addEventListener('click', incorrectPopup);
-otherOption4.addEventListener('click', incorrectPopup);
 
 
-// if (viking2) {
-// olavOption.addEventListener('click', correctPopup);
-// rolloOption.addEventListener('click', incorrectPopup);
-// leifOption.addEventListener('click', incorrectPopup);
-// haraldOption.addEventListener('click', incorrectPopup);
-// cnutOption.addEventListener('click', incorrectPopup);
-// otherOption1.addEventListener('click', incorrectPopup);
-// otherOption2.addEventListener('click', incorrectPopup);
-// otherOption3.addEventListener('click', incorrectPopup);
-// otherOption4.addEventListener('click', incorrectPopup);
-// }
+/* Attempted link of viking to question */
+const firstQuestion = document.getElementById("rollo-question");
 
-// if (viking3) {
-// leifOption.addEventListener('click', correctPopup);
-// rolloOption.addEventListener('click', incorrectPopup);
-// olavOption.addEventListener('click', incorrectPopup);
-// haraldOption.addEventListener('click', incorrectPopup);
-// cnutOption.addEventListener('click', incorrectPopup);
-// otherOption1.addEventListener('click', incorrectPopup);
-// otherOption2.addEventListener('click', incorrectPopup);
-// otherOption3.addEventListener('click', incorrectPopup);
-// otherOption4.addEventListener('click', incorrectPopup);
-// }
+function updateQuestion() {
+    const currentViking = viking1.dataset.topic;
+    let questionContent = "";
+    switch (currentViking) {
+        case 'rolloData':
+            questionContent = 'Question: What title did Rollo have in France?';
+            case 'olavData':
+                questionContent = 'Question: What landmark did Olav destroy?';
+                case 'leifData':
+                questionContent = 'Question: What was Harald known as?';
+                case 'haraldData':
+                    questionContent = 'Question: What was Harald known as?';
+                    case 'cnutData':
+                        questionContent = 'Question: What did Cnut rule over?';
+    }
+    firstQuestion.textContent = questionContent;
+}
 
-// if (viking4) {
-// haraldOption.addEventListener('click', correctPopup);
-// }
+updateQuestion();
 
-// if (viking5) {
-// cnutOption.addEventListener('click', correctPopup);
-// }
+correctOption.addEventListener('click', updateQuestion);
