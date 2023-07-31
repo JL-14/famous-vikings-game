@@ -56,12 +56,12 @@ document.querySelector('#button9').textContent = options[8];
 
 /* Event Listeners*/
 document.addEventListener('DOMContentLoaded', () => {
-startButton.addEventListener('click', (e) => startGame(e));
-quitButton.addEventListener('click', (e) => goHome(e));
-nextButton.addEventListener('click', showNextViking);
-incorrectNextButton.addEventListener('click', showNextViking);
-nextQuitButton.addEventListener('click', (e) => goHome(e));
-nextIncorrectQuitButton.addEventListener('click', (e) => goHome(e));
+    startButton.addEventListener('click', (e) => startGame(e));
+    quitButton.addEventListener('click', (e) => goHome(e));
+    nextButton.addEventListener('click', showNextViking);
+    incorrectNextButton.addEventListener('click', showNextViking);
+    nextQuitButton.addEventListener('click', (e) => goHome(e));
+    nextIncorrectQuitButton.addEventListener('click', (e) => goHome(e));
 });
 correctOption.addEventListener('click', correctPopup);
 incorrectOption.addEventListener('click', incorrectPopup);
@@ -110,10 +110,10 @@ const goHome = function (e) {
  * 2. If answer is incorrect, modalIncorrect activates incorrect answer popup
  */
 
-function correctPopup () {
+function correctPopup() {
     modal.style.display = "block";
 }
-function incorrectPopup () {
+function incorrectPopup() {
     modalIncorrect.style.display = "block";
 }
 
@@ -122,11 +122,11 @@ function incorrectPopup () {
  * 1. Sets Next question button on answer feedback popup to close the popup and move to the next question
  */
 
-nextButton.onclick = function() {
-modal.style.display = "none";
+nextButton.onclick = function () {
+    modal.style.display = "none";
 }
-incorrectNextButton.onclick = function() {
-modalIncorrect.style.display = "none";
+incorrectNextButton.onclick = function () {
+    modalIncorrect.style.display = "none";
 }
 
 /**
@@ -136,18 +136,18 @@ modalIncorrect.style.display = "none";
  */
 
 function showNextViking() {
-    if (vikingIndex < vikingBiogs.length) {      
-    // Hiding all Vikings apart from current
-    for (let i = 0; i < vikingBiogs.length; i++) {         
-    vikingBiogs[i].style.display = 'none';
+    if (vikingIndex < vikingBiogs.length) {
+        // Hiding all Vikings apart from current
+        for (let i = 0; i < vikingBiogs.length; i++) {
+            vikingBiogs[i].style.display = 'none';
+        }
     }
-} 
     // Showing the next viking
     vikingBiogs[vikingIndex].style.display = 'inline-flex';
     vikingIndex++;
 }
 // Showing the first list item initially
-    showNextViking(); 
+showNextViking();
 
 /**
  * Linking Question to the description of the Viking: (DRAFT)
@@ -156,7 +156,6 @@ function showNextViking() {
  * 3. Change question when the topic (viking1) changes
  * 4. CURRENTLY GOES STARIGHT TO LAST CASE ON CLICK
  */
-
 
 /* Attempted link of viking to question */
 const firstQuestion = document.getElementById("rollo-question");
@@ -167,14 +166,14 @@ function updateQuestion() {
     switch (currentViking) {
         case 'rolloData':
             questionContent = 'Question: What title did Rollo have in France?';
-            case 'olavData':
-                questionContent = 'Question: What landmark did Olav destroy?';
-                case 'leifData':
-                questionContent = 'Question: What was Harald known as?';
-                case 'haraldData':
-                    questionContent = 'Question: What was Harald known as?';
-                    case 'cnutData':
-                        questionContent = 'Question: What did Cnut rule over?';
+        case 'olavData':
+            questionContent = 'Question: What landmark did Olav destroy?';
+        case 'leifData':
+            questionContent = 'Question: What was Harald known as?';
+        case 'haraldData':
+            questionContent = 'Question: What was Harald known as?';
+        case 'cnutData':
+            questionContent = 'Question: What did Cnut rule over?';
     }
     firstQuestion.textContent = questionContent;
 }
