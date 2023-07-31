@@ -157,8 +157,20 @@ showNextViking();
  * 4. CURRENTLY GOES STARIGHT TO LAST CASE ON CLICK
  */
 
+// /* Create dictionaries for matching */
+// const vikingLink [
+//     {
+//         'name' : 'Rollo',
+//         'answer' : 'Became Duke of Normandy',
+//     },
+//     {
+//         'name' : 'olav',
+//         'answer' : 'Discovered America',
+//     }
+// ]
+
 /* Attempted link of viking to question */
-const firstQuestion = document.getElementById("rollo-question");
+const firstQuestion = rolloQuestion;
 
 function updateQuestion() {
     const currentViking = viking1.dataset.topic;
@@ -168,6 +180,7 @@ function updateQuestion() {
             questionContent = 'Question: What title did Rollo have in France?';
         case 'olavData':
             questionContent = 'Question: What landmark did Olav destroy?';
+            break;
         case 'leifData':
             questionContent = 'Question: What was Harald known as?';
         case 'haraldData':
