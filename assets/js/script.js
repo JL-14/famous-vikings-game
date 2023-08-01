@@ -26,6 +26,7 @@ const otherOption2 = document.getElementById("button7");
 const otherOption3 = document.getElementById("button8");
 const otherOption4 = document.getElementById("button9");
 
+const questionArea = document.getElementsByClassName("question");
 const rolloQuestion = document.getElementById("rollo-question");
 const olavQuestion = document.getElementById("olav-haraldsson-question");
 const leifQuestion = document.getElementById("leif-erikson-question");
@@ -33,11 +34,11 @@ const haraldQuestion = document.getElementById("harald-hardrada-question");
 const cnutQuestion = document.getElementById("cnut-the-great-question");
 
 /* Let variables */
-
 let options = ["Became Duke of Normandy", "Discovered America", "Established North Sea Empire", "The Last Great Viking", "Made London Bridge fall down", "Carried a 6 foot axe", "Had a blue tooth", "Conquered St Petersburg", "Invented the compass"];
 let quitButton = document.getElementById("quit-button");
 let vikingBiogs = [viking1, viking2, viking3, viking4, viking5];
 let vikingIndex = 0;
+let questionIndex = 0;
 let nextQuitButton = document.getElementById("next-quit-button");
 let nextIncorrectQuitButton = document.getElementById("incorrect-next-quit-button");
 let initialStart = false;
@@ -59,7 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
     startButton.addEventListener('click', (e) => startGame(e));
     quitButton.addEventListener('click', (e) => goHome(e));
     nextButton.addEventListener('click', showNextViking);
+    nextButton.addEventListener('click', showNextQuestion);
     incorrectNextButton.addEventListener('click', showNextViking);
+    incorrectNextButton.addEventListener('click', showNextQuestion);
     nextQuitButton.addEventListener('click', (e) => goHome(e));
     nextIncorrectQuitButton.addEventListener('click', (e) => goHome(e));
 });
@@ -170,27 +173,41 @@ showNextViking();
 // ]
 
 /* Attempted link of viking to question */
-const firstQuestion = rolloQuestion;
+// const firstQuestion = rolloQuestion;
 
-function updateQuestion() {
-    const currentViking = viking1.dataset.topic;
-    let questionContent = "";
-    switch (currentViking) {
-        case 'rolloData':
-            questionContent = 'Question: What title did Rollo have in France?';
-        case 'olavData':
-            questionContent = 'Question: What landmark did Olav destroy?';
-            break;
-        case 'leifData':
-            questionContent = 'Question: What was Harald known as?';
-        case 'haraldData':
-            questionContent = 'Question: What was Harald known as?';
-        case 'cnutData':
-            questionContent = 'Question: What did Cnut rule over?';
+// function updateQuestion() {
+//     const currentViking = viking1.dataset.topic;
+//     let questionContent = "";
+//     switch (currentViking) {
+//         case 'rolloData':
+//             questionContent = 'Question: What title did Rollo have in France?';
+//         case 'olavData':
+//             questionContent = 'Question: What landmark did Olav destroy?';
+//             break;
+//         case 'leifData':
+//             questionContent = 'Question: What was Harald known as?';
+//         case 'haraldData':
+//             questionContent = 'Question: What was Harald known as?';
+//         case 'cnutData':
+//             questionContent = 'Question: What did Cnut rule over?';
+//     }
+//     firstQuestion.textContent = questionContent;
+// }
+
+// updateQuestion();
+
+// correctOption.addEventListener('click', updateQuestion);
+
+function showNextQuestion() {
+    if (questionIndex < questions.length) {
+        // Hiding all Vikings apart from current
+        for (let i = 0; i < questions.length; i++) {
+            questions[i].style.display = 'none';
+        }
     }
-    firstQuestion.textContent = questionContent;
+    // Showing the next question
+    questions[questionIndex].style.display = 'inline-flex';
+    questionIndex++;
 }
-
-updateQuestion();
-
-correctOption.addEventListener('click', updateQuestion);
+// Showing the first list item initially
+showNextQuestion();

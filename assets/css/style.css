@@ -11,7 +11,7 @@ body {
     background-image : url("../images/game-background.jpg");
     background-color: #CE3A08;
     background-size: cover;
-    overflow: hidden;
+    overflow: auto;
     font-family: 'Acme', sans-serif;
     color: #fff0db;
     height: 100%;
@@ -177,8 +177,13 @@ h1, h2 {
     margin-left: 3%;
     text-align: center;
 }
+
+.question {
+    display: 'none'
+}
+
 #rollo-question {
-    display: inline-flex;
+    display: none;
 }
 
 #olav-haraldsson {
