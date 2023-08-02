@@ -211,3 +211,22 @@ function showNextQuestion() {
 }
 // Showing the first list item initially
 showNextQuestion();
+
+/* Matching tile to question */
+
+    // Get all buttons with class "answer-button"
+    const answerButtons = document.querySelectorAll(".answer-button");
+
+    // Add click event listener to each button
+    answerButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            // Get the data-question-id attribute of the clicked button
+            const questionId = button.dataset.questionId;
+
+            // Use the questionId to select the corresponding question element
+            const question = document.querySelector(`[data-question-id="${questionId}"]`);
+
+            // Do whatever you want with the question element
+            console.log(`You clicked on question ${questionId}: ${question.querySelector("p").textContent}`);
+        });
+    });
