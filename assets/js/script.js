@@ -4,9 +4,9 @@ const homeDisplay = document.getElementById("home-screen");
 const startButton = document.getElementById("start-button");
 
 const modal = document.getElementById("correct-answer");
-const correctOption = document.getElementById("button1");
+// const correctOption = document.getElementById("button1");
 const modalIncorrect = document.getElementById("incorrect-answer");
-const incorrectOption = document.getElementById("button2");
+// const incorrectOption = document.getElementById("button2");
 const nextButton = document.getElementById("next-question-button");
 const incorrectNextButton = document.getElementById("incorrect-next-question-button");
 
@@ -66,8 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
     nextQuitButton.addEventListener('click', (e) => goHome(e));
     nextIncorrectQuitButton.addEventListener('click', (e) => goHome(e));
 });
-correctOption.addEventListener('click', correctPopup);
-incorrectOption.addEventListener('click', incorrectPopup);
+// correctOption.addEventListener('click', correctPopup);
+// incorrectOption.addEventListener('click', incorrectPopup);
 
 /* Functions */
 /**
@@ -157,46 +157,7 @@ showNextViking();
  * 1. Set first question as the Rollo question
  * 2. Link the topics (Vikings) to the Questions using the dataset and switch attributes
  * 3. Change question when the topic (viking1) changes
- * 4. CURRENTLY GOES STARIGHT TO LAST CASE ON CLICK
  */
-
-// /* Create dictionaries for matching */
-// const vikingLink [
-//     {
-//         'name' : 'Rollo',
-//         'answer' : 'Became Duke of Normandy',
-//     },
-//     {
-//         'name' : 'olav',
-//         'answer' : 'Discovered America',
-//     }
-// ]
-
-/* Attempted link of viking to question */
-// const firstQuestion = rolloQuestion;
-
-// function updateQuestion() {
-//     const currentViking = viking1.dataset.topic;
-//     let questionContent = "";
-//     switch (currentViking) {
-//         case 'rolloData':
-//             questionContent = 'Question: What title did Rollo have in France?';
-//         case 'olavData':
-//             questionContent = 'Question: What landmark did Olav destroy?';
-//             break;
-//         case 'leifData':
-//             questionContent = 'Question: What was Harald known as?';
-//         case 'haraldData':
-//             questionContent = 'Question: What was Harald known as?';
-//         case 'cnutData':
-//             questionContent = 'Question: What did Cnut rule over?';
-//     }
-//     firstQuestion.textContent = questionContent;
-// }
-
-// updateQuestion();
-
-// correctOption.addEventListener('click', updateQuestion);
 
 function showNextQuestion() {
     if (questionIndex < questions.length) {
@@ -215,7 +176,7 @@ showNextQuestion();
 /* Matching tile to question */
 
     // Get all buttons with class "answer-button"
-    const answerButtons = document.querySelectorAll(".answer-button");
+    const answerButtons = document.querySelectorAll(".cell");
 
     // Add click event listener to each button
     answerButtons.forEach((button) => {
@@ -224,9 +185,9 @@ showNextQuestion();
             const questionId = button.dataset.questionId;
 
             // Use the questionId to select the corresponding question element
-            const question = document.querySelector(`[data-question-id="${questionId}"]`);
+            const question = document.querySelector(`[data-viking="${questionId}"]`);
 
             // Do whatever you want with the question element
-            console.log(`You clicked on question ${questionId}: ${question.querySelector("p").textContent}`);
+            correctPopup ();
         });
     });
