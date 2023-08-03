@@ -182,16 +182,15 @@ showNextQuestion();
     answerButtons.forEach((button) => {
         button.addEventListener("click", () => {
             // Get the data-viking attribute of the clicked button
-            const questionId = button.dataset.questionId;
+            const questionData = button.dataset.viking;
+            console.log(questionData);
 
-            // Use the questionId to select the corresponding question element
-            const question = document.querySelector(`[data-viking="${questionId}"]`);
-
-            // Do whatever you want with the question element
-            if (question === button) {
+            if (button.textContent === questionData) {
+                console.log("match");
                 correctPopup();
             } else {
-                incorrectPopup;
+                console.log("wrong");
+                incorrectPopup();
             }
         });
     });
