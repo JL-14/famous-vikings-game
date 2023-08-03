@@ -126,6 +126,20 @@ h1, h2 {
     display: none;
 }
 
+ /* Instructions (background) pop-up box */
+ .instructions-popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    margin-left: 0;
+    margin-top: 0;
+    width: 60%;
+    height: auto;
+    overflow: auto;
+    background-color: #fff0db;
+    border: 5px solid #402e32;
+  }
+
 /* Game Page */
 
 /* Visibility of Game Screen */

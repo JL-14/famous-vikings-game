@@ -77,6 +77,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* Functions */
 /**
+ * Show instructions
+ * 
+ */
+
+const instructions = document.getElementById("instructions");
+
+/**
  * Starting Game:
  * 1. Prevents default setting requiring click before click (i.e. double click) to start game
  * 2. Identifies whether gameDisplay is active
