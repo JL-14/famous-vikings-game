@@ -44,6 +44,7 @@ let nextIncorrectQuitButton = document.getElementById("incorrect-next-quit-butto
 let initialStart = false;
 let answerGrid = [rolloOption, olavOption, leifOption, haraldOption, cnutOption, otherOption1, otherOption2, otherOption3, otherOption4];
 let questions = [rolloQuestion, olavQuestion, leifQuestion, haraldQuestion, cnutQuestion];
+let questionText = ["Question: What title did Rollo have in France?", "Question: What landmark did Olav destroy?", "Question: What did Leif find?", "Question: What was Harald known as?", "Question: What did Cnut rule over?"];
 
 document.querySelector('#button1').textContent = options[0];
 document.querySelector('#button2').textContent = options[1];
@@ -173,7 +174,11 @@ function showNextQuestion() {
 // Showing the first list item initially
 showNextQuestion();
 
+
 /* Matching tile to question */
+
+let currentQuestion = questions[questionIndex];
+console.log(currentQuestion);
 
     // Get all buttons with class "cell"
     const answerButtons = document.querySelectorAll(".cell");
@@ -182,10 +187,12 @@ showNextQuestion();
     answerButtons.forEach((button) => {
         button.addEventListener("click", () => {
             // Get the data-viking attribute of the clicked button
-            const questionData = button.dataset.viking;
-            console.log(questionData);
 
-            if (button.textContent === questionData) {
+            const currentQuestionData = currentQuestion.dataset.data;
+            console.log(currentQuestionData);
+            console.log(button.textContent);
+
+            if (button.textContent === currentQuestionData) {
                 console.log("match");
                 correctPopup();
             } else {
