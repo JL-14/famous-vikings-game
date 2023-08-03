@@ -127,16 +127,11 @@ function incorrectPopup() {
 }
 
 /**
- * Next question function:
+ * Next question function with score update:
  * 1. Sets Next question button on answer feedback popup to close the popup and move to the next question
+ * 2. Update scores on correct or incorrect answer
  */
 
-
-
-/**
- * Add scores for right and wrong answers
- * 
- */
 nextButton.onclick = function() {
 let oldRightScore = parseInt(document.getElementById("right").innerText);
 	document.getElementById("right").innerText = ++oldRightScore;
