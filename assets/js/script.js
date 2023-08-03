@@ -160,6 +160,8 @@ showNextViking();
  * 3. Change question when the topic (viking1) changes
  */
 
+console.log(questionIndex);
+
 function showNextQuestion() {
     if (questionIndex < questions.length) {
         // Hiding all Vikings apart from current
@@ -177,13 +179,23 @@ console.log(questionIndex);
 
 /* Matching tile to question */
 
+let answerIndex = 0;
+
+if (answerIndex < questions.length) {
+    // Hiding all Vikings apart from current
+    for (let i = 0; i < questions.length; i++) {
+        answerIndex[i];
+    }
+}
+console.log(answerIndex);
+
     const answerButtons = document.querySelectorAll(".cell");
 
     answerButtons.forEach((button) => {
         button.addEventListener("click", () => {
-            console.log(questionIndex);
-            if (questionIndex <= 4) {
-              let currentQuestion = questions[questionIndex];
+            console.log(answerIndex);
+            if (answerIndex <= 5) {
+              let currentQuestion = questions[answerIndex];
               const currentQuestionData = currentQuestion.dataset.viking;
               console.log(currentQuestionData);
               console.log(button.textContent);
@@ -198,5 +210,6 @@ console.log(questionIndex);
               console.log("out of index");
               incorrectPopup();
             }
+            answerIndex++;
         });
     });
