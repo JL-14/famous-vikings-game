@@ -173,31 +173,30 @@ function showNextQuestion() {
 }
 // Showing the first list item initially
 showNextQuestion();
-
+console.log(questionIndex);
 
 /* Matching tile to question */
 
-let currentQuestion = questions[questionIndex];
-console.log(currentQuestion);
-
-    // Get all buttons with class "cell"
     const answerButtons = document.querySelectorAll(".cell");
 
-    // Add click event listener to each button
     answerButtons.forEach((button) => {
         button.addEventListener("click", () => {
-            // Get the data-viking attribute of the clicked button
-
-            const currentQuestionData = currentQuestion.dataset.data;
-            console.log(currentQuestionData);
-            console.log(button.textContent);
-
-            if (button.textContent === currentQuestionData) {
-                console.log("match");
-                correctPopup();
+            console.log(questionIndex);
+            if (questionIndex <= 4) {
+              let currentQuestion = questions[questionIndex];
+              const currentQuestionData = currentQuestion.dataset.viking;
+              console.log(currentQuestionData);
+              console.log(button.textContent);
+              if (button.textContent === currentQuestionData) {
+                  console.log("match");
+                  correctPopup();
+              } else {
+                  console.log("wrong");
+                  incorrectPopup();
+              }
             } else {
-                console.log("wrong");
-                incorrectPopup();
+              console.log("out of index");
+              incorrectPopup();
             }
         });
     });
