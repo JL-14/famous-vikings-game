@@ -33,18 +33,23 @@ const leifQuestion = document.getElementById("leif-erikson-question");
 const haraldQuestion = document.getElementById("harald-hardrada-question");
 const cnutQuestion = document.getElementById("cnut-the-great-question");
 
+const answerButtons = document.querySelectorAll(".cell");
+
 /* Let variables */
 let options = ["Became Duke of Normandy", "Made London Bridge fall down", "Discovered America", "The Last Great Viking", "Established North Sea Empire", "Carried a 6 foot axe", "Had a blue tooth", "Conquered St Petersburg", "Invented the compass"];
 let quitButton = document.getElementById("quit-button");
 let vikingBiogs = [viking1, viking2, viking3, viking4, viking5];
 let vikingIndex = 0;
 let questionIndex = 0;
+let answerIndex = 0;
 let nextQuitButton = document.getElementById("next-quit-button");
 let nextIncorrectQuitButton = document.getElementById("incorrect-next-quit-button");
 let initialStart = false;
 let answerGrid = [rolloOption, olavOption, leifOption, haraldOption, cnutOption, otherOption1, otherOption2, otherOption3, otherOption4];
 let questions = [rolloQuestion, olavQuestion, leifQuestion, haraldQuestion, cnutQuestion];
 let questionText = ["Question: What title did Rollo have in France?", "Question: What landmark did Olav destroy?", "Question: What did Leif find?", "Question: What was Harald known as?", "Question: What did Cnut rule over?"];
+
+
 
 document.querySelector('#button1').textContent = options[0];
 document.querySelector('#button2').textContent = options[1];
@@ -126,10 +131,20 @@ function incorrectPopup() {
  * 1. Sets Next question button on answer feedback popup to close the popup and move to the next question
  */
 
-nextButton.onclick = function () {
+
+
+/**
+ * Add scores for right and wrong answers
+ * 
+ */
+nextButton.onclick = function() {
+let oldRightScore = parseInt(document.getElementById("right").innerText);
+	document.getElementById("right").innerText = ++oldRightScore;
     modal.style.display = "none";
 }
-incorrectNextButton.onclick = function () {
+incorrectNextButton.onclick = function() {
+    let oldWrongScore = parseInt(document.getElementById("wrong").innerText);
+	document.getElementById("wrong").innerText = ++oldWrongScore;
     modalIncorrect.style.display = "none";
 }
 
@@ -177,39 +192,40 @@ function showNextQuestion() {
 showNextQuestion();
 console.log(questionIndex);
 
-/* Matching tile to question */
-
-let answerIndex = 0;
+/**
+ * Matching tile to question
+ * 
+ *  
+ * 
+ */
 
 if (answerIndex < questions.length) {
-    // Hiding all Vikings apart from current
     for (let i = 0; i < questions.length; i++) {
         answerIndex[i];
     }
 }
 console.log(answerIndex);
 
-    const answerButtons = document.querySelectorAll(".cell");
-
-    answerButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-            console.log(answerIndex);
-            if (answerIndex <= 5) {
-              let currentQuestion = questions[answerIndex];
-              const currentQuestionData = currentQuestion.dataset.viking;
-              console.log(currentQuestionData);
-              console.log(button.textContent);
-              if (button.textContent === currentQuestionData) {
-                  console.log("match");
-                  correctPopup();
-              } else {
-                  console.log("wrong");
-                  incorrectPopup();
-              }
+answerButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        console.log(answerIndex);
+        if (answerIndex <= 5) {
+            let currentQuestion = questions[answerIndex];
+            const currentQuestionData = currentQuestion.dataset.viking;
+            console.log(currentQuestionData);
+            console.log(button.textContent);
+            if (button.textContent === currentQuestionData) {
+                console.log("match");
+                correctPopup();
             } else {
-              console.log("out of index");
-              incorrectPopup();
+                console.log("wrong");
+                incorrectPopup();
             }
-            answerIndex++;
-        });
+        } else {
+            console.log("out of index");
+            incorrectPopup();
+        }
+        answerIndex++;
     });
+});
+
