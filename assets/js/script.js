@@ -34,7 +34,7 @@ const haraldQuestion = document.getElementById("harald-hardrada-question");
 const cnutQuestion = document.getElementById("cnut-the-great-question");
 
 /* Let variables */
-let options = ["Became Duke of Normandy", "Discovered America", "Established North Sea Empire", "The Last Great Viking", "Made London Bridge fall down", "Carried a 6 foot axe", "Had a blue tooth", "Conquered St Petersburg", "Invented the compass"];
+let options = ["Became Duke of Normandy", "Made London Bridge fall down", "Discovered America", "The Last Great Viking", "Established North Sea Empire", "Carried a 6 foot axe", "Had a blue tooth", "Conquered St Petersburg", "Invented the compass"];
 let quitButton = document.getElementById("quit-button");
 let vikingBiogs = [viking1, viking2, viking3, viking4, viking5];
 let vikingIndex = 0;
