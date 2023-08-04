@@ -82,6 +82,12 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 
 const instructions = document.getElementById("instructions");
+const instructionsLink = document.getElementById("instructions-link");
+instructionsLink.addEventListener('click', displayInstructions);
+function displayInstructions() {
+    instructions.style.display = "block";
+    
+}
 
 /**
  * Starting Game:
