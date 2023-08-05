@@ -4,9 +4,7 @@ const homeDisplay = document.getElementById("home-screen");
 const startButton = document.getElementById("start-button");
 
 const modal = document.getElementById("correct-answer");
-// const correctOption = document.getElementById("button1");
 const modalIncorrect = document.getElementById("incorrect-answer");
-// const incorrectOption = document.getElementById("button2");
 const nextButton = document.getElementById("next-question-button");
 const incorrectNextButton = document.getElementById("incorrect-next-question-button");
 
@@ -50,8 +48,6 @@ let answerGrid = [rolloOption, olavOption, leifOption, haraldOption, cnutOption,
 let questions = [rolloQuestion, olavQuestion, leifQuestion, haraldQuestion, cnutQuestion];
 let questionText = ["Question: What title did Rollo have in France?", "Question: What landmark did Olav destroy?", "Question: What did Leif find?", "Question: What was Harald known as?", "Question: What did Cnut rule over?"];
 
-
-
 document.querySelector('#button1').textContent = options[0];
 document.querySelector('#button2').textContent = options[1];
 document.querySelector('#button3').textContent = options[2];
@@ -72,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
     incorrectNextButton.addEventListener('click', showNextQuestion);
     nextQuitButton.addEventListener('click', (e) => goHome(e));
     nextIncorrectQuitButton.addEventListener('click', (e) => goHome(e));
-    instructions.addEventListener('click', displayInstructions);
 });
 // correctOption.addEventListener('click', correctPopup);
 // incorrectOption.addEventListener('click', incorrectPopup);
@@ -83,19 +78,14 @@ document.addEventListener('DOMContentLoaded', () => {
  * 
  */
 
-// const closeInstructions = document.querySelector("[data-close-instructions]");
-// closeInstructions.addEventListener('click', () => {
-//     dialogInstructions.close();
-// })
-
 const instructions = document.getElementById("instructions");
+
 const instructionsLink = document.getElementById("instructions-link");
+instructionsLink.addEventListener('click', () => instructions.style.display = "block");
 
-instructionsLink.addEventListener('click', displayInstructions);
+const closeInstructions = document.getElementById("close-instructions");
+closeInstructions.addEventListener('click', () => instructions.style.display = "none");
 
-function displayInstructions() {
-    instructions.style.display = "block";
-}
 
 /**
  * Starting Game:
@@ -124,6 +114,7 @@ const startGame = function (e) {
 
 const goHome = function (e) {
     e.preventDefault();
+    window.addEventListener('click',()=>{ location.reload()});
     if (homeDisplay.style.display === "none" || initialStart === false) {
         initialStart === true;
         gameDisplay.style.display = "none";
@@ -172,16 +163,13 @@ incorrectNextButton.onclick = function() {
 
 function showNextViking() {
     if (vikingIndex < vikingBiogs.length) {
-        // Hiding all Vikings apart from current
         for (let i = 0; i < vikingBiogs.length; i++) {
             vikingBiogs[i].style.display = 'none';
         }
     }
-    // Showing the next viking
     vikingBiogs[vikingIndex].style.display = 'inline-flex';
     vikingIndex++;
 }
-// Showing the first list item initially
 showNextViking();
 
 /**
@@ -191,21 +179,16 @@ showNextViking();
  * 3. Change question when the topic (viking1) changes
  */
 
-console.log(questionIndex);
-
 function showNextQuestion() {
     if (questionIndex < questions.length) {
         for (let i = 0; i < questions.length; i++) {
             questions[i].style.display = 'none';
         }
     }
-    // Showing the next question
     questions[questionIndex].style.display = 'inline-flex';
     questionIndex++;
 }
-// Showing the first list item initially
 showNextQuestion();
-console.log(questionIndex);
 
 /**
  * Matching tile to question
@@ -219,7 +202,6 @@ if (answerIndex < questions.length) {
         answerIndex[i];
     }
 }
-console.log(answerIndex);
 
 answerButtons.forEach((button) => {
     button.addEventListener("click", () => {

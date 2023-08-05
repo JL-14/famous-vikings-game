@@ -121,17 +121,41 @@ h1, h2 {
 
 /* Instructions */
 
-/* Visibility of Instructions Screen */
 #instructions {
     display: none;
+    position: fixed;
+    margin-left: 25%;
+    margin-top: -25%;
+    width: 50%;
+    height: auto;
+    padding: 20px;
+    background-color: #fff0db;
+    color: #402e32;
+    border: 5px solid #402e32;
+    border-radius: 0.25rem;
 }
 
 #instructions-link {
     cursor: pointer;
 }
 
-.close-instructions {
+#close-instructions {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-color:#FF2A22;
+    color: #fff0db;
+    font-weight: bold;
+    margin-top: 15px;
   }
+
+#close-instructions:hover {
+    background: rgba(255, 248, 240, 1);
+    color: #FF2A22;
+    box-shadow: 0 6px 20px #5f4c4c;
+    cursor: pointer;
+}
 
 /* Game Page */
 
