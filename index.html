@@ -36,7 +36,9 @@
                     </a>
                 </li>
                 <li id="instructions-link" aria-label="Click here for instructions how to play.">
+                    <a href="#instructions">
                     Instructions
+                    </a>
                 </li>
                 <li aria-label="Click here to send us an e-mail.">
                     <a href="mailto:info@vikinggames.co.uk">
@@ -83,7 +85,7 @@
             </div>
         </div>
         <!-- Instructions -->
-        <aside id="instructions" class="instructions-popup">
+        <div id="instructions" class="modal-popup">
             <h2>
                 Instructions how to play the Famous Viking Game
             </h2>
@@ -93,11 +95,11 @@
                 Every right answer gives you 1 point, and if you score 9 points you are officially fit
                 to be a Viking!
             <div class="close-instructions">
-                <button data-type="submit">
+                <button id = "close-instr" data-close-instructions>
                     Close Instructions
                 </button>
             </div>
-        </aside>
+        </div>
         <!-- Game Screen -->
         <section id="game-screen">
             <!-- Vikings section -->

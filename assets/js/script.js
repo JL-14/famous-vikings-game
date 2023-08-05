@@ -10,6 +10,7 @@ const modalIncorrect = document.getElementById("incorrect-answer");
 const nextButton = document.getElementById("next-question-button");
 const incorrectNextButton = document.getElementById("incorrect-next-question-button");
 
+
 const viking1 = document.getElementById("rollo");
 const viking2 = document.getElementById("olav-haraldsson");
 const viking3 = document.getElementById("leif-erikson");
@@ -71,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     incorrectNextButton.addEventListener('click', showNextQuestion);
     nextQuitButton.addEventListener('click', (e) => goHome(e));
     nextIncorrectQuitButton.addEventListener('click', (e) => goHome(e));
+    instructions.addEventListener('click', displayInstructions);
 });
 // correctOption.addEventListener('click', correctPopup);
 // incorrectOption.addEventListener('click', incorrectPopup);
@@ -81,12 +83,18 @@ document.addEventListener('DOMContentLoaded', () => {
  * 
  */
 
+// const closeInstructions = document.querySelector("[data-close-instructions]");
+// closeInstructions.addEventListener('click', () => {
+//     dialogInstructions.close();
+// })
+
 const instructions = document.getElementById("instructions");
 const instructionsLink = document.getElementById("instructions-link");
+
 instructionsLink.addEventListener('click', displayInstructions);
+
 function displayInstructions() {
     instructions.style.display = "block";
-    
 }
 
 /**
@@ -187,7 +195,6 @@ console.log(questionIndex);
 
 function showNextQuestion() {
     if (questionIndex < questions.length) {
-        // Hiding all Vikings apart from current
         for (let i = 0; i < questions.length; i++) {
             questions[i].style.display = 'none';
         }
@@ -216,12 +223,9 @@ console.log(answerIndex);
 
 answerButtons.forEach((button) => {
     button.addEventListener("click", () => {
-        console.log(answerIndex);
         if (answerIndex <= 5) {
             let currentQuestion = questions[answerIndex];
             const currentQuestionData = currentQuestion.dataset.viking;
-            console.log(currentQuestionData);
-            console.log(button.textContent);
             if (button.textContent === currentQuestionData) {
                 console.log("match");
                 correctPopup();
