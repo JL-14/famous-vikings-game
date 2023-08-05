@@ -500,6 +500,9 @@ h1, h2 {
     cursor: pointer;
 }
 
+#success-finish-screen {
+    display: none;
+}
 
 /* Footer */
 .footer {
