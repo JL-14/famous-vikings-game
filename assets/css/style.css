@@ -11,7 +11,7 @@ body {
     background-image : url("../images/game-background.jpg");
     background-color: #CE3A08;
     background-size: cover;
-    overflow: auto;
+    overflow: hidden;
     font-family: 'Acme', sans-serif;
     color: #fff0db;
     height: 100%;
