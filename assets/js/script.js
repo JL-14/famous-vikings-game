@@ -79,12 +79,15 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 
 const instructions = document.getElementById("instructions");
+const overlay = document.getElementsByClassName("overlay");
 
 const instructionsLink = document.getElementById("instructions-link");
 instructionsLink.addEventListener('click', () => instructions.style.display = "block");
+// instructionsLink.addEventListener('click', () => overlay.style.display = "block");
 
 const closeInstructions = document.getElementById("close-instructions");
 closeInstructions.addEventListener('click', () => instructions.style.display = "none");
+// closeInstructions.addEventListener('click', () => overlay.style.display = "none");
 
 
 /**
