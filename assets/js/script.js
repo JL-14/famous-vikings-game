@@ -249,3 +249,27 @@ answerButtons.forEach((button) => {
     });
 });
 
+/**
+ * Finish screen -Success (Score 4 or 5)
+ * 
+ * 
+ */
+
+let successScreen = document.getElementById("success-final-score");
+
+let result = document.getElementById("right").textContent;
+console.log(result);
+
+let scoreMessage = "You scored " + result + " out of 5!";
+
+const para = document.createElement("p");
+const resultNode = document.createTextNode(scoreMessage);
+para.appendChild(resultNode);
+
+const finalScore = document.getElementById("success-final-score");
+finalScore.appendChild(para);
+
+console.log(finalScore);
+
+
+

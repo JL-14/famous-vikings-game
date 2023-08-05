@@ -124,7 +124,7 @@ h1, h2 {
     display: none;
     position: fixed;
     margin: auto;
-    top: 40%;
+    top: 30%;
     left: 25%;
     width: 50%;
     height: auto;
@@ -501,6 +501,24 @@ h1, h2 {
 }
 
 #success-finish-screen {
+    display: none;
+    position: fixed;
+    margin: auto;
+    top: 20%;
+    left: 20%;
+    width: 50%;
+    height: auto;
+    padding: 20px;
+    background-color: #fff0db;
+    color: #402e32;
+    font-size: 150%;
+    text-align: center;
+    border: 5px solid #402e32;
+    border-radius: 0.25rem;
+    z-index: 10;
+}
+
+#failure-finish-screen {
     display: none;
 }
 
