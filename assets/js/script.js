@@ -89,6 +89,23 @@ const closeInstructions = document.getElementById("close-instructions");
 closeInstructions.addEventListener('click', () => instructions.style.display = "none");
 closeInstructions.addEventListener('click', () => overlay.style.display = "none");
 
+// /* Randomise options in question grid */
+
+// function randomOptions() {
+//     window.alert("The current order is: " + options);
+
+//     for (let i = 0; i < options.length; i++) {
+//         let randomNum = Math.floor(Math.random() * options.length);
+//         let tempOptions = "";
+//         let currentOptions = options[i];
+//         let shuffledOptions = options[randomNum];
+
+//         tempOptions = currentOptions;
+//         options[i] = shuffledOptions;
+//         options[randomNum] = tempOptions;
+//     }
+//     window.alert("The shuffled options are: " + options);
+// }
 
 /**
  * Starting Game:
@@ -154,12 +171,14 @@ let oldRightScore = parseInt(document.getElementById("right").innerText);
 	document.getElementById("right").innerText = ++oldRightScore;
     modal.style.display = "none";
     overlay.style.display = "none";
+    // randomOptions();
 }
 incorrectNextButton.onclick = function() {
     let oldWrongScore = parseInt(document.getElementById("wrong").innerText);
 	document.getElementById("wrong").innerText = ++oldWrongScore;
     modalIncorrect.style.display = "none";
     overlay.style.display = "none";
+    // randomOptions();
 }
 
 /**
