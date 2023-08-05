@@ -159,7 +159,7 @@ h1, h2 {
     cursor: pointer;
 }
 
-.overlay {
+#overlay {
     display: none;
     position: absolute;
     bottom: 0;
@@ -423,7 +423,7 @@ h1, h2 {
     overflow: auto;
     background-color: #fff0db;
     border: 5px solid #402e32;
-    
+    z-index: 10;
   }
   
   /* Next Question Button */

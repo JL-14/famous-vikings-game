@@ -79,15 +79,15 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 
 const instructions = document.getElementById("instructions");
-const overlay = document.getElementsByClassName("overlay");
+const overlay = document.getElementById("overlay");
 
 const instructionsLink = document.getElementById("instructions-link");
 instructionsLink.addEventListener('click', () => instructions.style.display = "block");
-// instructionsLink.addEventListener('click', () => overlay.style.display = "block");
+instructionsLink.addEventListener('click', () => overlay.style.display = "block");
 
 const closeInstructions = document.getElementById("close-instructions");
 closeInstructions.addEventListener('click', () => instructions.style.display = "none");
-// closeInstructions.addEventListener('click', () => overlay.style.display = "none");
+closeInstructions.addEventListener('click', () => overlay.style.display = "none");
 
 
 /**
@@ -136,9 +136,11 @@ const goHome = function (e) {
 
 function correctPopup() {
     modal.style.display = "block";
+    overlay.style.display = "block";
 }
 function incorrectPopup() {
     modalIncorrect.style.display = "block";
+    overlay.style.display = "block";
 }
 
 /**
@@ -151,11 +153,13 @@ nextButton.onclick = function() {
 let oldRightScore = parseInt(document.getElementById("right").innerText);
 	document.getElementById("right").innerText = ++oldRightScore;
     modal.style.display = "none";
+    overlay.style.display = "none";
 }
 incorrectNextButton.onclick = function() {
     let oldWrongScore = parseInt(document.getElementById("wrong").innerText);
 	document.getElementById("wrong").innerText = ++oldWrongScore;
     modalIncorrect.style.display = "none";
+    overlay.style.display = "none";
 }
 
 /**
