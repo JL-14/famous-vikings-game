@@ -51,6 +51,8 @@ let answerGrid = [rolloOption, olavOption, leifOption, haraldOption, cnutOption,
 let questions = [rolloQuestion, olavQuestion, leifQuestion, haraldQuestion, cnutQuestion];
 let questionText = ["Question: What title did Rollo have in France?", "Question: What landmark did Olav destroy?", "Question: What did Leif find?", "Question: What was Harald known as?", "Question: What did Cnut rule over?"];
 
+let wrongResult = document.getElementById("wrong").textContent;
+
 document.querySelector('#button1').textContent = options[0];
 document.querySelector('#button2').textContent = options[1];
 document.querySelector('#button3').textContent = options[2];
@@ -160,10 +162,14 @@ const goHome = function (e) {
 function correctPopup() {
     modal.style.display = "block";
     overlay.style.display = "block";
+    let oldRightScore = parseInt(document.getElementById("right").innerText);
+	document.getElementById("right").innerText = ++oldRightScore;
 }
 function incorrectPopup() {
     modalIncorrect.style.display = "block";
     overlay.style.display = "block";
+    let oldWrongScore = parseInt(document.getElementById("wrong").innerText);
+	document.getElementById("wrong").innerText = ++oldWrongScore;
 }
 
 function finalCorrectPopup() {
@@ -182,16 +188,12 @@ function finalIncorrectPopup() {
  */
 
 nextButton.onclick = function() {
-let oldRightScore = parseInt(document.getElementById("right").innerText);
-	document.getElementById("right").innerText = ++oldRightScore;
     modal.style.display = "none";
     overlay.style.display = "none";
     // randomOptions();
 }
 
 incorrectNextButton.onclick = function() {
-    let oldWrongScore = parseInt(document.getElementById("wrong").innerText);
-	document.getElementById("wrong").innerText = ++oldWrongScore;
     modalIncorrect.style.display = "none";
     overlay.style.display = "none";
     // randomOptions();
@@ -305,6 +307,12 @@ function failureEndScreen(){
 	document.getElementById("wrong").innerText = ++oldWrongScore;
 }
 
+//Capture final score
+let endResult = document.getElementById("right");
+console.log(endResult);
+
+
+
 /**
  * Finish screen -Success (Score 4 or 5)
  * 
@@ -314,19 +322,16 @@ function failureEndScreen(){
 const successScreen = document.getElementById("success-finish-screen");
 
 //Result
-let result = document.getElementById("right").textContent;
-let wrongResult = document.getElementById("wrong").textContent;
+let result = 0;
+
 
 let scoreMessage = "You scored " + result + " out of 5!";
-console.log(scoreMessage);
 const para = document.createElement("p");
 const resultNode = document.createTextNode(scoreMessage);
 para.appendChild(resultNode);
-console.log(resultNode);
 
 const finalScore = document.getElementById("success-final-score");
 finalScore.appendChild(resultNode);
-console.log(finalScore);
 
 //Return home button
 const returnHomeButton = document.getElementById("return-home");
