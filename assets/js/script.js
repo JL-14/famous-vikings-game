@@ -209,7 +209,7 @@ function showNextViking() {
 showNextViking();
 
 /**
- * Linking Question to the description of the Viking: (DRAFT)
+ * Linking Question to the description of the Viking
  * 1. Set first question as the Rollo question
  * 2. Link the topics (Vikings) to the Questions using the dataset and switch attributes
  * 3. Change question when the topic (viking1) changes
@@ -325,19 +325,6 @@ function endGame() {
     overlay.style.display = "none";
 }
 
-//Try again button
-const tryAgainButton = document.getElementById("try-again");
-tryAgainButton.addEventListener('click', (e) => startGame(e));
-tryAgainButton.addEventListener('click', restartGame);
-
-function restartGame() {
-    successScreen.style.display = "none";
-    overlay.style.display = "none";
-    finalModal.style.display = "none";
-    document.getElementById("right").innerHTML = "0";
-    document.getElementById("wrong").innerHTML = "0";
-}
-
 /**
  * Finish screen -Failure (Score 0-3)
  * 
@@ -368,16 +355,4 @@ function failureEndGame() {
     overlay.style.display = "none";
 }
 
-//Try again button
-const failureTryAgainButton = document.getElementById("failure-try-again");
-failureTryAgainButton.addEventListener('click', (e) => startGame(e));
-failureTryAgainButton.addEventListener('click', failureRestartGame);
-
-function failureRestartGame() {
-    failureScreen.style.display = "none";
-    overlay.style.display = "none";
-    finalModalIncorrect.style.display = "none";
-    document.getElementById("right").innerHTML = "0";
-    document.getElementById("wrong").innerHTML = "0";
-}
 
