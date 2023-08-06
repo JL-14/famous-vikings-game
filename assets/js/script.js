@@ -148,6 +148,7 @@ const goHome = function (e) {
     } else {
         homeDisplay.style.display = "none";
     }
+    confirm("Are you sure you want to quit?");
 }
 
 /**
