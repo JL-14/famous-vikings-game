@@ -306,6 +306,8 @@
                 </button>
                 <button id="incorrect-next-quit-button" class="quit-button">Quit</button>
             </div>
+
+            <!-- Finish screens -->
             <div id="success-finish-screen" class="modal-popup">
                 <h2>
                     Well done, you have completed the quiz!
@@ -314,20 +316,19 @@
                 <p id="success-final-score">   
                 </p>
                 <p>You really do know your Vikings! Maybe there is Viking-blood in you?</p>
-                <button>Return to main page</button>
-                <button>Try again!</button>
+                <button id="try-again">Try again!</button>
+                <button id="return-home">Return to main page</button>
             </div>
             <div id="failure-finish-screen">
                 <h2>
                     You have completed the quiz!
                 </h2>
-                <img src="assets/images/viking-crying.gif" id="failure-gif">
-                <p>
-                    You scored NN out of 5!
+                <img src="assets/images/viking-defeated.gif" id="failure-gif">
+                <p id="failure-final-score">
                 </p>
                 <p>I am sure you can do better than that... Why not try again? HINT -There are clues in the text about the viking...</p>
-                <button>Return to main page</button>
-                <button>Try again!</button>
+                <button id="try-again">Try again!</button>
+                <button id="return-home">Return to main page</button>
             </div>
         </section>
     </main>

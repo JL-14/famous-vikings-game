@@ -255,6 +255,7 @@ answerButtons.forEach((button) => {
  * 
  */
 
+//Success screen
 let successScreen = document.getElementById("success-final-score");
 
 let result = document.getElementById("right").textContent;
@@ -271,5 +272,20 @@ finalScore.appendChild(para);
 
 console.log(finalScore);
 
+//Defeat screen
+let failureScreen = document.getElementById("failure-final-score");
 
+let badResult = document.getElementById("right").textContent;
+console.log(badResult);
+
+let badScoreMessage = "You scored " + result + " out of 5!";
+
+const badPara = document.createElement("p");
+const badResultNode = document.createTextNode(badScoreMessage);
+badPara.appendChild(badResultNode);
+
+const badFinalScore = document.getElementById("failure-final-score");
+badFinalScore.appendChild(para);
+
+console.log(badFinalScore);
 
