@@ -179,10 +179,14 @@ function incorrectPopup() {
 function finalCorrectPopup() {
     finalModal.style.display = "block";
     overlay.style.display = "block";
+    let oldRightScore = parseInt(document.getElementById("right").innerText);
+	document.getElementById("right").innerText = ++oldRightScore;
 }
 function finalIncorrectPopup() {
     finalModalIncorrect.style.display = "block";
     overlay.style.display = "block";
+    let oldWrongScore = parseInt(document.getElementById("wrong").innerText);
+	document.getElementById("wrong").innerText = ++oldWrongScore;
 }
 
 /**
@@ -190,6 +194,7 @@ function finalIncorrectPopup() {
  * 1. Sets Next question button on answer feedback popup to close the popup and move to the next question
  * 2. Update scores on correct or incorrect answer
  */
+
 
 nextButton.onclick = function() {
     modal.style.display = "none";
@@ -295,8 +300,6 @@ function successEndScreen(){
     overlay.style.display = "block";
     finalModal.style.display = "none";
     finalModalIncorrect.style.display = "none";
-    let oldRightScore = parseInt(document.getElementById("right").innerText);
-	document.getElementById("right").innerText = ++oldRightScore;
 }
 
 finishIncorrectButton = document.getElementById("finish-incorrect-button");
@@ -307,16 +310,7 @@ function failureEndScreen(){
     overlay.style.display = "block";
     finalModal.style.display = "none";
     finalModalIncorrect.style.display = "none";
-    let oldWrongScore = parseInt(document.getElementById("wrong").innerText);
-	document.getElementById("wrong").innerText = ++oldWrongScore;
 }
-
-//Capture final score
-let endResult = document.getElementById("right").innerText;
-
-console.log(endResult);
-
-
 
 /**
  * Finish screen -Success (Score 4 or 5)
@@ -327,8 +321,7 @@ console.log(endResult);
 const successScreen = document.getElementById("success-finish-screen");
 
 //Result
-let result = 0;
-
+let result = document.getElementById("right").textContent;
 
 let scoreMessage = "You scored " + result + " out of 5!";
 const para = document.createElement("p");
@@ -337,6 +330,7 @@ para.appendChild(resultNode);
 
 const finalScore = document.getElementById("success-final-score");
 finalScore.appendChild(resultNode);
+
 
 //Return home button
 const returnHomeButton = document.getElementById("return-home");
