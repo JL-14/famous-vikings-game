@@ -5,9 +5,10 @@ const startButton = document.getElementById("start-button");
 
 const modal = document.getElementById("correct-answer");
 const modalIncorrect = document.getElementById("incorrect-answer");
+const finalModal = document.getElementById("final-correct-answer"); 
+const finalModalIncorrect = document.getElementById("final-incorrect-answer");
 const nextButton = document.getElementById("next-question-button");
 const incorrectNextButton = document.getElementById("incorrect-next-question-button");
-
 
 const viking1 = document.getElementById("rollo");
 const viking2 = document.getElementById("olav-haraldsson");
@@ -160,6 +161,15 @@ function incorrectPopup() {
     overlay.style.display = "block";
 }
 
+function finalCorrectPopup() {
+    finalModal.style.display = "block";
+    overlay.style.display = "block";
+}
+function finalIncorrectPopup() {
+    finalModalIncorrect.style.display = "block";
+    overlay.style.display = "block";
+}
+
 /**
  * Next question function with score update:
  * 1. Sets Next question button on answer feedback popup to close the popup and move to the next question
@@ -180,6 +190,14 @@ incorrectNextButton.onclick = function() {
     overlay.style.display = "none";
     // randomOptions();
 }
+
+/**
+ * Final popup on 5th answer
+ * 
+ * 
+ */
+
+
 
 /**
  * Move to the next Viking in the list of Vikings (vikingBiogs) when the Button Next Question is clicked:
@@ -231,7 +249,7 @@ if (answerIndex < questions.length) {
 
 answerButtons.forEach((button) => {
     button.addEventListener("click", () => {
-        if (answerIndex <= 5) {
+        if (answerIndex <= 3) {
             let currentQuestion = questions[answerIndex];
             const currentQuestionData = currentQuestion.dataset.viking;
             if (button.textContent === currentQuestionData) {
@@ -240,6 +258,16 @@ answerButtons.forEach((button) => {
             } else {
                 console.log("wrong");
                 incorrectPopup();
+            }
+        } else if (answerIndex = 4) {
+            let currentQuestion = questions[answerIndex];
+            const currentQuestionData = currentQuestion.dataset.viking;
+            if (button.textContent === currentQuestionData) {
+                console.log("match");
+                finalCorrectPopup();
+            } else {
+                console.log("wrong");
+                finalIncorrectPopup();
             }
         } else {
             console.log("out of index");
