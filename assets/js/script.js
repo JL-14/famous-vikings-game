@@ -256,36 +256,70 @@ answerButtons.forEach((button) => {
  */
 
 //Success screen
-let successScreen = document.getElementById("success-final-score");
+const successScreen = document.getElementById("success-finish-screen");
 
+//Result
 let result = document.getElementById("right").textContent;
-console.log(result);
 
 let scoreMessage = "You scored " + result + " out of 5!";
 
 const para = document.createElement("p");
 const resultNode = document.createTextNode(scoreMessage);
-para.appendChild(resultNode);
 
 const finalScore = document.getElementById("success-final-score");
 finalScore.appendChild(para);
 
-console.log(finalScore);
+//Return home button
+const returnHomeButton = document.getElementById("return-home");
+returnHomeButton.addEventListener('click', (e) => goHome(e));
+returnHomeButton.addEventListener('click', endGame);
+
+function endGame() {
+    successScreen.style.display = "none";
+    overlay.style.display = "none";
+}
+
+//Try again button
+const tryAgainButton = document.getElementById("try-again");
+tryAgainButton.addEventListener('click', (e) => startGame(e));
+tryAgainButton.addEventListener('click', restartGame);
+
+function restartGame() {
+    successScreen.style.display = "none";
+    overlay.style.display = "none";
+}
 
 //Defeat screen
-let failureScreen = document.getElementById("failure-final-score");
+const failureScreen = document.getElementById("failure-finish-screen");
 
+//Result update
 let badResult = document.getElementById("right").textContent;
-console.log(badResult);
 
 let badScoreMessage = "You scored " + result + " out of 5!";
 
 const badPara = document.createElement("p");
 const badResultNode = document.createTextNode(badScoreMessage);
-badPara.appendChild(badResultNode);
 
 const badFinalScore = document.getElementById("failure-final-score");
 badFinalScore.appendChild(para);
 
-console.log(badFinalScore);
+//Return home button
+const failureReturnHomeButton = document.getElementById("return-home");
+failureReturnHomeButton.addEventListener('click', (e) => goHome(e));
+failureReturnHomeButton.addEventListener('click', failureEndGame);
+
+function failureEndGame() {
+    failureScreen.style.display = "none";
+    overlay.style.display = "none";
+}
+
+//Try again button
+const failureTryAgainButton = document.getElementById("try-again");
+failureTryAgainButton.addEventListener('click', (e) => startGame(e));
+failureTryAgainButton.addEventListener('click', failureRestartGame);
+
+function failureRestartGame() {
+    failureScreen.style.display = "none";
+    overlay.style.display = "none";
+}
 

@@ -349,6 +349,7 @@ h2 {
     color: #fff0db;
     font-weight: bold;
     font-size: 140%;
+    cursor: pointer;
 }
 
 /* Scores */
@@ -507,7 +508,7 @@ h2 {
 }
 
 #success-finish-screen {
-    display: flex;
+    display: block;
     position: fixed;
     margin: auto;
     left: 20%;
@@ -524,7 +525,7 @@ h2 {
 }
 
 #failure-finish-screen {
-    display: block;
+    display: none;
     position: fixed;
     margin: auto;
     left: 20%;
