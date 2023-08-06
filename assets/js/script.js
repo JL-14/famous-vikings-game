@@ -192,14 +192,6 @@ incorrectNextButton.onclick = function() {
 }
 
 /**
- * Final popup on 5th answer
- * 
- * 
- */
-
-
-
-/**
  * Move to the next Viking in the list of Vikings (vikingBiogs) when the Button Next Question is clicked:
  * 1. Set display of all vikings to hidden
  * 2. Activate next Viking when Next Question is clicked through incrementing the vikings (vikingBiogs) using the index (vikingIndex)
@@ -278,6 +270,28 @@ answerButtons.forEach((button) => {
 });
 
 /**
+ * Code to bring up finish screen with score
+ * 
+ * 
+ */
+
+finishButton = document.getElementById("finish-button");
+finishButton.addEventListener('click', successEndScreen);
+
+function successEndScreen(){
+    successScreen.style.display = "block";
+    overlay.style.display = "block";
+}
+
+finishIncorrectButton = document.getElementById("finish-incorrect-button");
+finishIncorrectButton.addEventListener('click', failureEndScreen);
+
+function failureEndScreen(){
+    failureScreen.style.display = "block";
+    overlay.style.display = "block";
+}
+
+/**
  * Finish screen -Success (Score 4 or 5)
  * 
  * 
@@ -288,6 +302,7 @@ const successScreen = document.getElementById("success-finish-screen");
 
 //Result
 let result = document.getElementById("right").textContent;
+let wrongResult = document.getElementById("wrong").textContent;
 
 let scoreMessage = "You scored " + result + " out of 5!";
 console.log(scoreMessage);
@@ -318,6 +333,9 @@ tryAgainButton.addEventListener('click', restartGame);
 function restartGame() {
     successScreen.style.display = "none";
     overlay.style.display = "none";
+    finalModal.style.display = "none";
+    document.getElementById("right").innerHTML = "0";
+    document.getElementById("wrong").innerHTML = "0";
 }
 
 /**
@@ -358,5 +376,8 @@ failureTryAgainButton.addEventListener('click', failureRestartGame);
 function failureRestartGame() {
     failureScreen.style.display = "none";
     overlay.style.display = "none";
+    finalModalIncorrect.style.display = "none";
+    document.getElementById("right").innerHTML = "0";
+    document.getElementById("wrong").innerHTML = "0";
 }
 
