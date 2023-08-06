@@ -262,12 +262,15 @@ const successScreen = document.getElementById("success-finish-screen");
 let result = document.getElementById("right").textContent;
 
 let scoreMessage = "You scored " + result + " out of 5!";
-
+console.log(scoreMessage);
 const para = document.createElement("p");
 const resultNode = document.createTextNode(scoreMessage);
+para.appendChild(resultNode);
+console.log(resultNode);
 
 const finalScore = document.getElementById("success-final-score");
-finalScore.appendChild(para);
+finalScore.appendChild(resultNode);
+console.log(finalScore);
 
 //Return home button
 const returnHomeButton = document.getElementById("return-home");
@@ -289,7 +292,12 @@ function restartGame() {
     overlay.style.display = "none";
 }
 
-//Defeat screen
+/**
+ * Finish screen -Failure (Score 0-3)
+ * 
+ * 
+ */
+
 const failureScreen = document.getElementById("failure-finish-screen");
 
 //Result update
@@ -299,9 +307,10 @@ let badScoreMessage = "You scored " + result + " out of 5!";
 
 const badPara = document.createElement("p");
 const badResultNode = document.createTextNode(badScoreMessage);
+para.appendChild(badResultNode);
 
 const badFinalScore = document.getElementById("failure-final-score");
-badFinalScore.appendChild(para);
+badFinalScore.appendChild(badResultNode);
 
 //Return home button
 const failureReturnHomeButton = document.getElementById("return-home");

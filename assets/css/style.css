@@ -508,7 +508,7 @@ h2 {
 }
 
 #success-finish-screen {
-    display: block;
+    display: none;
     position: fixed;
     margin: auto;
     left: 20%;
@@ -525,7 +525,7 @@ h2 {
 }
 
 #failure-finish-screen {
-    display: none;
+    display: block;
     position: fixed;
     margin: auto;
     left: 20%;
