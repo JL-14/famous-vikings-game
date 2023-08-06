@@ -188,6 +188,7 @@ let oldRightScore = parseInt(document.getElementById("right").innerText);
     overlay.style.display = "none";
     // randomOptions();
 }
+
 incorrectNextButton.onclick = function() {
     let oldWrongScore = parseInt(document.getElementById("wrong").innerText);
 	document.getElementById("wrong").innerText = ++oldWrongScore;
@@ -286,6 +287,10 @@ finishButton.addEventListener('click', successEndScreen);
 function successEndScreen(){
     successScreen.style.display = "block";
     overlay.style.display = "block";
+    finalModal.style.display = "none";
+    finalModalIncorrect.style.display = "none";
+    let oldRightScore = parseInt(document.getElementById("right").innerText);
+	document.getElementById("right").innerText = ++oldRightScore;
 }
 
 finishIncorrectButton = document.getElementById("finish-incorrect-button");
@@ -294,6 +299,10 @@ finishIncorrectButton.addEventListener('click', failureEndScreen);
 function failureEndScreen(){
     failureScreen.style.display = "block";
     overlay.style.display = "block";
+    finalModal.style.display = "none";
+    finalModalIncorrect.style.display = "none";
+    let oldWrongScore = parseInt(document.getElementById("wrong").innerText);
+	document.getElementById("wrong").innerText = ++oldWrongScore;
 }
 
 /**
@@ -302,7 +311,6 @@ function failureEndScreen(){
  * 
  */
 
-//Success screen
 const successScreen = document.getElementById("success-finish-screen");
 
 //Result
@@ -322,8 +330,19 @@ console.log(finalScore);
 
 //Return home button
 const returnHomeButton = document.getElementById("return-home");
-returnHomeButton.addEventListener('click', (e) => goHome(e));
-returnHomeButton.addEventListener('click', endGame);
+returnHomeButton.addEventListener('click', (e) => finalHome(e));
+
+const finalHome = function (e) {
+    e.preventDefault();
+    window.addEventListener('click',()=>{ location.reload()});
+    if (homeDisplay.style.display === "none" || initialStart === false) {
+        initialStart === true;
+        gameDisplay.style.display = "none";
+        homeDisplay.style.display = "block";
+    } else {
+        homeDisplay.style.display = "none";
+    }
+}
 
 function endGame() {
     successScreen.style.display = "none";
@@ -351,13 +370,19 @@ const badFinalScore = document.getElementById("failure-final-score");
 badFinalScore.appendChild(badResultNode);
 
 //Return home button
-const failureReturnHomeButton = document.getElementById("failure-return-home");
-failureReturnHomeButton.addEventListener('click', (e) => goHome(e));
-failureReturnHomeButton.addEventListener('click', failureEndGame);
+const failureHomeButton = document.getElementById("failure-return-home");
+failureHomeButton.addEventListener('click', (e) => failureHome(e));
 
-function failureEndGame() {
-    failureScreen.style.display = "none";
-    overlay.style.display = "none";
+const failureHome = function (e) {
+    e.preventDefault();
+    window.addEventListener('click',()=>{ location.reload()});
+    if (homeDisplay.style.display === "none" || initialStart === false) {
+        initialStart === true;
+        gameDisplay.style.display = "none";
+        homeDisplay.style.display = "block";
+    } else {
+        homeDisplay.style.display = "none";
+    }
 }
 
 
