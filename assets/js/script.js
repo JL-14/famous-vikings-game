@@ -38,6 +38,8 @@ const answerButtons = document.querySelectorAll(".cell");
 /* Let variables */
 let options = ["Became Duke of Normandy", "Made London Bridge fall down", "Discovered America", "The Last Great Viking", "Established North Sea Empire", "Carried a 6 foot axe", "Had a blue tooth", "Conquered St Petersburg", "Invented the compass"];
 let quitButton = document.getElementById("quit-button");
+let finalQuitButton = document.getElementById("final-next-quit-button");
+let finalIncorrectQuitButton = document.getElementById("final-incorrect-next-quit-button");
 let vikingBiogs = [viking1, viking2, viking3, viking4, viking5];
 let vikingIndex = 0;
 let questionIndex = 0;
@@ -63,6 +65,8 @@ document.querySelector('#button9').textContent = options[8];
 document.addEventListener('DOMContentLoaded', () => {
     startButton.addEventListener('click', (e) => startGame(e));
     quitButton.addEventListener('click', (e) => goHome(e));
+    finalQuitButton.addEventListener('click', (e) => goHome(e));
+    finalIncorrectQuitButton.addEventListener('click', (e) => goHome(e));
     nextButton.addEventListener('click', showNextViking);
     nextButton.addEventListener('click', showNextQuestion);
     incorrectNextButton.addEventListener('click', showNextViking);
