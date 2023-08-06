@@ -38,7 +38,7 @@
                 </li>
                 <li id="instructions-link" aria-label="Click here for instructions how to play.">
                     <a href="#instructions">
-                    Instructions
+                        Instructions
                     </a>
                 </li>
                 <li aria-label="Click here to send us an e-mail.">
@@ -92,16 +92,17 @@
             </h2>
             <p>
                 The game is very simple.
-            </p> 
+            </p>
             <ol>
-                <li>On the left there is a description of a famous Viking from the Viking Age.</li> 
-                <li>On the right there are 9 tiles with simple facts, only one of which are true for the Viking on the left.</li>
-                <li>Select and click on the tile you think matches the Viking!</li> 
+                <li>On the left there is a description of a famous Viking from the Viking Age.</li>
+                <li>On the right there are 9 tiles with simple facts, only one of which are true for the Viking on the
+                    left.</li>
+                <li>Select and click on the tile you think matches the Viking!</li>
             </ol>
             <p>
                 There are 5 Vikings in total, so 5 questions to answer.
             </p>
-                Are you able to answer them all?
+            Are you able to answer them all?
             </p>
             <button id="close-instructions">
                 Close Instructions
@@ -263,15 +264,18 @@
                     </h2>
                     <h2 id="cnut-the-great-question" class="question" data-viking="Established North Sea Empire">
                         Question: What did Cnut rule over?
-                    <h2 id="incorrect1-question" class="question" data-viking="incorrect">
-                    </h2>
+                        <h2 id="incorrect1-question" class="question" data-viking="incorrect">
+                        </h2>
                 </div>
                 <div class="grid">
-                    <button class="cell" id="button1" data-viking="Became Duke of Normandy">Became Duke of Normandy</button>
-                    <button class="cell" id="button2" data-viking="Made London Bridge fall down">Made London Bridge fall down</button>
+                    <button class="cell" id="button1" data-viking="Became Duke of Normandy">Became Duke of
+                        Normandy</button>
+                    <button class="cell" id="button2" data-viking="Made London Bridge fall down">Made London Bridge fall
+                        down</button>
                     <button class="cell" id="button3" data-viking="Discovered America">Discovered America</button>
                     <button class="cell" id="button4" data-viking="The Last Great Viking">The Last Great Viking</button>
-                    <button class="cell" id="button5" data-viking="Established North Sea Empire">Established North Sea Empire</button>
+                    <button class="cell" id="button5" data-viking="Established North Sea Empire">Established North Sea
+                        Empire</button>
                     <button class="cell" id="button6" data-vikig="incorrect">Carried a 6 foot axe</button>
                     <button class="cell" id="button7" data-vikig="incorrect">Had a blue tooth</button>
                     <button class="cell" id="button8" data-vikig="incorrect">Conquered St Petersburg</button>
@@ -307,29 +311,60 @@
                 <button id="incorrect-next-quit-button" class="quit-button">Quit</button>
             </div>
 
+            <!-- Final Correct Answer pop-up -->
+            <div id="final-correct-answer" class="modal-popup">
+                <h2 id="correct-text">
+                    Correct!
+                </h2>
+                <img src="assets/images/viking-thumbs-up.gif" id="thumbs-up-gif">
+                <p>
+                    That was the final question...
+                </p>
+                <button id="next-question-button">
+                    Finish!
+                </button>
+                <button id="finish-button" class="quit-button">Quit</button>
+            </div>
+
+            <!-- Final incorrect Answer pop-up -->
+            <div id="final-incorrect-answer" class="modal-popup">
+                <h2 id="incorrect-text">
+                    Oops! Not quite correct...
+                </h2>
+                <img src="assets/images/viking-crying.gif" id="viking-crying-gif">
+                <p>
+                    That was the final question...
+                </p>
+                <button id="incorrect-finish-button">
+                    Finish!
+                </button>
+                <button id="incorrect-next-quit-button" class="quit-button">Quit</button>
+            </div>
+
             <!-- Finish screens -->
             <div id="success-finish-screen" class="modal-popup">
                 <h2>
                     Well done, you have completed the quiz!
                 </h2>
                 <img src="assets/images/victorious-viking.gif" id="victorious-gif">
-                <p id="success-final-score">   
+                <p id="success-final-score">
                 </p>
                 <p>You really do know your Vikings! Maybe there is Viking-blood in you?</p>
                 <button id="try-again">Try again!</button>
                 <button id="return-home">Return to main page</button>
             </div>
-            
+
             <div id="failure-finish-screen">
                 <h2>
                     You have completed the quiz!
                 </h2>
-                <img src="assets/images/viking-defeated.gif" id="failure-gif">
+                <img src="assets/images/viking-defeated.gif" id="defeated-gif">
                 <p id="failure-final-score">
                 </p>
-                <p>I am sure you can do better than that... Why not try again? HINT -There are clues in the text about the viking...</p>
-                <button id="try-again">Try again!</button>
-                <button id="return-home">Return to main page</button>
+                <p>I am sure you can do better than that... Why not try again? HINT -There are clues in the text about
+                    the viking...</p>
+                <button id="failure-try-again">Try again!</button>
+                <button id="failure-return-home">Return to main page</button>
             </div>
         </section>
     </main>

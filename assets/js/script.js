@@ -313,7 +313,7 @@ const badFinalScore = document.getElementById("failure-final-score");
 badFinalScore.appendChild(badResultNode);
 
 //Return home button
-const failureReturnHomeButton = document.getElementById("return-home");
+const failureReturnHomeButton = document.getElementById("failure-return-home");
 failureReturnHomeButton.addEventListener('click', (e) => goHome(e));
 failureReturnHomeButton.addEventListener('click', failureEndGame);
 
@@ -323,7 +323,7 @@ function failureEndGame() {
 }
 
 //Try again button
-const failureTryAgainButton = document.getElementById("try-again");
+const failureTryAgainButton = document.getElementById("failure-try-again");
 failureTryAgainButton.addEventListener('click', (e) => startGame(e));
 failureTryAgainButton.addEventListener('click', failureRestartGame);
 
