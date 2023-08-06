@@ -44,6 +44,7 @@ let vikingBiogs = [viking1, viking2, viking3, viking4, viking5];
 let vikingIndex = 0;
 let questionIndex = 0;
 let answerIndex = 0;
+let scoreIndex = 0;
 let nextQuitButton = document.getElementById("next-quit-button");
 let nextIncorrectQuitButton = document.getElementById("incorrect-next-quit-button");
 let initialStart = false;
@@ -157,6 +158,8 @@ const goHome = function (e) {
  * Answer feedback:
  * 1. If answer is correct, modal display is activated and correct answer popup appears
  * 2. If answer is incorrect, modalIncorrect activates incorrect answer popup
+ * 3. For a correct answer the 'right' score increases by 1
+ * 4. For an incorrect answer the 'wrong' score increases by 1
  */
 
 function correctPopup() {
@@ -165,6 +168,7 @@ function correctPopup() {
     let oldRightScore = parseInt(document.getElementById("right").innerText);
 	document.getElementById("right").innerText = ++oldRightScore;
 }
+
 function incorrectPopup() {
     modalIncorrect.style.display = "block";
     overlay.style.display = "block";
@@ -308,7 +312,8 @@ function failureEndScreen(){
 }
 
 //Capture final score
-let endResult = document.getElementById("right");
+let endResult = document.getElementById("right").innerText;
+
 console.log(endResult);
 
 
