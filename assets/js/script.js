@@ -130,7 +130,7 @@ const startGame = function (e) {
     if (gameDisplay.style.display === "none" || initialStart === false) {
         initialStart === true;
         homeDisplay.style.display = "none";
-        gameDisplay.style.display = "inline-flex";
+        gameDisplay.style.display = "flex";
     } else {
         gameDisplay.style.display = "none";
     }
@@ -252,7 +252,6 @@ if (answerIndex < questions.length) {
         answerIndex[i];
     }
 }
-
 answerButtons.forEach((button) => {
     button.addEventListener("click", () => {
         //Set the correct answer for the first four questions (1-4)

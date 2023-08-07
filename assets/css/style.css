@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 html,
 body {
     height: 100%;
@@ -33,9 +39,8 @@ header {
     font-size: 170%;
 }
 
-h1,
-h2 {
-    line-height: 20px;
+h1 {
+    line-height: 60px;
 }
 
 .viking-shield {
@@ -101,7 +106,6 @@ h2 {
     font-size: 150%;
     padding: 10px;
     margin-top: 40px;
-    margin-left: -5%;
     height: 80px;
     width: 30%;
     border-radius: 7px;
@@ -178,24 +182,24 @@ h2 {
 #game-screen {
     display: none;
     justify-content: center;
+    flex-wrap: wrap;
+    overflow: auto;
 }
 
 .viking-details {
     display: inline-flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     margin-top: 80px;
     width: 45%;
     height: 80%;
     padding: 10px;
-    margin-left: 3%;
     text-align: center;
 }
 
 .viking-name {
     display: block;
     font-size: 125%;
-    line-height: 0;
 }
 
 .viking-image {
@@ -206,26 +210,25 @@ h2 {
 }
 
 .individual-viking-description {
-    display: block;
+    display: flex;
 }
 
 /* Individual Viking visibility */
 #rollo {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    margin-top: 80px;
+    justify-content: left;
     width: 100%;
-    height: 80%;
+    height: auto;
     background-color: rgba(255, 240, 219, 0.9);
     color: black;
-    padding: 10px;
-    margin-left: 3%;
+    padding: 20px;
     text-align: center;
+    margin-left: 30px;
 }
 
 .question {
-    display: 'none'
+    display: 'none';
 }
 
 #rollo-question {
@@ -233,17 +236,16 @@ h2 {
 }
 
 #olav-haraldsson {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    margin-top: 80px;
+    justify-content: left;
     width: 100%;
-    height: 80%;
+    height: auto;
     background-color: rgba(255, 240, 219, 0.9);
     color: black;
-    padding: 10px;
-    margin-left: 3%;
+    padding: 20px;
     text-align: center;
+    margin-left: 30px;
 }
 
 #olav-haraldsson-question {
@@ -251,17 +253,16 @@ h2 {
 }
 
 #leif-erikson {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    margin-top: 80px;
+    justify-content: left;
     width: 100%;
-    height: 80%;
+    height: auto;
     background-color: rgba(255, 240, 219, 0.9);
     color: black;
-    padding: 10px;
-    margin-left: 3%;
+    padding: 20px;
     text-align: center;
+    margin-left: 30px;
 }
 
 #leif-erikson-question {
@@ -269,17 +270,16 @@ h2 {
 }
 
 #harald-hardrada {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    margin-top: 80px;
+    justify-content: left;
     width: 100%;
-    height: 80%;
+    height: auto;
     background-color: rgba(255, 240, 219, 0.9);
     color: black;
-    padding: 10px;
-    margin-left: 3%;
+    padding: 20px;
     text-align: center;
+    margin-left: 30px;
 }
 
 #harald-hardrada-question {
@@ -287,17 +287,16 @@ h2 {
 }
 
 #cnut-the-great {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    margin-top: 80px;
+    justify-content: left;
     width: 100%;
-    height: 80%;
+    height: auto;
     background-color: rgba(255, 240, 219, 0.9);
     color: black;
-    padding: 10px;
-    margin-left: 3%;
+    padding: 20px;
     text-align: center;
+    margin-left: 30px;
 }
 
 #cnut-the-great-question {
@@ -322,10 +321,10 @@ h2 {
     align-items: center;
     background-color: rgba(255, 240, 219, 0.9);
     color: black;
-    height: 40px;
+    height: auto;
     margin-left: 2px;
     margin-top: auto;
-    padding: 20px;
+    padding: 10px;
     width: 90%;
 }
 
@@ -333,6 +332,7 @@ h2 {
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+    position: relative;
     width: 100%;
     margin-left: auto;
     margin-right: 3%;
@@ -773,4 +773,56 @@ footer a:hover {
 #socialmedia dd a:hover {
     border-bottom: 2px solid #fffb00;
     color: #fffb00;
+}
+
+/* Responsive design */
+/* --------- Media queries */
+
+@media (max-width: 1200px) {
+
+    .game-area {
+        display: flex;
+        width: 100%;
+        height: auto;
+        margin-right: 30px;
+        margin-left: auto;
+        overflow: auto;
+    }
+    #game-screen {
+        display: none;
+        justify-content: center;
+        flex-wrap: wrap;
+        overflow: scroll;
+    }
+    .viking-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 80px;
+        width: 90%;
+        height: auto;
+        padding: 10px;
+        margin-left: 3%;
+        text-align: center;
+    }
+    #rollo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 80px;
+        width: 100%;
+        height: 80%;
+        background-color: rgba(255, 240, 219, 0.9);
+        color: black;
+        padding: 10px;
+        text-align: center;
+    }
+    .viking-shield {
+        display: none;
+    }
+}        
+
+
+@media (max-width: 320px) {
+
 }
