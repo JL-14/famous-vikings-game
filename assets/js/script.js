@@ -5,7 +5,7 @@ const startButton = document.getElementById("start-button");
 
 const modal = document.getElementById("correct-answer");
 const modalIncorrect = document.getElementById("incorrect-answer");
-const finalModal = document.getElementById("final-correct-answer"); 
+const finalModal = document.getElementById("final-correct-answer");
 const finalModalIncorrect = document.getElementById("final-incorrect-answer");
 const nextButton = document.getElementById("next-question-button");
 const incorrectNextButton = document.getElementById("incorrect-next-question-button");
@@ -142,7 +142,7 @@ const startGame = function (e) {
 
 const goHome = function (e) {
     e.preventDefault();
-    window.addEventListener('click',()=>{ location.reload()});
+    window.addEventListener('click', () => { location.reload() });
     if (homeDisplay.style.display === "none" || initialStart === false) {
         initialStart === true;
         gameDisplay.style.display = "none";
@@ -166,27 +166,27 @@ function correctPopup() {
     modal.style.display = "block";
     overlay.style.display = "block";
     let oldRightScore = parseInt(document.getElementById("right").innerText);
-	document.getElementById("right").innerText = ++oldRightScore;
+    document.getElementById("right").innerText = ++oldRightScore;
 }
 
 function incorrectPopup() {
     modalIncorrect.style.display = "block";
     overlay.style.display = "block";
     let oldWrongScore = parseInt(document.getElementById("wrong").innerText);
-	document.getElementById("wrong").innerText = ++oldWrongScore;
+    document.getElementById("wrong").innerText = ++oldWrongScore;
 }
 
 function finalCorrectPopup() {
     finalModal.style.display = "block";
     overlay.style.display = "block";
     let oldRightScore = parseInt(document.getElementById("right").innerText);
-	document.getElementById("right").innerText = ++oldRightScore;
+    document.getElementById("right").innerText = ++oldRightScore;
 }
 function finalIncorrectPopup() {
     finalModalIncorrect.style.display = "block";
     overlay.style.display = "block";
     let oldWrongScore = parseInt(document.getElementById("wrong").innerText);
-	document.getElementById("wrong").innerText = ++oldWrongScore;
+    document.getElementById("wrong").innerText = ++oldWrongScore;
 }
 
 /**
@@ -196,13 +196,13 @@ function finalIncorrectPopup() {
  */
 
 
-nextButton.onclick = function() {
+nextButton.onclick = function () {
     modal.style.display = "none";
     overlay.style.display = "none";
     // randomOptions();
 }
 
-incorrectNextButton.onclick = function() {
+incorrectNextButton.onclick = function () {
     modalIncorrect.style.display = "none";
     overlay.style.display = "none";
     // randomOptions();
@@ -274,19 +274,66 @@ answerButtons.forEach((button) => {
             if (button.textContent === currentQuestionData) {
                 console.log("match");
                 finalCorrectPopup();
-                //Result calculation
-                    let result = document.getElementById("right").textContent;
+                    //Result calculation on correct final answer
+                    let result = document.getElementById("right").innerHTML;
                     let scoreMessage = "You scored " + result + " out of 5!";
-                    //Good result
-                    const para = document.createElement("p");
-                    const resultNode = document.createTextNode(scoreMessage);
-                    para.appendChild(resultNode);
-                    const finalScore = document.getElementById("success-final-score");
-                    finalScore.appendChild(resultNode);
-                    console.log(result);
+                        //Write result
+                        const para = document.createElement("p");
+                        const resultNode = document.createTextNode(scoreMessage);
+                        para.appendChild(resultNode);
+                        const finalScore = document.getElementById("success-final-score");
+                        finalScore.appendChild(resultNode);
+                        console.log(result);
+                            //Final result screen after correct final answer
+                            if (result >= "4") {
+                                finishButton.addEventListener('click', successEndScreen);
+                                function successEndScreen() {
+                                    successScreen.style.display = "block";
+                                    overlay.style.display = "block";
+                                    finalModal.style.display = "none";
+                                    finalModalIncorrect.style.display = "none";
+                                }
+                            } else {
+                                finishButton.addEventListener('click', failureEndScreen);
+                                function failureEndScreen() {
+                                    failureScreen.style.display = "block";
+                                    overlay.style.display = "block";
+                                    finalModal.style.display = "none";
+                                    finalModalIncorrect.style.display = "none";
+                                }
+                            }
+
             } else {
                 console.log("wrong");
                 finalIncorrectPopup();
+                    //Result calculation on wrong final answer
+                    let badResult = document.getElementById("right").innerHTML;
+                    let badScoreMessage = "You scored " + badResult + " out of 5!";
+                        //Write result
+                        const badPara = document.createElement("p");
+                        const badResultNode = document.createTextNode(badScoreMessage);
+                        badPara.appendChild(badResultNode);
+                        const badFinalScore = document.getElementById("failure-final-score");
+                        badFinalScore.appendChild(badResultNode);
+                        console.log(badResult);
+                            //Final result screen after wrong final answer
+                            if (badResult >= "4") {
+                                finishIncorrectButton.addEventListener('click', successEndScreen);
+                                function successEndScreen() {
+                                    successScreen.style.display = "block";
+                                    overlay.style.display = "block";
+                                    finalModal.style.display = "none";
+                                    finalModalIncorrect.style.display = "none";
+                                }
+                            } else {
+                                finishIncorrectButton.addEventListener('click', failureEndScreen);
+                                function failureEndScreen() {
+                                    failureScreen.style.display = "block";
+                                    overlay.style.display = "block";
+                                    finalModal.style.display = "none";
+                                    finalModalIncorrect.style.display = "none";
+                                }
+                            }
             }
         } else {
             console.log("out of index");
@@ -303,24 +350,22 @@ answerButtons.forEach((button) => {
  */
 
 finishButton = document.getElementById("finish-button");
-finishButton.addEventListener('click', successEndScreen);
 
-function successEndScreen(){
-    successScreen.style.display = "block";
-    overlay.style.display = "block";
-    finalModal.style.display = "none";
-    finalModalIncorrect.style.display = "none";
-}
+// function endSuccess() {
+
+// }
 
 finishIncorrectButton = document.getElementById("finish-incorrect-button");
-finishIncorrectButton.addEventListener('click', failureEndScreen);
 
-function failureEndScreen(){
-    failureScreen.style.display = "block";
-    overlay.style.display = "block";
-    finalModal.style.display = "none";
-    finalModalIncorrect.style.display = "none";
-}
+// function endFailure() {
+//     if (result <= 3) {
+
+//     }
+// }
+
+
+
+
 
 /**
  * Finish screen -Success (Score 4 or 5)
@@ -332,14 +377,7 @@ const successScreen = document.getElementById("success-finish-screen");
 
 //Result
 
-let badResult = document.getElementById("right").textContent;
-let badScoreMessage = "You scored " + result + " out of 5!";
-const badPara = document.createElement("p");
-const badResultNode = document.createTextNode(badScoreMessage);
-badPara.appendChild(badResultNode);
-const badFinalScore = document.getElementById("failure-final-score");
-badFinalScore.appendChild(badResultNode);
-console.log(badResult);
+
 
 
 
@@ -349,7 +387,7 @@ returnHomeButton.addEventListener('click', (e) => finalHome(e));
 
 const finalHome = function (e) {
     e.preventDefault();
-    window.addEventListener('click',()=>{ location.reload()});
+    window.addEventListener('click', () => { location.reload() });
     if (homeDisplay.style.display === "none" || initialStart === false) {
         initialStart === true;
         gameDisplay.style.display = "none";
@@ -381,7 +419,7 @@ failureHomeButton.addEventListener('click', (e) => failureHome(e));
 
 const failureHome = function (e) {
     e.preventDefault();
-    window.addEventListener('click',()=>{ location.reload()});
+    window.addEventListener('click', () => { location.reload() });
     if (homeDisplay.style.display === "none" || initialStart === false) {
         initialStart === true;
         gameDisplay.style.display = "none";
