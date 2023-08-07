@@ -790,7 +790,7 @@ footer a:hover {
 /* Responsive design */
 /* Media queries */
 
-@media (max-width: 1200px) {
+@media (max-width: 1179px) {
     #sub-title {
         display: none;
     }
