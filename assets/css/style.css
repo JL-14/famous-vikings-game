@@ -15,10 +15,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
     background-image: url("../images/game-background.jpg");
     background-color: #CE3A08;
     background-size: cover;
-    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-attachment: fixed;
     font-family: 'Acme', sans-serif;
     color: #fff0db;
     height: 100%;
@@ -28,8 +31,9 @@ body {
 header {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    position: absolute;
+    position: fixed;
     height: auto;
     width: 100%;
     left: 0;
@@ -41,6 +45,7 @@ header {
 
 h1 {
     line-height: 60px;
+    padding-top: 5px;
 }
 
 .viking-shield {
@@ -74,6 +79,7 @@ h1 {
 /* Visibility of Home Screen */
 #home-screen {
     display: block;
+    height: 100%;
 }
 
 .introduction {
@@ -183,7 +189,6 @@ h1 {
     display: none;
     justify-content: center;
     flex-wrap: wrap;
-    overflow: auto;
 }
 
 .viking-details {
@@ -225,6 +230,7 @@ h1 {
     padding: 20px;
     text-align: center;
     margin-left: 30px;
+    overflow: auto;
 }
 
 .question {
@@ -323,7 +329,7 @@ h1 {
     background-color: rgba(255, 240, 219, 0.9);
     color: black;
     height: auto;
-    margin-left: 2px;
+    margin-left: 3%;
     margin-top: auto;
     padding: 10px;
     width: 90%;
@@ -335,7 +341,6 @@ h1 {
     justify-content: flex-end;
     position: relative;
     width: 100%;
-    margin-left: auto;
     margin-right: 3%;
     margin-top: 10px;
     align-content: center;
@@ -729,13 +734,12 @@ h1 {
     cursor: pointer;
 }
 
-
 /* Footer */
 .footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: absolute;
+    position: fixed;
     height: 50px;
     width: 100%;
     left: 0;
@@ -784,34 +788,33 @@ footer a:hover {
 }
 
 /* Responsive design */
-/* --------- Media queries */
+/* Media queries */
 
 @media (max-width: 1200px) {
-
+    #sub-title {
+        display: none;
+    }
     .game-area {
         display: flex;
         width: 100%;
         height: auto;
         margin-right: 30px;
         margin-left: auto;
-        overflow: auto;
     }
     #game-screen {
         display: none;
         justify-content: center;
         flex-wrap: wrap;
-        overflow: scroll;
     }
     .viking-details {
         display: flex;
         flex-direction: column;
         justify-content: center;
         margin-top: 80px;
+        padding: 10px;
+        text-align: center;
         width: 90%;
         height: auto;
-        padding: 10px;
-        margin-left: 3%;
-        text-align: center;
     }
     #rollo {
         display: flex;
@@ -828,9 +831,22 @@ footer a:hover {
     .viking-shield {
         display: none;
     }
+    .cell {
+        flex: 0 0 32%;
+        height: 17.5vh;
+        margin-bottom: 5px;
+        margin-right: 5px;
+        background-color: rgba(255, 42, 34, 0.85);
+        color: #fff0db;
+        font-weight: bold;
+        font-size: 80%;
+        cursor: pointer;
+    }
 }        
 
 
-@media (max-width: 320px) {
-
+@media (max-width: 930px) {
+#sub-title {
+    display: none;
+}
 }
