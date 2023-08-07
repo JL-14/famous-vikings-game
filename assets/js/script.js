@@ -35,6 +35,17 @@ const cnutQuestion = document.getElementById("cnut-the-great-question");
 
 const answerButtons = document.querySelectorAll(".cell");
 
+const instructions = document.getElementById("instructions");
+const overlay = document.getElementById("overlay");
+const instructionsLink = document.getElementById("instructions-link");
+const closeInstructions = document.getElementById("close-instructions");
+
+const successScreen = document.getElementById("success-finish-screen");
+const failureScreen = document.getElementById("failure-finish-screen");
+
+const finishButton = document.getElementById("finish-button");
+const finishIncorrectButton = document.getElementById("finish-incorrect-button");
+
 /* Let variables */
 let options = ["Became Duke of Normandy", "Made London Bridge fall down", "Discovered America", "The Last Great Viking", "Established North Sea Empire", "Carried a 6 foot axe", "Had a blue tooth", "Conquered St Petersburg", "Invented the compass"];
 let quitButton = document.getElementById("quit-button");
@@ -53,6 +64,8 @@ let questions = [rolloQuestion, olavQuestion, leifQuestion, haraldQuestion, cnut
 let questionText = ["Question: What title did Rollo have in France?", "Question: What landmark did Olav destroy?", "Question: What did Leif find?", "Question: What was Harald known as?", "Question: What did Cnut rule over?"];
 
 let wrongResult = document.getElementById("wrong").textContent;
+
+
 
 document.querySelector('#button1').textContent = options[0];
 document.querySelector('#button2').textContent = options[1];
@@ -76,28 +89,20 @@ document.addEventListener('DOMContentLoaded', () => {
     incorrectNextButton.addEventListener('click', showNextQuestion);
     nextQuitButton.addEventListener('click', (e) => goHome(e));
     nextIncorrectQuitButton.addEventListener('click', (e) => goHome(e));
+    instructionsLink.addEventListener('click', () => instructions.style.display = "block");
+instructionsLink.addEventListener('click', () => overlay.style.display = "block");
+closeInstructions.addEventListener('click', () => instructions.style.display = "none");
+closeInstructions.addEventListener('click', () => overlay.style.display = "none");
 });
 // correctOption.addEventListener('click', correctPopup);
 // incorrectOption.addEventListener('click', incorrectPopup);
 
 /* Functions */
 /**
- * Show instructions
+ * Randomise tiles in question grid
+ * 1. 
  * 
  */
-
-const instructions = document.getElementById("instructions");
-const overlay = document.getElementById("overlay");
-
-const instructionsLink = document.getElementById("instructions-link");
-instructionsLink.addEventListener('click', () => instructions.style.display = "block");
-instructionsLink.addEventListener('click', () => overlay.style.display = "block");
-
-const closeInstructions = document.getElementById("close-instructions");
-closeInstructions.addEventListener('click', () => instructions.style.display = "none");
-closeInstructions.addEventListener('click', () => overlay.style.display = "none");
-
-// /* Randomise options in question grid */
 
 // function randomOptions() {
 //     window.alert("The current order is: " + options);
@@ -116,7 +121,7 @@ closeInstructions.addEventListener('click', () => overlay.style.display = "none"
 // }
 
 /**
- * Starting Game:
+ * Start Game:
  * 1. Prevents default setting requiring click before click (i.e. double click) to start game
  * 2. Identifies whether gameDisplay is active
  * 3. Sets homeDisplay to inactive and activates gameDisplay
@@ -134,10 +139,11 @@ const startGame = function (e) {
 }
 
 /**
- * Quitting Game:
+ * Quit Game:
  * 1. Prevents default setting requiring click before click (i.e. double click) to quit game
  * 2. Identifies whether homeDisplay is active
  * 3. Sets homeDisplay to active and hides gameDisplay
+ * 4. Activates confirmation that user wants to quit
  */
 
 const goHome = function (e) {
@@ -157,9 +163,11 @@ const goHome = function (e) {
 /**
  * Answer feedback:
  * 1. If answer is correct, modal display is activated and correct answer popup appears
- * 2. If answer is incorrect, modalIncorrect activates incorrect answer popup
- * 3. For a correct answer the 'right' score increases by 1
- * 4. For an incorrect answer the 'wrong' score increases by 1
+ * 2. Separate function for the final question, bringing up final answer popup
+ * 3. If answer is incorrect, modalIncorrect activates incorrect answer popup
+ * 4. Separate function for the final question, bringing up final answer popup
+ * 5. For a correct answer the 'right' score increases by 1
+ * 6. For an incorrect answer the 'wrong' score increases by 1
  */
 
 function correctPopup() {
@@ -168,19 +176,17 @@ function correctPopup() {
     let oldRightScore = parseInt(document.getElementById("right").innerText);
     document.getElementById("right").innerText = ++oldRightScore;
 }
-
-function incorrectPopup() {
-    modalIncorrect.style.display = "block";
-    overlay.style.display = "block";
-    let oldWrongScore = parseInt(document.getElementById("wrong").innerText);
-    document.getElementById("wrong").innerText = ++oldWrongScore;
-}
-
 function finalCorrectPopup() {
     finalModal.style.display = "block";
     overlay.style.display = "block";
     let oldRightScore = parseInt(document.getElementById("right").innerText);
     document.getElementById("right").innerText = ++oldRightScore;
+}
+function incorrectPopup() {
+    modalIncorrect.style.display = "block";
+    overlay.style.display = "block";
+    let oldWrongScore = parseInt(document.getElementById("wrong").innerText);
+    document.getElementById("wrong").innerText = ++oldWrongScore;
 }
 function finalIncorrectPopup() {
     finalModalIncorrect.style.display = "block";
@@ -190,18 +196,15 @@ function finalIncorrectPopup() {
 }
 
 /**
- * Next question function with score update:
- * 1. Sets Next question button on answer feedback popup to close the popup and move to the next question
- * 2. Update scores on correct or incorrect answer
+ * Close answer popups on moving to next question:
+ * 1. Use Next question button on answer feedback popup to close the popup and overlay
  */
-
 
 nextButton.onclick = function () {
     modal.style.display = "none";
     overlay.style.display = "none";
     // randomOptions();
 }
-
 incorrectNextButton.onclick = function () {
     modalIncorrect.style.display = "none";
     overlay.style.display = "none";
@@ -226,10 +229,9 @@ function showNextViking() {
 showNextViking();
 
 /**
- * Linking Question to the description of the Viking
+ * Change question alongside the change of Viking
  * 1. Set first question as the Rollo question
- * 2. Link the topics (Vikings) to the Questions using the dataset and switch attributes
- * 3. Change question when the topic (viking1) changes
+ * 2. Move through the questions in the same order as the Vikings to ensure they match
  */
 
 function showNextQuestion() {
@@ -244,10 +246,13 @@ function showNextQuestion() {
 showNextQuestion();
 
 /**
- * Matching tile to question
- * 
- *  
- * 
+ * Match tile to question, calculate and display score, and activate appropriate popup
+ * 1. Create answer index to match questions 1-4 and then separate match for question 5 to display final question popup
+ * 2. Take the final score (number of correct answers) and write into:
+ *      -Right fifth answer, linking to success game screen (4-5 correct answers)
+ *      -Right fifth answer, linking to failed game screen (1-3 correct answers)
+ *      -Wrong fifth answer, linking to success game screen (4-5 correct answers)
+ *      -Wrong fifth answer, linking to failed game screen (1-3 correct answers)
  */
 
 if (answerIndex < questions.length) {
@@ -258,6 +263,7 @@ if (answerIndex < questions.length) {
 
 answerButtons.forEach((button) => {
     button.addEventListener("click", () => {
+        //Set the correct answer for the first four questions (1-4)
         if (answerIndex <= 3) {
             let currentQuestion = questions[answerIndex];
             const currentQuestionData = currentQuestion.dataset.viking;
@@ -268,17 +274,19 @@ answerButtons.forEach((button) => {
                 console.log("wrong");
                 incorrectPopup();
             }
+        //Set the correct answer for the fifth question, bringing up the appropriate final answer popup
         } else if (answerIndex = 4) {
             let currentQuestion = questions[answerIndex];
             const currentQuestionData = currentQuestion.dataset.viking;
             if (button.textContent === currentQuestionData) {
+                //Final result screen after correct final answer
                 console.log("match");
                 finalCorrectPopup();
-                    //Result calculation on correct final answer
+                    //Calculating the final score and writing it into the final result screen
                         let result = document.getElementById("right").innerHTML;
                         let scoreMessage = "You scored " + result + " out of 5!";
-                            //Final result screen after correct final answer
                             if (result >= "4") {
+                                //Correct final answer, success game screen
                                 const para = document.createElement("p");
                                 const resultNode = document.createTextNode(scoreMessage);
                                 para.appendChild(resultNode);
@@ -293,14 +301,15 @@ answerButtons.forEach((button) => {
                                     finalModalIncorrect.style.display = "none";
                                 }
                             } else {
-                                    let badResult = document.getElementById("right").innerHTML;
-                                    let badScoreMessage = "You scored " + badResult + " out of 5!";
-                                    const badPara = document.createElement("p");
-                                    const badResultNode = document.createTextNode(badScoreMessage);
-                                    badPara.appendChild(badResultNode);
-                                    const badFinalScore = document.getElementById("failure-final-score");
-                                    badFinalScore.appendChild(badResultNode);
-                                    console.log(badResult);
+                                //Correct final answer, failed game screen
+                                let badResult = document.getElementById("right").innerHTML;
+                                let badScoreMessage = "You scored " + badResult + " out of 5!";
+                                const badPara = document.createElement("p");
+                                const badResultNode = document.createTextNode(badScoreMessage);
+                                badPara.appendChild(badResultNode);
+                                const badFinalScore = document.getElementById("failure-final-score");
+                                badFinalScore.appendChild(badResultNode);
+                                console.log(badResult);
                                 finishButton.addEventListener('click', failureEndScreen);
                                 function failureEndScreen() {
                                     failureScreen.style.display = "block";
@@ -310,12 +319,13 @@ answerButtons.forEach((button) => {
                                 }
                             }
             } else {
+                //Final result screen after wrong final answer
                 console.log("wrong");
                 finalIncorrectPopup();
-                    //Result calculation on wrong final answer
+                //Calculating the final score and writing it into the final result screen                   
                     let badResult = document.getElementById("right").innerHTML;
                     let badScoreMessage = "You scored " + badResult + " out of 5!";
-                            //Final result screen after wrong final answer
+                            //Wrong final answer, success game screen
                             if (badResult >= "4") {
                                 let result = document.getElementById("right").innerHTML;
                                 let scoreMessage = "You scored " + result + " out of 5!";
@@ -333,6 +343,7 @@ answerButtons.forEach((button) => {
                                     finalModalIncorrect.style.display = "none";
                                 }
                             } else {
+                                //Wrong final answer, failed game screen
                                 const badPara = document.createElement("p");
                                 const badResultNode = document.createTextNode(badScoreMessage);
                                 badPara.appendChild(badResultNode);
@@ -349,6 +360,7 @@ answerButtons.forEach((button) => {
                             }
             }
         } else {
+            //Answer popup for tiles that are always incorrect (no matching question)
             console.log("out of index");
             incorrectPopup();
         }
@@ -357,47 +369,14 @@ answerButtons.forEach((button) => {
 });
 
 /**
- * Code to bring up finish screen with score
- * 
- * 
+ * Return home buttons for end-of-game screens
+ * 1. On click to return home, activates the home screen and hides other active screens (popups and game screen)
+ * 2. Restarts game
  */
 
-finishButton = document.getElementById("finish-button");
-
-// function endSuccess() {
-
-// }
-
-finishIncorrectButton = document.getElementById("finish-incorrect-button");
-
-// function endFailure() {
-//     if (result <= 3) {
-
-//     }
-// }
-
-
-
-
-
-/**
- * Finish screen -Success (Score 4 or 5)
- * 
- * 
- */
-
-const successScreen = document.getElementById("success-finish-screen");
-
-//Result
-
-
-
-
-
-//Return home button
+//Return home button for success screen
 const returnHomeButton = document.getElementById("return-home");
 returnHomeButton.addEventListener('click', (e) => finalHome(e));
-
 const finalHome = function (e) {
     e.preventDefault();
     window.addEventListener('click', () => { location.reload() });
@@ -409,21 +388,7 @@ const finalHome = function (e) {
         homeDisplay.style.display = "none";
     }
 }
-
-function endGame() {
-    successScreen.style.display = "none";
-    overlay.style.display = "none";
-}
-
-/**
- * Finish screen -Failure (Score 0-3)
- * 
- * 
- */
-
-const failureScreen = document.getElementById("failure-finish-screen");
-
-//Return home button
+//Return home button for failed game screen
 const failureHomeButton = document.getElementById("failure-return-home");
 failureHomeButton.addEventListener('click', (e) => failureHome(e));
 
