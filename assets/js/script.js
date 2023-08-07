@@ -274,6 +274,16 @@ answerButtons.forEach((button) => {
             if (button.textContent === currentQuestionData) {
                 console.log("match");
                 finalCorrectPopup();
+                //Result calculation
+                    let result = document.getElementById("right").textContent;
+                    let scoreMessage = "You scored " + result + " out of 5!";
+                    //Good result
+                    const para = document.createElement("p");
+                    const resultNode = document.createTextNode(scoreMessage);
+                    para.appendChild(resultNode);
+                    const finalScore = document.getElementById("success-final-score");
+                    finalScore.appendChild(resultNode);
+                    console.log(result);
             } else {
                 console.log("wrong");
                 finalIncorrectPopup();
@@ -321,15 +331,16 @@ function failureEndScreen(){
 const successScreen = document.getElementById("success-finish-screen");
 
 //Result
-let result = document.getElementById("right").textContent;
 
-let scoreMessage = "You scored " + result + " out of 5!";
-const para = document.createElement("p");
-const resultNode = document.createTextNode(scoreMessage);
-para.appendChild(resultNode);
+let badResult = document.getElementById("right").textContent;
+let badScoreMessage = "You scored " + result + " out of 5!";
+const badPara = document.createElement("p");
+const badResultNode = document.createTextNode(badScoreMessage);
+badPara.appendChild(badResultNode);
+const badFinalScore = document.getElementById("failure-final-score");
+badFinalScore.appendChild(badResultNode);
+console.log(badResult);
 
-const finalScore = document.getElementById("success-final-score");
-finalScore.appendChild(resultNode);
 
 
 //Return home button
@@ -362,16 +373,7 @@ function endGame() {
 const failureScreen = document.getElementById("failure-finish-screen");
 
 //Result update
-let badResult = document.getElementById("right").textContent;
 
-let badScoreMessage = "You scored " + result + " out of 5!";
-
-const badPara = document.createElement("p");
-const badResultNode = document.createTextNode(badScoreMessage);
-para.appendChild(badResultNode);
-
-const badFinalScore = document.getElementById("failure-final-score");
-badFinalScore.appendChild(badResultNode);
 
 //Return home button
 const failureHomeButton = document.getElementById("failure-return-home");
