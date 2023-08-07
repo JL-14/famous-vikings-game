@@ -275,17 +275,16 @@ answerButtons.forEach((button) => {
                 console.log("match");
                 finalCorrectPopup();
                     //Result calculation on correct final answer
-                    let result = document.getElementById("right").innerHTML;
-                    let scoreMessage = "You scored " + result + " out of 5!";
-                        //Write result
-                        const para = document.createElement("p");
-                        const resultNode = document.createTextNode(scoreMessage);
-                        para.appendChild(resultNode);
-                        const finalScore = document.getElementById("success-final-score");
-                        finalScore.appendChild(resultNode);
-                        console.log(result);
+                        let result = document.getElementById("right").innerHTML;
+                        let scoreMessage = "You scored " + result + " out of 5!";
                             //Final result screen after correct final answer
                             if (result >= "4") {
+                                const para = document.createElement("p");
+                                const resultNode = document.createTextNode(scoreMessage);
+                                para.appendChild(resultNode);
+                                const finalScore = document.getElementById("success-final-score");
+                                finalScore.appendChild(resultNode);
+                                console.log(result);
                                 finishButton.addEventListener('click', successEndScreen);
                                 function successEndScreen() {
                                     successScreen.style.display = "block";
@@ -294,6 +293,14 @@ answerButtons.forEach((button) => {
                                     finalModalIncorrect.style.display = "none";
                                 }
                             } else {
+                                    let badResult = document.getElementById("right").innerHTML;
+                                    let badScoreMessage = "You scored " + badResult + " out of 5!";
+                                    const badPara = document.createElement("p");
+                                    const badResultNode = document.createTextNode(badScoreMessage);
+                                    badPara.appendChild(badResultNode);
+                                    const badFinalScore = document.getElementById("failure-final-score");
+                                    badFinalScore.appendChild(badResultNode);
+                                    console.log(badResult);
                                 finishButton.addEventListener('click', failureEndScreen);
                                 function failureEndScreen() {
                                     failureScreen.style.display = "block";
@@ -302,22 +309,22 @@ answerButtons.forEach((button) => {
                                     finalModalIncorrect.style.display = "none";
                                 }
                             }
-
             } else {
                 console.log("wrong");
                 finalIncorrectPopup();
                     //Result calculation on wrong final answer
                     let badResult = document.getElementById("right").innerHTML;
                     let badScoreMessage = "You scored " + badResult + " out of 5!";
-                        //Write result
-                        const badPara = document.createElement("p");
-                        const badResultNode = document.createTextNode(badScoreMessage);
-                        badPara.appendChild(badResultNode);
-                        const badFinalScore = document.getElementById("failure-final-score");
-                        badFinalScore.appendChild(badResultNode);
-                        console.log(badResult);
                             //Final result screen after wrong final answer
                             if (badResult >= "4") {
+                                let result = document.getElementById("right").innerHTML;
+                                let scoreMessage = "You scored " + result + " out of 5!";
+                                const para = document.createElement("p");
+                                const resultNode = document.createTextNode(scoreMessage);
+                                para.appendChild(resultNode);
+                                const finalScore = document.getElementById("success-final-score");
+                                finalScore.appendChild(resultNode);
+                                console.log(result);
                                 finishIncorrectButton.addEventListener('click', successEndScreen);
                                 function successEndScreen() {
                                     successScreen.style.display = "block";
@@ -326,6 +333,12 @@ answerButtons.forEach((button) => {
                                     finalModalIncorrect.style.display = "none";
                                 }
                             } else {
+                                const badPara = document.createElement("p");
+                                const badResultNode = document.createTextNode(badScoreMessage);
+                                badPara.appendChild(badResultNode);
+                                const badFinalScore = document.getElementById("failure-final-score");
+                                badFinalScore.appendChild(badResultNode);
+                                console.log(badResult);
                                 finishIncorrectButton.addEventListener('click', failureEndScreen);
                                 function failureEndScreen() {
                                     failureScreen.style.display = "block";
@@ -409,9 +422,6 @@ function endGame() {
  */
 
 const failureScreen = document.getElementById("failure-finish-screen");
-
-//Result update
-
 
 //Return home button
 const failureHomeButton = document.getElementById("failure-return-home");
