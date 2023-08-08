@@ -2,20 +2,17 @@
 const gameDisplay = document.getElementById("game-screen");
 const homeDisplay = document.getElementById("home-screen");
 const startButton = document.getElementById("start-button");
-
 const modal = document.getElementById("correct-answer");
 const modalIncorrect = document.getElementById("incorrect-answer");
 const finalModal = document.getElementById("final-correct-answer");
 const finalModalIncorrect = document.getElementById("final-incorrect-answer");
 const nextButton = document.getElementById("next-question-button");
 const incorrectNextButton = document.getElementById("incorrect-next-question-button");
-
 const viking1 = document.getElementById("rollo");
 const viking2 = document.getElementById("olav-haraldsson");
 const viking3 = document.getElementById("leif-erikson");
 const viking4 = document.getElementById("harald-hardrada");
 const viking5 = document.getElementById("cnut-the-great");
-
 const rolloOption = document.getElementById("button1");
 const olavOption = document.getElementById("button2");
 const leifOption = document.getElementById("button3");
@@ -25,24 +22,19 @@ const otherOption1 = document.getElementById("button6");
 const otherOption2 = document.getElementById("button7");
 const otherOption3 = document.getElementById("button8");
 const otherOption4 = document.getElementById("button9");
-
 const questionArea = document.getElementsByClassName("question");
 const rolloQuestion = document.getElementById("rollo-question");
 const olavQuestion = document.getElementById("olav-haraldsson-question");
 const leifQuestion = document.getElementById("leif-erikson-question");
 const haraldQuestion = document.getElementById("harald-hardrada-question");
 const cnutQuestion = document.getElementById("cnut-the-great-question");
-
 const answerButtons = document.querySelectorAll(".cell");
-
 const instructions = document.getElementById("instructions");
 const overlay = document.getElementById("overlay");
 const instructionsLink = document.getElementById("instructions-link");
 const closeInstructions = document.getElementById("close-instructions");
-
 const successScreen = document.getElementById("success-finish-screen");
 const failureScreen = document.getElementById("failure-finish-screen");
-
 const finishButton = document.getElementById("finish-button");
 const finishIncorrectButton = document.getElementById("finish-incorrect-button");
 const returnHomeButton = document.getElementById("return-home");
@@ -65,7 +57,6 @@ let initialStart = false;
 let answerGrid = [rolloOption, olavOption, leifOption, haraldOption, cnutOption, otherOption1, otherOption2, otherOption3, otherOption4];
 let questions = [rolloQuestion, olavQuestion, leifQuestion, haraldQuestion, cnutQuestion];
 let questionText = ["Question: What title did Rollo have in France?", "Question: What landmark did Olav destroy?", "Question: What did Leif find?", "Question: What was Harald known as?", "Question: What did Cnut rule over?"];
-
 let wrongResult = document.getElementById("wrong").textContent;
 
 document.querySelector('#button1').textContent = options[0];
@@ -95,37 +86,12 @@ document.addEventListener('DOMContentLoaded', () => {
     closeInstructions.addEventListener('click', () => instructions.style.display = "none");
     closeInstructions.addEventListener('click', () => overlay.style.display = "none");
 });
-// correctOption.addEventListener('click', correctPopup);
-// incorrectOption.addEventListener('click', incorrectPopup);
-
-/* Functions */
-/** Randomise tiles in question grid
- * 1. 
- * 
- */
-
-// function randomOptions() {
-//     window.alert("The current order is: " + options);
-
-//     for (let i = 0; i < options.length; i++) {
-//         let randomNum = Math.floor(Math.random() * options.length);
-//         let tempOptions = "";
-//         let currentOptions = options[i];
-//         let shuffledOptions = options[randomNum];
-
-//         tempOptions = currentOptions;
-//         options[i] = shuffledOptions;
-//         options[randomNum] = tempOptions;
-//     }
-//     window.alert("The shuffled options are: " + options);
-// }
 
 /** Start Game:
  * 1. Prevents default setting requiring click before click (i.e. double click) to start game
  * 2. Identifies whether gameDisplay is active
  * 3. Sets homeDisplay to inactive and activates gameDisplay
  */
-
 const startGame = function (e) {
     e.preventDefault();
     if (gameDisplay.style.display === "none" || initialStart === false) {
@@ -143,19 +109,17 @@ const startGame = function (e) {
  * 3. Sets homeDisplay to active and hides gameDisplay
  * 4. Activates confirmation that user wants to quit
  */
-
 const goHome = function (e) {
     e.preventDefault();
+    confirm("Are you sure you want to quit?");
     window.addEventListener('click', () => { location.reload() });
     if (homeDisplay.style.display === "none" || initialStart === false) {
         initialStart === true;
         gameDisplay.style.display = "none";
         homeDisplay.style.display = "block";
-        // randomOptions();
     } else {
         homeDisplay.style.display = "none";
     }
-    confirm("Are you sure you want to quit?");
 }
 
 /** Answer feedback:
@@ -166,25 +130,27 @@ const goHome = function (e) {
  * 5. For a correct answer the 'right' score increases by 1
  * 6. For an incorrect answer the 'wrong' score increases by 1
  */
-
 function correctPopup() {
     modal.style.display = "block";
     overlay.style.display = "flex";
     let oldRightScore = parseInt(document.getElementById("right").innerText);
     document.getElementById("right").innerText = ++oldRightScore;
 }
+
 function finalCorrectPopup() {
     finalModal.style.display = "block";
     overlay.style.display = "flex";
     let oldRightScore = parseInt(document.getElementById("right").innerText);
     document.getElementById("right").innerText = ++oldRightScore;
 }
+
 function incorrectPopup() {
     modalIncorrect.style.display = "block";
     overlay.style.display = "flex";
     let oldWrongScore = parseInt(document.getElementById("wrong").innerText);
     document.getElementById("wrong").innerText = ++oldWrongScore;
 }
+
 function finalIncorrectPopup() {
     finalModalIncorrect.style.display = "block";
     overlay.style.display = "flex";
@@ -195,23 +161,20 @@ function finalIncorrectPopup() {
 /** Close answer popups on moving to next question:
  * 1. Use Next question button on answer feedback popup to close the popup and overlay
  */
-
 nextButton.onclick = function () {
     modal.style.display = "none";
     overlay.style.display = "none";
-    // randomOptions();
 }
+
 incorrectNextButton.onclick = function () {
     modalIncorrect.style.display = "none";
     overlay.style.display = "none";
-    // randomOptions();
 }
 
 /** Move to the next Viking in the list of Vikings (vikingBiogs) when the Button Next Question is clicked:
  * 1. Set display of all vikings to hidden
  * 2. Activate next Viking when Next Question is clicked through incrementing the vikings (vikingBiogs) using the index (vikingIndex)
  */
-
 function showNextViking() {
     if (vikingIndex < vikingBiogs.length) {
         for (let i = 0; i < vikingBiogs.length; i++) {
@@ -221,13 +184,13 @@ function showNextViking() {
     vikingBiogs[vikingIndex].style.display = 'inline-flex';
     vikingIndex++;
 }
+
 showNextViking();
 
 /** Change question alongside the change of Viking:
  * 1. Set first question as the Rollo question
  * 2. Move through the questions in the same order as the Vikings to ensure they match
  */
-
 function showNextQuestion() {
     if (questionIndex < questions.length) {
         for (let i = 0; i < questions.length; i++) {
@@ -237,6 +200,7 @@ function showNextQuestion() {
     questions[questionIndex].style.display = 'inline-flex';
     questionIndex++;
 }
+
 showNextQuestion();
 
 /** Match tile to question, calculate and display score, and activate appropriate popup:
@@ -247,12 +211,12 @@ showNextQuestion();
  *      -Wrong fifth answer, linking to success game screen (4-5 correct answers)
  *      -Wrong fifth answer, linking to failed game screen (1-3 correct answers)
  */
-
 if (answerIndex < questions.length) {
     for (let i = 0; i < questions.length; i++) {
         answerIndex[i];
     }
 }
+
 answerButtons.forEach((button) => {
     button.addEventListener("click", () => {
         //Set the correct answer for the first four questions (1-4)
@@ -372,8 +336,6 @@ answerButtons.forEach((button) => {
  * 1. On click to return home, activates the home screen and hides other active screens (popups and game screen)
  * 2. Restarts game
  */
-
-//Return home button for success screen
 returnHomeButton.addEventListener('click', (e) => finalHome(e));
 const finalHome = function (e) {
     e.preventDefault();
@@ -386,7 +348,7 @@ const finalHome = function (e) {
         homeDisplay.style.display = "none";
     }
 }
-//Return home button for failed game screen
+
 failureHomeButton.addEventListener('click', (e) => failureHome(e));
 const failureHome = function (e) {
     e.preventDefault();
