@@ -48,6 +48,7 @@ const finishIncorrectButton = document.getElementById("finish-incorrect-button")
 const returnHomeButton = document.getElementById("return-home");
 const failureHomeButton = document.getElementById("failure-return-home");
 
+
 /* Let variables */
 let options = ["Became Duke of Normandy", "Made London Bridge fall down", "Discovered America", "The Last Great Viking", "Established North Sea Empire", "Carried a 6 foot axe", "Had a blue tooth", "Conquered St Petersburg", "Invented the compass"];
 let quitButton = document.getElementById("quit-button");
@@ -168,25 +169,25 @@ const goHome = function (e) {
 
 function correctPopup() {
     modal.style.display = "block";
-    overlay.style.display = "block";
+    overlay.style.display = "flex";
     let oldRightScore = parseInt(document.getElementById("right").innerText);
     document.getElementById("right").innerText = ++oldRightScore;
 }
 function finalCorrectPopup() {
     finalModal.style.display = "block";
-    overlay.style.display = "block";
+    overlay.style.display = "flex";
     let oldRightScore = parseInt(document.getElementById("right").innerText);
     document.getElementById("right").innerText = ++oldRightScore;
 }
 function incorrectPopup() {
     modalIncorrect.style.display = "block";
-    overlay.style.display = "block";
+    overlay.style.display = "flex";
     let oldWrongScore = parseInt(document.getElementById("wrong").innerText);
     document.getElementById("wrong").innerText = ++oldWrongScore;
 }
 function finalIncorrectPopup() {
     finalModalIncorrect.style.display = "block";
-    overlay.style.display = "block";
+    overlay.style.display = "flex";
     let oldWrongScore = parseInt(document.getElementById("wrong").innerText);
     document.getElementById("wrong").innerText = ++oldWrongScore;
 }
