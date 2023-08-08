@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico'>
 
     <title>Viking Kings Quiz</title>
 </head>
@@ -84,7 +83,7 @@
             </div>
         </div>
         <!-- Instructions -->
-        <div id="instructions" class="instructions-popup" class="fade-in-transition">
+        <div id="instructions" class="instructions-popup">
             <h2>
                 Instructions how to play the Famous Viking Game
             </h2>
@@ -100,6 +99,7 @@
             <p>
                 There are 5 Vikings in total, so 5 questions to answer.
             </p>
+            <p>
             Are you able to answer them all?
             </p>
             <button id="close-instructions">
@@ -262,8 +262,7 @@
                     </h2>
                     <h2 id="cnut-the-great-question" class="question" data-viking="Established North Sea Empire">
                         Question: What did Cnut rule over?
-                        <h2 id="incorrect1-question" class="question" data-viking="incorrect">
-                        </h2>
+                    </h2>
                 </div>
                 <div class="grid">
                     <button class="cell" id="button1" data-viking="Became Duke of Normandy">Became Duke of
@@ -287,7 +286,8 @@
             </section>
             <!-- Correct Answer pop-up -->
             <div id="correct-answer" class="modal-popup">
-                <h2 id="correct-text">
+                <br>
+                <h2>
                     Correct!
                 </h2>
                 <img src="assets/images/viking-thumbs-up.gif" id="thumbs-up-gif">
@@ -298,10 +298,11 @@
             </div>
             <!-- Incorrect Answer pop-up -->
             <div id="incorrect-answer" class="modal-popup">
-                <h2 id="incorrect-text">
+                <br>
+                <h2>
                     Oops! Not quite right...
                 </h2>
-                <img src="assets/images/viking-lightning.gif" id="viking-lightning-gif">
+                <img src="assets/images/viking-lightning.gif">
                 <button id="incorrect-next-question-button">
                     Next Question!
                 </button>
@@ -309,11 +310,12 @@
             </div>
             <!-- Final Correct Answer pop-up -->
             <div id="final-correct-answer" class="final-modal-popup">
-                <h2 id="correct-text">
+                <br>
+                <h2>
                     Correct!
                 </h2>
                 <img src="assets/images/viking-thumbs-up.gif" id="thumbs-up-gif">
-                <p class="final-text">
+                <p>
                     That was the final question!
                 </p>
                 <button id="finish-button">
@@ -323,11 +325,12 @@
             </div>
             <!-- Final incorrect Answer pop-up -->
             <div id="final-incorrect-answer" class="final-modal-popup">
-                <h2 id="incorrect-text">
+                <br>
+                <h2>
                     Oops! Not quite right...
                 </h2>
-                <img src="assets/images/viking-lightning.gif" id="viking-lightning-gif">
-                <p class="final-text">
+                <img src="assets/images/viking-lightning.gif">
+                <p class>
                     That was the final question!
                 </p>
                 <button id="finish-incorrect-button">
