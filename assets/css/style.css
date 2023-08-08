@@ -254,7 +254,7 @@ ol {
 
 .viking-image {
     display: block;
-    width: 30%;
+    width: 300px;
     margin: auto;
     padding: 20px;
 }
@@ -367,6 +367,7 @@ ol {
     font-size: 110%;
     font-weight: bold;
     padding-right: 10px;
+    padding-left: 5px;
 }
 
 #wrong {
@@ -374,6 +375,7 @@ ol {
     font-size: 110%;
     font-weight: bold;
     padding-right: 10px;
+    padding-left: 5px;
 }
 
 .quit-button {
@@ -381,7 +383,6 @@ ol {
     color: #fff0db;
     font-weight: bold;
     padding: 2px;
-    margin-bottom: 20px;
 }
 
 .quit-button:hover {
@@ -452,6 +453,7 @@ ol {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding-bottom: 20px;
 }
 
 .final-modal-popup {
@@ -465,6 +467,7 @@ ol {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding-bottom: 20px;
 }
 
 .final-text {
@@ -826,6 +829,15 @@ footer a:hover {
         font-size: 60%;
         width: 80%;
     }
+
+    .score-area {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .viking-image {
+        width: 195px;
+    }
 }        
 
 @media (max-width: 400px) {
@@ -875,17 +887,53 @@ footer a:hover {
         font-size: 100%;
     }
     .right-image,
-    .wrong-image,
-    .victorious-image,
-    .defeated-image {
+    .wrong-image {
         max-width: 70%;
         max-height: 70%;
     }
+
+    .victorious-image,
+    .defeated-image {
+        max-width: 90%;
+        max-height: 90%;
+    }
+
     #next-question-button,
     #incorrect-next-question-button,
     #finish-button,
     #finish-incorrect-button {
         font-size: 45%;
         width: 80%;
+    }
+
+    .score-area {
+        font-size: 80%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    #right,
+    #wrong {
+        font-size: 80%;
+    }
+    #quit-button,
+    #next-quit-button {
+        margin-top: 2px;
+        margin-bottom: 2px;
+        font-size: 60%;
+    }
+    #success-finish-screen,
+    #failure-finish-screen {
+        font-size: 100%;
+    }
+    #return-home,
+    #failure-return-home {
+        font-size: 40%;
+        width: 75px;
+    }
+
+    .viking-image {
+        width: 112px;
+        margin: auto;
     }
 }
