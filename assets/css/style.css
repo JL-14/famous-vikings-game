@@ -444,7 +444,7 @@ ol {
 .modal-popup {
     display: none;
     position: fixed;
-    width: 45%;
+    width: 60%;
     overflow: auto;
     background-color: #fff0db;
     border: 5px solid #402e32;
@@ -457,7 +457,7 @@ ol {
 .final-modal-popup {
     display: none;
     position: fixed;
-    width: 45%;
+    width: 60%;
     overflow: auto;
     background-color: #fff0db;
     border: 5px solid #402e32;
@@ -486,7 +486,7 @@ ol {
     text-transform: uppercase;
     font-size: 70%;
     padding: 10px;
-    width: 40%;
+    width: 50%;
     margin: auto;
     border-radius: 7px;
     border: 2px solid #402e32;
@@ -819,6 +819,12 @@ footer a:hover {
     #final-incorrect-answer {
         font-size: 140%;
     }
+    #next-question-button,
+    #incorrect-next-question-button,
+    #finish-button,
+    #finish-incorrect-button {
+        font-size: 50%;
+    }
 }        
 
 
@@ -867,5 +873,19 @@ footer a:hover {
     #final-correct-answer,
     #final-incorrect-answer {
         font-size: 100%;
+    }
+    .right-image,
+    .wrong-image,
+    .victorious-image,
+    .defeated-image {
+        max-width: 70%;
+        max-height: 70%;
+    }
+    #next-question-button,
+    #incorrect-next-question-button,
+    #finish-button,
+    #finish-incorrect-button {
+        font-size: 45%;
+        width: 80%;
     }
 }
