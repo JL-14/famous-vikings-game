@@ -290,6 +290,8 @@ answerButtons.forEach((button) => {
                         overlay.style.display = "block";
                         finalModal.style.display = "none";
                         finalModalIncorrect.style.display = "none";
+                        correctPopup.style.display = "none";
+                        incorrectPopup.style.display = "none";
                     }
                 } else {
                     //Correct final answer, failed game screen
@@ -307,6 +309,8 @@ answerButtons.forEach((button) => {
                         overlay.style.display = "block";
                         finalModal.style.display = "none";
                         finalModalIncorrect.style.display = "none";
+                        correctPopup.style.display = "none";
+                        incorrectPopup.style.display = "none";
                     }
                 }
             } else {
@@ -332,6 +336,8 @@ answerButtons.forEach((button) => {
                         overlay.style.display = "block";
                         finalModal.style.display = "none";
                         finalModalIncorrect.style.display = "none";
+                        correctPopup.style.display = "none";
+                        incorrectPopup.style.display = "none";
                     }
                 } else {
                     //Wrong final answer, failed game screen
@@ -347,6 +353,8 @@ answerButtons.forEach((button) => {
                         overlay.style.display = "block";
                         finalModal.style.display = "none";
                         finalModalIncorrect.style.display = "none";
+                        correctPopup.style.display = "none";
+                        incorrectPopup.style.display = "none";
                     }
                 }
             }
