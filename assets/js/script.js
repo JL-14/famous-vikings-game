@@ -276,7 +276,7 @@ answerButtons.forEach((button) => {
                 //Calculating the final score and writing it into the final result screen
                 let result = document.getElementById("right").innerHTML;
                 let scoreMessage = "You scored " + result + " out of 5!";
-                if (result >= "4") {
+                if (result >= "3") {
                     //Correct final answer, success game screen
                     const para = document.createElement("p");
                     const resultNode = document.createTextNode(scoreMessage);
@@ -317,7 +317,7 @@ answerButtons.forEach((button) => {
                 let badResult = document.getElementById("right").innerHTML;
                 let badScoreMessage = "You scored " + badResult + " out of 5!";
                 //Wrong final answer, success game screen
-                if (badResult >= "4") {
+                if (badResult >= "3") {
                     let result = document.getElementById("right").innerHTML;
                     let scoreMessage = "You scored " + result + " out of 5!";
                     const para = document.createElement("p");
