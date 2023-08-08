@@ -823,10 +823,10 @@ footer a:hover {
     #incorrect-next-question-button,
     #finish-button,
     #finish-incorrect-button {
-        font-size: 50%;
+        font-size: 60%;
+        width: 80%;
     }
 }        
-
 
 @media (max-width: 400px) {
     #sub-title {
