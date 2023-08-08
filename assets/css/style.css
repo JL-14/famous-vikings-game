@@ -6,16 +6,16 @@
     padding: 0;
 }
 
-html,
-body {
-    height: 100%;
+
+main {
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
 
 body {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     background-image: url("../images/game-background.jpg");
     background-color: #CE3A08;
     background-size: cover;
@@ -24,8 +24,8 @@ body {
     background-attachment: fixed;
     font-family: 'Acme', sans-serif;
     color: #fff0db;
-    height: 100%;
     width: 100%;
+    margin-top: 10%;
 }
 
 header {
@@ -34,13 +34,13 @@ header {
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    height: auto;
     width: 100%;
     left: 0;
     top: 0;
     text-align: center;
     background-color: #FF2A22;
     font-size: 170%;
+    z-index: 100;
 }
 
 h1 {
@@ -49,7 +49,6 @@ h1 {
 }
 
 .viking-shield {
-    height: 90%;
     padding: 5px;
     padding-left: 20px;
 }
@@ -77,19 +76,21 @@ h1 {
 }
 
 /* Visibility of Home Screen */
+
 #home-screen {
+    display: flex;
+    flex-direction: row;
     display: block;
-    height: 100%;
 }
 
 .introduction {
     display: flex;
     text-align: center;
+    justify-content: center;
     flex-direction: column;
     width: 90%;
     background: rgba(255, 42, 34, 0.75);
     margin: auto;
-    margin-top: 10%;
     font-size: 130%;
     padding: 5px;
 }
@@ -111,11 +112,10 @@ h1 {
     text-transform: uppercase;
     font-size: 150%;
     padding: 10px;
-    margin-top: 40px;
-    height: 80px;
     width: 30%;
     border-radius: 7px;
     border: 2px solid #402e32;
+    margin-top: 20px;
     text-decoration: none;
     outline: 0;
     cursor: pointer;
@@ -135,11 +135,9 @@ h1 {
 #instructions {
     display: none;
     position: fixed;
-    margin: auto;
     top: 30%;
     left: 25%;
     width: 50%;
-    height: auto;
     padding: 20px;
     background-color: #fff0db;
     color: #402e32;
@@ -160,7 +158,6 @@ h1 {
     background-color: #FF2A22;
     color: #fff0db;
     font-weight: bold;
-    margin-top: 15px;
     border-radius: 0.25rem;
 }
 
@@ -176,7 +173,6 @@ h1 {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 100%;
     inset: 0;
     background: rgba(0, 0, 0, 0.5);
     z-index: 9;
@@ -195,11 +191,10 @@ h1 {
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 80px;
-    width: 45%;
-    height: 80%;
+    width: 80%;
     padding: 10px;
     text-align: center;
+    padding: 20px;
 }
 
 .viking-name {
@@ -210,8 +205,8 @@ h1 {
 .viking-image {
     display: block;
     width: 30%;
-    height: auto;
-    margin: 0 auto;
+    margin: auto;
+    padding: 20px;
 }
 
 .individual-viking-description {
@@ -220,17 +215,14 @@ h1 {
 
 /* Individual Viking visibility */
 #rollo {
-    display: flex;
     flex-direction: column;
     justify-content: left;
     width: 100%;
-    height: auto;
     background-color: rgba(255, 240, 219, 0.9);
     color: black;
-    padding: 20px;
     text-align: center;
-    margin-left: 30px;
     overflow: auto;
+    padding: 5%;
 }
 
 .question {
@@ -242,16 +234,14 @@ h1 {
 }
 
 #olav-haraldsson {
-    display: flex;
     flex-direction: column;
     justify-content: left;
     width: 100%;
-    height: auto;
     background-color: rgba(255, 240, 219, 0.9);
     color: black;
-    padding: 20px;
     text-align: center;
-    margin-left: 30px;
+    overflow: auto;
+    padding: 5%;
 }
 
 #olav-haraldsson-question {
@@ -259,16 +249,14 @@ h1 {
 }
 
 #leif-erikson {
-    display: flex;
     flex-direction: column;
     justify-content: left;
     width: 100%;
-    height: auto;
     background-color: rgba(255, 240, 219, 0.9);
     color: black;
-    padding: 20px;
     text-align: center;
-    margin-left: 30px;
+    overflow: auto;
+    padding: 5%;
 }
 
 #leif-erikson-question {
@@ -276,16 +264,14 @@ h1 {
 }
 
 #harald-hardrada {
-    display: flex;
     flex-direction: column;
     justify-content: left;
     width: 100%;
-    height: auto;
     background-color: rgba(255, 240, 219, 0.9);
     color: black;
-    padding: 20px;
     text-align: center;
-    margin-left: 30px;
+    overflow: auto;
+    padding: 5%;
 }
 
 #harald-hardrada-question {
@@ -293,16 +279,14 @@ h1 {
 }
 
 #cnut-the-great {
-    display: flex;
     flex-direction: column;
     justify-content: left;
     width: 100%;
-    height: auto;
     background-color: rgba(255, 240, 219, 0.9);
     color: black;
-    padding: 20px;
     text-align: center;
-    margin-left: 30px;
+    overflow: auto;
+    padding: 5%;
 }
 
 #cnut-the-great-question {
@@ -315,22 +299,15 @@ h1 {
     align-items: center;
     align-content: center;
     flex-direction: column;
-    width: 45%;
-    height: auto;
-    margin-right: 30px;
-    margin-left: auto;
-    margin-top: 3%;
 }
 
 .question-area {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto;
     background-color: rgba(255, 240, 219, 0.9);
     color: black;
-    height: auto;
-    margin-left: 3%;
-    margin-top: auto;
     padding: 10px;
     width: 90%;
 }
@@ -338,19 +315,17 @@ h1 {
 .grid {
     display: inline-flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: center;
     position: relative;
-    width: 100%;
-    margin-right: 3%;
+    width: 60%;
     margin-top: 10px;
     align-content: center;
 }
 
 .cell {
     flex: 0 0 32%;
-    height: 17.5vh;
-    margin-bottom: 5px;
-    margin-right: 5px;
+    height: 10.6em;
+    margin: 5px;
     background-color: rgba(255, 42, 34, 0.85);
     color: #fff0db;
     font-weight: bold;
@@ -365,10 +340,9 @@ h1 {
     align-items: center;
     background-color: rgba(255, 240, 219, 0.9);
     color: black;
-    height: 40px;
-    margin-top: 5px;
-    margin-left: 2px;
-    width: 90%;
+    width: 50%;
+    padding: 10px;
+    margin: auto;
 }
 
 .score {
@@ -458,28 +432,27 @@ h1 {
     display: none;
     position: fixed;
     z-index: 1;
-    margin-left: 0;
-    margin-top: 0;
     width: 45%;
-    height: 65%;
     overflow: auto;
     background-color: #fff0db;
     border: 5px solid #402e32;
     z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .final-modal-popup {
     display: none;
     position: fixed;
-    z-index: 1;
-    margin-left: 0;
-    margin-top: 0;
     width: 45%;
-    height: 75%;
     overflow: auto;
     background-color: #fff0db;
     border: 5px solid #402e32;
     z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .final-text {
@@ -501,10 +474,6 @@ h1 {
     text-transform: uppercase;
     font-size: 70%;
     padding: 10px;
-    margin-top: 80px;
-    margin-left: 30%;
-    margin-bottom: 20px;
-    height: 80px;
     width: 40%;
     border-radius: 7px;
     border: 2px solid #402e32;
@@ -538,10 +507,6 @@ h1 {
     text-transform: uppercase;
     font-size: 70%;
     padding: 10px;
-    margin-top: 40px;
-    margin-left: 30%;
-    margin-bottom: 20px;
-    height: 80px;
     width: 40%;
     border-radius: 7px;
     border: 2px solid #402e32;
@@ -565,10 +530,8 @@ h1 {
 #success-finish-screen {
     display: none;
     position: fixed;
-    margin: auto;
     left: 20%;
     width: 50%;
-    height: auto;
     padding: 20px;
     padding-top: 40px;
     background-color: #fff0db;
@@ -583,10 +546,8 @@ h1 {
 #failure-finish-screen {
     display: none;
     position: fixed;
-    margin: auto;
     left: 20%;
     width: 50%;
-    height: auto;
     padding: 20px;
     padding-top: 40px;
     background-color: #fff0db;
@@ -610,9 +571,7 @@ h1 {
     text-transform: uppercase;
     font-size: 50%;
     padding: 10px;
-    height: 10%;
     width: 150px;
-    margin-left: 20px;
     border-radius: 7px;
     border: 2px solid #402e32;
     text-decoration: none;
@@ -644,9 +603,7 @@ h1 {
     text-transform: uppercase;
     font-size: 50%;
     padding: 10px;
-    height: 10%;
     width: 150px;
-    margin-left: 20px;
     border-radius: 7px;
     border: 2px solid #402e32;
     text-decoration: none;
@@ -678,10 +635,6 @@ h1 {
     text-transform: uppercase;
     font-size: 70%;
     padding: 10px;
-    margin-top: 80px;
-    margin-left: 30%;
-    margin-bottom: 20px;
-    height: 80px;
     width: 40%;
     border-radius: 7px;
     border: 2px solid #402e32;
@@ -714,10 +667,6 @@ h1 {
     text-transform: uppercase;
     font-size: 70%;
     padding: 10px;
-    margin-top: 80px;
-    margin-left: 30%;
-    margin-bottom: 20px;
-    height: 80px;
     width: 40%;
     border-radius: 7px;
     border: 2px solid #402e32;
@@ -741,6 +690,7 @@ h1 {
 /* Footer */
 .footer {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     position: fixed;
@@ -778,7 +728,6 @@ footer a:hover {
     list-style-type: none;
     justify-content: space-around;
     display: inline-flex;
-    margin-left: 5px;
 }
 
 #socialmedia dd a {
@@ -798,6 +747,7 @@ footer a:hover {
     #sub-title {
         display: none;
     }
+    /* }
     .game-area {
         display: flex;
         width: 100%;
@@ -831,11 +781,11 @@ footer a:hover {
         color: black;
         padding: 10px;
         text-align: center;
-    }
+    } */
     .viking-shield {
         display: none;
     }
-    .cell {
+    /* .cell {
         flex: 0 0 32%;
         height: 17.5vh;
         margin-bottom: 5px;
@@ -845,7 +795,7 @@ footer a:hover {
         font-weight: bold;
         font-size: 80%;
         cursor: pointer;
-    }
+    } */
 }        
 
 
