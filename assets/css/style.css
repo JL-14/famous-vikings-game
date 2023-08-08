@@ -41,7 +41,7 @@ header {
     top: 0;
     text-align: center;
     background-color: #FF2A22;
-    font-size: 170%;
+    font-size: 160%;
     z-index: 100;
 }
 
@@ -711,7 +711,7 @@ ol {
     justify-content: space-around;
     align-items: center;
     position: fixed;
-    height: 50px;
+
     width: 100%;
     left: 0;
     bottom: 0;
@@ -790,15 +790,82 @@ footer a:hover {
     header {
         font-size: 100%;
     }
+    #rollo,
+    #olav-haraldsson,
+    #leif-erikson,
+    #harald-hardrada,
+    #cnut-the-great {
+        font-size: 100%;
+    }
+    #rollo-question,
+    #olav-haraldsson-question,
+    #leif-erikson-question,
+    #harald-hardrada-question,
+    #cnut-the-great-question {
+        font-size: 120%;
+    }
+    .cell {
+        font-size: 90%;
+    }
+    .introduction {
+        font-size: 100%;
+    }
+    #start-button {
+        font-size: 120%;
+    }
+    #correct-answer,
+    #incorrect-answer,
+    #final-correct-answer,
+    #final-incorrect-answer {
+        font-size: 140%;
+    }
 }        
 
 
-@media (max-width: 930px) {
-#sub-title {
-    display: none;
-}
-.footer {
-    flex-direction: column;
-    font-size: 80%;
-}
+@media (max-width: 400px) {
+    #sub-title {
+        display: none;
+    }
+
+    .footer {
+        flex-direction: column;
+        font-size: 80%;
+    }
+
+    h1 {
+        line-height: 40px;
+    }
+
+    header {
+        font-size: 80%;
+    }
+    #rollo,
+    #olav-haraldsson,
+    #leif-erikson,
+    #harald-hardrada,
+    #cnut-the-great {
+        font-size: 70%;
+    }
+    #rollo-question,
+    #olav-haraldsson-question,
+    #leif-erikson-question,
+    #harald-hardrada-question,
+    #cnut-the-great-question {
+        font-size: 90%;
+    }
+    .cell {
+        font-size: 80%;
+    }
+    .introduction {
+        font-size: 80%;
+    }
+    #start-button {
+        font-size: 100%;
+    }
+    #correct-answer,
+    #incorrect-answer,
+    #final-correct-answer,
+    #final-incorrect-answer {
+        font-size: 100%;
+    }
 }
