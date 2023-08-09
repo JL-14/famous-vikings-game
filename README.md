@@ -6,7 +6,7 @@ The Viking Kings Quiz website lets users play a quiz about famous Viking kings. 
 
 The website can be accessed [here](https://jl-14.github.io/famous-vikings-game/)
 
-![Responsive Mockup](/documentation/images/vikingexperience-mockup.png)
+![Responsive Mockup](/documentation/images/viking-kings-quiz-mockup.png)
 
 ---
 ## User Stories
@@ -397,13 +397,11 @@ The website displays correctly across the different browsers, and also across di
 
 2. The W3C CSS Validator returned five warnings relating to external third-party content in the code, none of which affect the user experience.
 
-3. On the very smallest screen sizes the word 'experiences' in the semi-transparent cover text box exceeds the background container, with the 'e' and the 's' appearing on or just outside the edge. 
+3. On some screen sizes the Failed Game result screen appears low down, cutting off the bottom of the box (including the Return to Main Page button). 
 
-- The issue does not disrupt user experience, and will be addressed in future versions.
+4. The overlay behind popup boxes does not stretch below the bottom of the screen, so when scrolling down the lower portion of the screen appears without the overlay.
 
-4. At the smallest screen sizes (<400px) the edges of the header bar and footer bar are cropped -outside the on-screen display so does not affect user experience.
-
-- The issue will be addressed in future versions.
+5. At the smallest screen sizes (<270px) the text in the Viking biography section becomes too big for the containing box and overflows.
 
 ### Solved Bugs
 - A number of bugs were solved throughout the design of the website, on a running basis.
@@ -418,10 +416,11 @@ The website displays correctly across the different browsers, and also across di
 * add Favicon with [Favicon Generator](https://realfavicongenerator.net/)
 * further refine responsive design elements to improve appearance on the smallest screens (especially small mobiles)
 * refine the images used, both in terms of file-types and placement on the Packages page
-* add an up-to-date availability checker and the ability to book and pay online on the website
+* randomise the answer tiles in the answer grid each time the next question button is clicked to make for a more engaging game
+* add a custom quit confirmation popup
+* add more questions and Viking biographies to the game
 * add a custom 404 Error page
-* add a gallery page
-* add feedback functionality
+* add feedback functionality in addition to the e-mail function
 
 ---
 
