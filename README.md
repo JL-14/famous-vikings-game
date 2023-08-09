@@ -199,7 +199,7 @@ The website can be accessed [here](https://jl-14.github.io/famous-vikings-game/)
 
 ![Color Palette](/documentation/images/colour-palette.png)
 
-- A vibrant red colour (Candy Red) was chosen as the main background colour, as psychologically it is associated with excitement and strength, and fit with the theme of the game (around Viking kings and their exploits). The colour matches the theme and the background for the website and is used both in full and with 0.5 opaqueness.
+- A darker red colour (Engineering Orange) was chosen as the main background colour, as psychologically it is associated with excitement and strength, and fit with the theme of the game (around Viking kings and their exploits). The colour matches the theme and the background for the website and is used both in full and with 0.9 opaqueness.
 
 - An off-white colour (Antique White) was used for the fonts, both in the header and in the body of the site. The colour provides good contrast against the red background, and is gentler than pure white.
 
