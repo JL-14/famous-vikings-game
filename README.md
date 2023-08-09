@@ -182,12 +182,12 @@ The website can be accessed [here](https://jl-14.github.io/famous-vikings-game/)
 
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) was used as the foundation of the site.
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/css) - was used for the formatting and layout of the site.
-- [CSS Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox) - was used to arrange items and ensure responsive design.
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - was used to programme interactive elements of the site.
 - [Balsamiq](https://balsamiq.com/) was used to make wireframes for the website.
-- [Codeanywhere](https://app.codeanywhere.com/) was used as the main Independent Developer Environment (IDE) tool to write and edit code.
 - [Gitpod](https://gitpod.io/) was used as a backup IDE tool for writing code and editing.
 - [Git](https://git-scm.com/) was used for the version control of the website.
 - [GitHub](https://github.com/) was used to host the code of the website.
+- [GitHub Pages](https://pages.github.com/) was used to deploy the website on the internet.
 - [iStock](https://www.istockphoto.com/) was used to source the images on the website.
 - [Adobe Photoshop](https://www.adobe.com/uk/products/photoshop.html) was used to edit and size images on the website.
 
