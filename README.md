@@ -283,6 +283,8 @@ The website displays correctly across the different browsers, and also across di
 
 - There were 9 warnings when the W3C CSS Validator was run, all relating to external content in the Google Fonts link.
 
+### JavaScript
+
 ![JavaScript Validator](/documentation/images/validator-js.png)
 
 - The JS Validator (https://jshint.com/) found 19 warnings, and no errors. The warnings relate to structure rather than functionality, e.g. the placement of functions in the more complex functions -where no alternative has been found. The warnings do not affect user experience.
@@ -290,27 +292,11 @@ The website displays correctly across the different browsers, and also across di
 ---
 
 ### Performance
-- Using Lighthouse in DevTools on the Chrome browser I checked the performance of the website, which was very good across the board. The only flagged area was linked to the use of anchors for internal links which had no text attached and so were perceived by the Validator as affecting Search Engine Optimization (SEO).
+- Using Lighthouse in DevTools on the Chrome browser I checked the performance of the website, which was very good across the board. The only flagged area was linked to the use of gif images which are resource intensive, hence the lower performance score of 87. Alternative image formats will be explored in future versions of the site.
 
 #### Home Page
 
-![Home Page Lighthouse](/documentation/images/lighthouse-home.png)
-
-#### Packages Page
-
-![Packages Page Lighthouse](/documentation/images/lighthouse-packages.png)
-
-#### Contact Page
-
-![Contact Page Lighthouse](/documentation/images/lighthouse-contact.png)
-
-#### Terms and Conditions Page
-
-![Terms and Conditions Page Lighthouse](/documentation/images/lighthouse-tandc.png)
-
-#### Thank You Page
-
-![Thank You Page Lighthouse](/documentation/images/lighthouse-thankyou.png)
+![Website Lighthouse](/documentation/images/lighthouse-home.png)
 
 ---
 
@@ -318,9 +304,9 @@ The website displays correctly across the different browsers, and also across di
 
 - The accessibility of the website for visitors with assistive technologies or other impairments was tested using the Google WAVE extension. 
 
-- After making some adjustments to increase contrast, there were no accessibility errors, with some warnings about the length of some ARIA-label descriptions (the descriptions being on the long side) which I decided do not impair the accessibility of the website.
+- After making some adjustments to increase contrast, there were no accessibility errors, with some warnings about the length of some ARIA-label descriptions linked to text links (the descriptions being on the long side) which do not impair the accessibility of the website.
 
-![Home Page WAVE](/documentation/images/validator-wave.png)
+![Website WAVE](/documentation/images/validator-wave.png)
 
 ---
 
@@ -355,7 +341,7 @@ The website displays correctly across the different browsers, and also across di
 
 - The warning relates to the embedded Google Map in the Location section on the Home Page, and does not affect performance.
 
-2. The W3C CSS Validator returned five warnings relating to external third-party content in the code, none of which affect the user experience.
+2. The W3C CSS Validator returned 9 warnings relating to external third-party content in the code, none of which affect the user experience.
 
 3. On some screen sizes the Failed Game result screen appears low down, cutting off the bottom of the box (including the Return to Main Page button). 
 
