@@ -413,6 +413,6 @@ The website displays correctly across the different browsers, and also across di
 
 - [Juliia Konovalova](https://github.com/IuliiaKonovalova) for her support as Code Institute mentor for the project, for her invaluable insights and suggestions.
 - [Code Institute](https://codeinstitute.net/) and Slack community members for the teaching, tutor support, and resources for the project.
-- My wife, Joanne Lovbakke, for her patience with me whilst doing the project, and her amazing insights into design and layouts.
+- My wife, Joanne, for her patience with me whilst doing the project, and my sons, Samuel and Christopher, for user testing of the website.
 - Coders across the world offering their time and support on forums such as [Stack Overflow](https://stackoverflow.com/) and [Reddit](https://www.reddit.com/r/programming/).
 
