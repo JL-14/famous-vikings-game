@@ -10,13 +10,14 @@
 main {
     display: flex;
     flex-direction: row;
-    margin-top: 15%;
-    margin-bottom: 10%;
+    align-items: center;
+    width: 100%;
+    margin-bottom: auto;
 }
 
 body {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-image: url("../images/game-background.jpg");
@@ -28,6 +29,7 @@ body {
     font-family: 'Acme', sans-serif;
     color: #fff0db;
     width: 100%;
+    margin-bottom: 205px;
 }
 
 header {
@@ -35,14 +37,11 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    position: fixed;
     width: 100%;
-    left: 0;
-    top: 0;
     text-align: center;
     background-color: #FF2A22;
     font-size: 160%;
-    z-index: 100;
+    margin-bottom: 40px;
 }
 
 h1 {
@@ -80,8 +79,6 @@ h1 {
 /* Visibility of Home Screen */
 
 #home-screen {
-    display: flex;
-    flex-direction: row;
     display: block;
 }
 
@@ -136,7 +133,7 @@ h1 {
 /* Instructions */
 #instructions {
     display: none;
-    position: fixed;
+    position: absolute;
     top: 30%;
     left: 25%;
     width: 50%;
@@ -146,6 +143,7 @@ h1 {
     border: 5px solid #402e32;
     border-radius: 0.25rem;
     z-index: 10;
+    font-size: 100%;
 }
 
 ol {
@@ -164,6 +162,7 @@ ol {
     background-color: #FF2A22;
     color: #fff0db;
     font-weight: bold;
+    font-size: 100%;
     border-radius: 0.25rem;
     margin: auto;
     padding: 5px;
@@ -382,6 +381,7 @@ ol {
     color: #fff0db;
     font-weight: bold;
     padding: 2px;
+    font-size: 50%;
 }
 
 .quit-button:hover {
@@ -713,11 +713,9 @@ ol {
     justify-content: space-around;
     align-items: center;
     position: fixed;
-
     width: 100%;
-    left: 0;
+    right: 0;
     bottom: 0;
-    text-align: center;
     background-color: #FF2A22;
 }
 
@@ -784,6 +782,10 @@ footer a:hover {
         flex-direction: column;
     }
 
+    #instructions {
+        font-size: 80%;
+    }
+
     .viking-details {
         display: flex;
         flex-direction: column;
@@ -848,9 +850,28 @@ footer a:hover {
         display: none;
     }
 
+    #instructions {
+        font-size: 50%;
+    }
+
     .footer {
         flex-direction: column;
         font-size: 80%;
+        justify-content: center;
+    }
+
+    #github-link {
+        text-align: center;
+    }
+    
+    #copyright
+    {
+        text-align: center;
+    }
+
+    #socialmedia dd {
+        justify-content: center;
+        display: flex;
     }
 
     h1 {
@@ -923,7 +944,7 @@ footer a:hover {
     #next-quit-button {
         margin-top: 2px;
         margin-bottom: 2px;
-        font-size: 60%;
+        font-size: 40%;
     }
     #success-finish-screen,
     #failure-finish-screen {
