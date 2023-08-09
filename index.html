@@ -19,7 +19,7 @@
     <div id="overlay"></div>
     <header>
         <div>
-            <img src="assets/images/viking-shield.png" class="viking-shield">
+            <img src="assets/images/viking-shield.png" class="viking-shield" alt="Image of a Viking shield.">
         </div>
         <div class="title">
             <h1>Viking Kings Quiz</h1>
@@ -76,7 +76,7 @@
             </div>
 
             <div class="start-position">
-                <button data-type="submit" id="start-button">
+                <button data-type="submit" id="start-button" aria-label="Click here to start game.">
                     Start!
                 </button>
             </div>
@@ -112,7 +112,7 @@
                 </strong>
             </p>
             <br>
-            <button id="close-instructions">
+            <button id="close-instructions" aria-label="Click here to close the instructions box.">
                 Close Instructions
             </button>
         </div>
@@ -130,7 +130,7 @@
                             (unknown - c.928AD to 933AD)
                         </h3>
                     </div>
-                    <img src="assets/images/rollo.jpg" class="viking-image">
+                    <img src="assets/images/rollo.jpg" class="viking-image" alt="Image of King Rollo of Normandy from an old French book">
                     <p class="individual-viking-description">
                         Rollo was a Viking who conducted raids on the coast of France starting in the 800s. Scholars are
                         unsure whether Rollo
@@ -157,7 +157,7 @@
                             (c.995AD - 1030AD)
                         </h3>
                     </div>
-                    <img src="assets/images/olav-haraldsson.jpg" class="viking-image">
+                    <img src="assets/images/olav-haraldsson.jpg" class="viking-image" alt="Image of King Olav from an old painting">
                     <p>
                         Olav Haraldsson, was the first Viking king to unify all of Norway (which had previously been
                         made small kingdoms).
@@ -184,7 +184,7 @@
                             (c.970AD - c.1019AD to 1025AD)
                         </h3>
                     </div>
-                    <img src="assets/images/leif-erikson.jpg" class="viking-image">
+                    <img src="assets/images/leif-erikson.jpg" class="viking-image" alt="Image of King Leif from a painting showing his arrival in America.">
                     <p>
                         As claims to fame go, Leif Erikson's isn't half bad. Leif is generally considered to have
                         been the first European to set foot in North America, a full 500 years before
@@ -210,7 +210,7 @@
                             (c.1015AD - 1066AD)
                         </h3>
                     </div>
-                    <img src="assets/images/harald-hardrada.webp" class="viking-image">
+                    <img src="assets/images/harald-hardrada.webp" class="viking-image" alt="Image of King Harald from an illustration of the king in battle.">
                     <p>
                         Harald Hardrada is known as 'The Last Great Viking'. Harald became known as an adventurer,
                         mercenary, king, conqueror, administrator and hero of the Icelandic sagas.
@@ -238,7 +238,7 @@
                             (955AD - 1035AD)
                         </h3>
                     </div>
-                    <img src="assets/images/cnut-the-great.jpg" class="viking-image">
+                    <img src="assets/images/cnut-the-great.jpg" class="viking-image" alt="Image of King Cnut on the shores of East Anglia.">
                     <p>
                         As the conqueror of England, Denmark, and Norway, Cnut is one
                         of the most influential Vikings in history, establishing a Norse rule in
@@ -291,7 +291,7 @@
                 <div class="score-area">
                     <p class="score">Right Answers: <span id="right">0</span></p>
                     <p class="score">Wrong Answers: <span id="wrong">0</span></p>
-                    <button id="quit-button" class="quit-button">Quit</button>
+                    <button id="quit-button" class="quit-button" aria-label="Quit game">Quit</button>
                 </div>
             </section>
             <!-- Correct Answer pop-up -->
@@ -300,11 +300,11 @@
                 <h2>
                     Correct!
                 </h2>
-                <img src="assets/images/viking-thumbs-up.gif" class="right-image">
+                <img src="assets/images/viking-thumbs-up.gif" class="right-image" alt="Animated cartoon or gif of Viking giving the thumbs up.">
                 <button id="next-question-button">
                     Next Question!
                 </button>
-                <button id="next-quit-button" class="quit-button">Quit</button>
+                <button id="next-quit-button" class="quit-button" aria-label="Click here to quit the game.">Quit</button>
             </div>
             <!-- Incorrect Answer pop-up -->
             <div id="incorrect-answer" class="modal-popup">
@@ -312,11 +312,11 @@
                 <h2>
                     Oops! Not quite right...
                 </h2>
-                <img src="assets/images/viking-lightning.gif" class="wrong-image">
+                <img src="assets/images/viking-lightning.gif" class="wrong-image" alt="Animated cartoon or gif of Viking being hit by lightning.">
                 <button id="incorrect-next-question-button">
                     Next Question!
                 </button>
-                <button id="incorrect-next-quit-button" class="quit-button">Quit</button>
+                <button id="incorrect-next-quit-button" class="quit-button" aria-label="Click here to quit the game.">Quit</button>
             </div>
             <!-- Final Correct Answer pop-up -->
             <div id="final-correct-answer" class="final-modal-popup">
@@ -324,15 +324,15 @@
                 <h2>
                     Correct!
                 </h2>
-                <img src="assets/images/viking-thumbs-up.gif" class="right-image">
+                <img src="assets/images/viking-thumbs-up.gif" class="right-image" alt="Animated cartoon or gif of Viking giving the thumbs up.">
                 <p>
                     That was the final question!
                 </p>
                 <br>
-                <button id="finish-button">
+                <button id="finish-button" aria-label="Click here to finish the game.">
                     Finish!
                 </button>
-                <button id="final-next-quit-button" class="quit-button">Quit</button>
+                <button id="final-next-quit-button" class="quit-button" aria-label="Click here to quit the game.">Quit</button>
             </div>
             <!-- Final incorrect Answer pop-up -->
             <div id="final-incorrect-answer" class="final-modal-popup">
@@ -340,22 +340,22 @@
                 <h2>
                     Oops! Not quite right...
                 </h2>
-                <img src="assets/images/viking-lightning.gif" class="wrong-image">
+                <img src="assets/images/viking-lightning.gif" class="wrong-image" alt="Animated cartoon or gif of Viking being hit by lightning.">
                 <p class>
                     That was the final question!
                 </p>
                 <br>
-                <button id="finish-incorrect-button">
+                <button id="finish-incorrect-button" aria-label="Click here to finish the game.">
                     Finish!
                 </button>
-                <button id="final-incorrect-next-quit-button" class="quit-button">Quit</button>
+                <button id="final-incorrect-next-quit-button" class="quit-button" aria-label="Click here to quit the game.">Quit</button>
             </div>
             <!-- Finish screens -->
             <div id="success-finish-screen" class="modal-popup">
                 <h2>
                     Well done, you have completed the quiz!
                 </h2>
-                <img src="assets/images/victorious-viking.gif" class="victorious-image">
+                <img src="assets/images/victorious-viking.gif" class="victorious-image" alt="Animated cartoon or gif of Viking flexing his muscles on top of a dragon skull.">
                 <p id="success-final-score">
                 </p>
                 <br>
@@ -363,13 +363,13 @@
                     You really do know your Vikings! Maybe there is Viking-blood in you?
                 </p>
                 <br>
-                <button id="return-home">Return to main page</button>
+                <button id="return-home" aria-label="Click here to return to the main page.">Return to main page</button>
             </div>
             <div id="failure-finish-screen">
                 <h2>
                     You have completed the quiz!
                 </h2>
-                <img src="assets/images/viking-defeated.gif" class="defeated-image">
+                <img src="assets/images/viking-defeated.gif" class="defeated-image" alt="Animated cartoon or gif of Viking wounded after battle.">
                 <p id="failure-final-score">
                 </p>
                 <br>
@@ -377,7 +377,7 @@
                     I am sure you can do better than that... Why not try again? 
                 </p>
                 <br>
-                <button id="failure-return-home">Return to main page</button>
+                <button id="failure-return-home" aria-label="Click here to return to the main page.">Return to main page</button>
             </div>
         </section>
     </main>
