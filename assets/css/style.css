@@ -40,7 +40,7 @@ header {
     justify-content: space-between;
     width: 100%;
     text-align: center;
-    background-color: #FF2A22;
+    background-color: #5f4c4c;
     font-size: 160%;
     margin-bottom: 40px;
 }
@@ -89,7 +89,7 @@ h1 {
     justify-content: center;
     flex-direction: column;
     width: 90%;
-    background: rgba(255, 42, 34, 0.9);
+    background: rgba(95, 76, 76, 0.9);
     margin: auto;
     font-size: 130%;
     padding: 5px;
@@ -127,7 +127,7 @@ h1 {
 
 #start-button:hover {
     background: rgba(255, 248, 240, 1);
-    color: #FF2A22;
+    color: #5f4c4c;
     box-shadow: 0 6px 20px #5f4c4c;
 }
 
@@ -160,7 +160,7 @@ ol {
     align-items: center;
     align-content: center;
     justify-content: center;
-    background-color: #FF2A22;
+    background-color: #5f4c4c;
     color: white;
     font-weight: bold;
     font-size: 100%;
@@ -171,7 +171,7 @@ ol {
 
 #close-instructions:hover {
     background: rgba(255, 248, 240, 1);
-    color: #FF2A22;
+    color: #5f4c4c;
     box-shadow: 0 6px 20px #5f4c4c;
     cursor: pointer;
 }
@@ -230,7 +230,7 @@ ol {
     height: 6em;
     min-width: 6em;
     margin: 5px;
-    background-color: rgba(255, 42, 34, 0.9);
+    background-color: rgba(95, 76, 76, 0.9);
     color: white;
     font-weight: bold;
     font-size: 120%;
@@ -378,7 +378,7 @@ ol {
 }
 
 .quit-button {
-    background-color: rgba(255, 42, 34, 0.9);
+    background-color: rgba(95, 76, 76, 0.9);
     color: white;
     font-weight: bold;
     padding: 2px;
@@ -391,7 +391,7 @@ ol {
 
 .quit-button:hover {
     background: rgba(255, 248, 240, 1);
-    color: #FF2A22;
+    color: #5f4c4c;
     box-shadow: 0 6px 20px #5f4c4c;
 }
 
@@ -509,7 +509,7 @@ ol {
 #next-question-button:hover,
 #next-question-button:focus {
     background: rgba(255, 248, 240, 1);
-    color: #FF2A22;
+    color: #5f4c4c;
     box-shadow: 0 6px 20px #5f4c4c;
     cursor: pointer;
 }
@@ -543,7 +543,7 @@ ol {
 #incorrect-next-question-button:hover,
 #incorrect-next-question-button:focus {
     background: rgba(255, 248, 240, 1);
-    color: #FF2A22;
+    color: #5f4c4c;
     box-shadow: 0 6px 20px #5f4c4c;
     cursor: pointer;
 }
@@ -586,7 +586,7 @@ ol {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: #FF2A22;
+    background-color: #5f4c4c;
     color: white;
     border: 2px solid #5f4c4c;
     font-weight: bold;
@@ -609,7 +609,7 @@ ol {
 #return-home:hover,
 #return-home:focus {
     background: rgba(255, 248, 240, 1);
-    color: #FF2A22;
+    color: #5f4c4c;
     box-shadow: 0 6px 20px #5f4c4c;
     cursor: pointer;
 }
@@ -618,7 +618,7 @@ ol {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: #FF2A22;
+    background-color: #5f4c4c;
     color: #fff0db;
     border: 2px solid #5f4c4c;
     font-weight: bold;
@@ -641,7 +641,7 @@ ol {
 #failure-return-home:hover,
 #failure-return-home:focus {
     background: rgba(255, 248, 240, 1);
-    color: #FF2A22;
+    color: #5f4c4c;
     box-shadow: 0 6px 20px #5f4c4c;
     cursor: pointer;
 }
@@ -674,7 +674,7 @@ ol {
 #finish-button:hover,
 #finish-button:focus {
     background: rgba(255, 248, 240, 1);
-    color: #FF2A22;
+    color: #5f4c4c;
     box-shadow: 0 6px 20px #5f4c4c;
     cursor: pointer;
 }
@@ -707,7 +707,7 @@ ol {
 #finish-incorrect-button:hover,
 #finish-incorrect-button:focus {
     background: rgba(255, 248, 240, 1);
-    color: #FF2A22;
+    color: #5f4c4c;
     box-shadow: 0 6px 20px #5f4c4c;
     cursor: pointer;
 }
@@ -722,7 +722,7 @@ ol {
     width: 100%;
     right: 0;
     bottom: 0;
-    background-color: #FF2A22;
+    background-color: #5f4c4c;
 }
 
 footer>span {
