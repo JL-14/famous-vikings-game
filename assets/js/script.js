@@ -13,16 +13,6 @@ const viking2 = document.getElementById("olav-haraldsson");
 const viking3 = document.getElementById("leif-erikson");
 const viking4 = document.getElementById("harald-hardrada");
 const viking5 = document.getElementById("cnut-the-great");
-const rolloOption = document.getElementById("button1");
-const olavOption = document.getElementById("button2");
-const leifOption = document.getElementById("button3");
-const haraldOption = document.getElementById("button4");
-const cnutOption = document.getElementById("button5");
-const otherOption1 = document.getElementById("button6");
-const otherOption2 = document.getElementById("button7");
-const otherOption3 = document.getElementById("button8");
-const otherOption4 = document.getElementById("button9");
-const questionArea = document.getElementsByClassName("question");
 const rolloQuestion = document.getElementById("rollo-question");
 const olavQuestion = document.getElementById("olav-haraldsson-question");
 const leifQuestion = document.getElementById("leif-erikson-question");
@@ -51,14 +41,10 @@ let vikingBiogs = [viking1, viking2, viking3, viking4, viking5];
 let vikingIndex = 0;
 let questionIndex = 0;
 let answerIndex = 0;
-let scoreIndex = 0;
 let nextQuitButton = document.getElementById("next-quit-button");
 let nextIncorrectQuitButton = document.getElementById("incorrect-next-quit-button");
 let initialStart = false;
-let answerGrid = [rolloOption, olavOption, leifOption, haraldOption, cnutOption, otherOption1, otherOption2, otherOption3, otherOption4];
 let questions = [rolloQuestion, olavQuestion, leifQuestion, haraldQuestion, cnutQuestion];
-let questionText = ["Question: What title did Rollo have in France?", "Question: What landmark did Olav destroy?", "Question: What did Leif find?", "Question: What was Harald known as?", "Question: What did Cnut rule over?"];
-let wrongResult = document.getElementById("wrong").textContent;
 
 document.querySelector('#button1').textContent = options[0];
 document.querySelector('#button2').textContent = options[1];
@@ -261,8 +247,7 @@ answerButtons.forEach((button) => {
                         finalModal.style.display = "none";
                         finalModalIncorrect.style.display = "none";
                         modal.style.display = "none";
-                        incorrectModal.style.display = "none";
-                        body.style.overflow = "hidden";
+                        modalIncorrect.style.display = "none";
                     }
                 } else {
                     //Correct final answer, failed game screen
@@ -281,7 +266,7 @@ answerButtons.forEach((button) => {
                         finalModal.style.display = "none";
                         finalModalIncorrect.style.display = "none";
                         modal.style.display = "none";
-                        incorrectModal.style.display = "none";
+                        modalIncorrect.style.display = "none";
                     }
                 }
             } else {
@@ -308,7 +293,7 @@ answerButtons.forEach((button) => {
                         finalModal.style.display = "none";
                         finalModalIncorrect.style.display = "none";
                         modal.style.display = "none";
-                        incorrectModal.style.display = "none";
+                        modalIncorrect.style.display = "none";
                     }
                 } else {
                     //Wrong final answer, failed game screen
@@ -318,14 +303,14 @@ answerButtons.forEach((button) => {
                     const badFinalScore = document.getElementById("failure-final-score");
                     badFinalScore.appendChild(badResultNode);
                     console.log(badResult);
-                    finishIncorrectButton.addEventListener('click', failureEndScreen);
-                    function failureEndScreen() {
+                    finishIncorrectButton.addEventListener('click', wrongFailureEndScreen);
+                    function wrongFailureEndScreen() {
                         failureScreen.style.display = "block";
                         overlay.style.display = "block";
                         finalModal.style.display = "none";
                         finalModalIncorrect.style.display = "none";
                         modal.style.display = "none";
-                        incorrectModal.style.display = "none";
+                        modalIncorrect.style.display = "none";
                     }
                 }
             }

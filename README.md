@@ -271,45 +271,19 @@ The website displays correctly across the different browsers, and also across di
 ### Validator Testing
 
 ### HTML
-#### Home Page
 - No errors or warnings were found when W3C Validator was employed.
 
-![Home Page HTML Validator](/documentation/images/w3c-validator-home-100623.png)
-
-#### Packages Page
-- No errors or warnings were found when W3C Validator was employed.
-
-![Packages Page HTML Validator](/documentation/images/w3c-validator-packages-100623.png)
-
-#### Contact Page
-
-- No errors or warnings were found when W3C Validator was employed.
-
-![Contact Page HTML Validator](/documentation/images/w3c-validator-contact-100623.png)
-
-#### Terms and Conditions Page
-
-- No errors or warnings were found when W3C Validator was employed.
-
-![Terms and Conditions Page HTML Validator](/documentation/images/w3c-validator-t-and-c-100623.png)
-
-#### Thank You Page
-
-- No errors or warnings were found when W3C Validator was employed.
-
-![Thank You Page HTML Validator](/documentation/images/w3c-validator-thankyou-100623.png)
+![Home Page HTML Validator](/documentation/images/validator-html.png)
 
 ### CSS
 
 - No errors were found when the W3C CSS Validator was employed.
 
-![CSS Page Validator](/documentation/images/w3c-css-validator-100623.png)
+![CSS Page Validator](/documentation/images/validator-css.png)
 
-- There were 5 warnings when the W3C CSS Validator was run.
+- There were 9 warnings when the W3C CSS Validator was run, all relating to external content in the Google Fonts link.
 
-![CSS Page Validator Warnings](/documentation/images/w3c-css-validator-warnings-100623.png)
-
-- The warnings all relate to embedded content on the website, and on testing with Firefox and Chrome browsers were not found to affect performance.
+![JavaScript Validator]()
 
 ---
 
