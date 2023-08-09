@@ -199,23 +199,21 @@ The website can be accessed [here](https://jl-14.github.io/famous-vikings-game/)
 
 ![Color Palette](/documentation/images/colour-palette.png)
 
-- A soft light brown colour was chosen as the main background colour, as psychologically it is associated with warmth, nature, earthiness, reliability, and support. These properties match the theme of the website, which provides outdoor experiences and work with natural materials.
+- A vibrant red colour (Candy Red) was chosen as the main background colour, as psychologically it is associated with excitement and strength, and fit with the theme of the game (around Viking kings and their exploits). The colour matches the theme and the background for the website and is used both in full and with 0.5 opaqueness.
 
-- A warm medium brown colour was used for the title and logo, for the same reasons as the main background colour, providing a middle contrast between the background and font colours.
+- An off-white colour (Antique White) was used for the fonts, both in the header and in the body of the site. The colour provides good contrast against the red background, and is gentler than pure white.
 
-- A darker brown colour was used for fonts, headings and borders, chosen as it matches and provides good contrast against the background colour.
+- A bright yellow colour was used for the Start, Next Question, and Finish buttons as it provides excellent contrast against the background colours, and draws the user's attention to it, making it the natural next button to press.
 
-- A slightly brighter light brown colour was chosen for the contact form boxes, to make the boxes stand out clearly against the background colour, and encourage action for these sections.
+- A medium brown colour was used for borders around modals/ popups and buttons, as it provides good contrast with the red, off-white, and yellow background colours used for buttons. Brown also fits the theme of the website in being associated with nature and ruggedness.
+
+- Black was used for fonts on modals/ popups and for the Viking biographies, as it provides the highest level of contrast against the off-white backgrounds used here, and is highly legible.
 
 ### Typography
 
-![Main Font](/documentation/images/font-sourcesanspro.png)
+![Main Font](/documentation/images/typography.png)
 
-- Source Sans Pro was used as the main font for the website as it provides good readability and works well with the header font.
-
-![Title font](/documentation/images/font-josefinsans.png)
-
-- Josefin Sans was used for titles and headers as it has a Nordic appearance (with sharper edges than the main font), is legible and goes well with the theme of the website.
+- Acme was used as the main font for the website as it provides good readability and has a Nordic appearance (with sharper edges than most other fonts). The font is legible and goes well with the theme of the website.
 
 ### Wireframe
 
