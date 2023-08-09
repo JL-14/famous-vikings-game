@@ -50,7 +50,7 @@ The website can be accessed [here](https://jl-14.github.io/famous-vikings-game/)
 
 - The navigation bar is simply and clearly set out, giving a good first impression for the user.
 
-![Navbar](/documentation/images/viking-quiz-navbar.png)
+![Navbar](/documentation/images/viking-quiz-header.png)
 
 - The navigation bar is responsive:
 
@@ -413,6 +413,7 @@ The website displays correctly across the different browsers, and also across di
 
 - [Juliia Konovalova](https://github.com/IuliiaKonovalova) for her support as Code Institute mentor for the project, for her invaluable insights and suggestions.
 - [Code Institute](https://codeinstitute.net/) and Slack community members for the teaching, tutor support, and resources for the project.
-- My wife, Joanne, for her patience with me whilst doing the project, and my sons, Samuel and Christopher, for user testing of the website.
+- My wife, Joanne, for her patience with me whilst doing the project and her invaluable talent for graphics formatting. 
+- My sons, Samuel and Christopher, for user testing of the website.
 - Coders across the world offering their time and support on forums such as [Stack Overflow](https://stackoverflow.com/) and [Reddit](https://www.reddit.com/r/programming/).
 
