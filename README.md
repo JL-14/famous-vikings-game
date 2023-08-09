@@ -380,6 +380,8 @@ The website displays correctly across the different browsers, and also across di
 
 - The idea, concept, and content for the website came from me (Jorgen Lovbakke).
 
+- The outline of the README document has been taken from my earlier README.md from the Viking Experience website, published through GitHub Pages.
+
 - In developing the idea and concept, I consulted "The Children of Ash and Elm -A History of the Vikings" by Neil Price, published in 2022 by Penguin Books, and the Heimskringla -Snorre's sagas of the Viking kings, the version consulted was published in Norwegian in 1998 by Gyldendal Publishers. 
 
 - Inspiration for the use of a fixed background image came from the Code Institute's 'Love Running' project.
@@ -388,18 +390,16 @@ The website displays correctly across the different browsers, and also across di
 
 - The background image on the website was downloaded from [iStock](https://www.istockphoto.com/).
 
-- The animated gif images were taken from
+- The animated gif images were published by http://www.animated-gifs.fr/. (The site is currently unavailable.)
+- The animated gif of the correct answer Viking (thumbs up) is from https://waterford.fyi/.
 
--The images not from iStock were:
-* Reception image on Home Page: Clive Perrin / The Viking Longhouse Ancient Technology Centre Cranborne Dorset / CC BY-SA 2.0
-* Shipbuilding image on Packages page: Photo illustration: NDLA.no
-* Viking ship with rowers on Packages page: From 	Viking archive, Jarmeryk (archiwum własne wikingów, Jarmeryk)
-* Viking in bow of Viking ship on Packages page: From pl.pinterest.com
-* Viking cook on Packages page: GEOGRAPHY PHOTOS / UNIVERSAL IMAGES GROUP / GETTY IMAGES
-* Viking tent by the seaside on Packages page: Marcos Lima Silveira
-* Viking craftsman working with reeds on Packages page: https://www.northlincs.gov.uk/ Visit the Vikings site
-* Viking jewellery on Packages page: https://laptrinhx.com/
-* Carved dragon head on Packages page: Thorvald-Rhys Bjørnson
+- The images of the Viking Kings were from:
+* Rollo of Normandy: Anonymous, historical image available on Wikipedia.
+* Olav Haraldsson: By Rabax63 -CC BY-SA 4.0, image available on https://www.warhistoryonline.com/.
+* Leif Erikson: available on WikiMedia Commons, https://commons.wikimedia.org/wiki/File:Leif_Erikson_Discovers_America_Hans_Dahl.jpg.
+* Harald Hardrada: public domain, via Wikimedia Commons.
+* Canute the Great: image from https://vikinghistorytales.blogspot.com/.
+
 
 + #### Tools
 
