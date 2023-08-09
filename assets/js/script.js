@@ -74,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     startButton.addEventListener('click', (e) => startGame(e));
     quitButton.addEventListener('click', confirmQuit);
     finalQuitButton.addEventListener('click', confirmQuit);
+    finalIncorrectQuitButton.addEventListener('click', confirmQuit);
     quitButton.addEventListener('click', confirmQuit);
     nextButton.addEventListener('click', showNextViking);
     nextButton.addEventListener('click', showNextQuestion);

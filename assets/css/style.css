@@ -377,11 +377,15 @@ ol {
 }
 
 .quit-button {
-    background-color: #FF2A22;
+    background-color: rgba(255, 42, 34, 0.85);
     color: #fff0db;
     font-weight: bold;
     padding: 2px;
     font-size: 50%;
+}
+
+#quit-button {
+    font-size: 100%;
 }
 
 .quit-button:hover {
