@@ -217,11 +217,13 @@ The website can be accessed [here](https://jl-14.github.io/famous-vikings-game/)
 
 ### Wireframe
 
-![Wireframe for website](/documentation/images/wireframe.png)
+![Wireframe for website](/documentation/images/balsamiq-wireframes-viking-quiz-1.png)
+
+![Wireframe for website](/documentation/images/balsamiq-wireframes-viking-quiz-2.png)
 
 - The wireframe for the website was greated using the Balsamiq wireframe tool, creating an initial outline of the website. The initial design was further developed as the website was realised, but the core concept and design remains consistent.
 
-The full wireframe document can be found [here](/documentation/images/balsamiq-wireframes.pdf)
+The full wireframe document can be found [here](/documentation/images/balsamiq-wireframes-viking-kings-quiz.pdf)
 ---
 
 ## Testing
@@ -376,7 +378,7 @@ The website displays correctly across the different browsers, and also across di
 - The website was deployed to GitHub Pages.
 
 - In order to deploy, the following process was followed:
-    1. Select the [GitHub repository](https://github.com/JL-14/viking-experience-uk) and go to Settings.
+    1. Select the [GitHub repository](https://github.com/JL-14/famous-vikings-game) and go to Settings.
     2. Select the **Main Branch** from the Source Dropdown menu, and click Save.
     3. The page will be refreshed automatically with a detailed report showing successful deployment.
 
@@ -384,11 +386,11 @@ The website displays correctly across the different browsers, and also across di
 
 ## Local Deployment
 
-- The Viking Experience UK website can be cloned in your IDE, creating a local copy. The following command will create the clone:
+- The Viking Kings Quiz website can be cloned in your IDE, creating a local copy. The following command will create the clone:
 
-- `git clone https://github.com/JL-14/viking-experience-uk'
+- `git clone https://github.com/JL-14/famous-vikings-game'
 
-- In Gitpod you can open the workspace [here](https://gitpod.io/#https://github.com/JL-14/viking-experience-uk)
+- In Gitpod you can open the workspace [here](https://gitpod.io/#https://github.com/JL-14/famous-vikings-game)
 
 ---
 
