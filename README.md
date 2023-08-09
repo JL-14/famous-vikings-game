@@ -74,131 +74,107 @@ The website can be accessed [here](https://jl-14.github.io/famous-vikings-game/)
 
 - On the Home Page there is a cover text box with a semi-transparent background, with the welcome message motivating visitors to explore more.
 
-![Intro](/documentation/images/vikingexperience-front-screen.png)
+![Front Page](/documentation/images/viking-quiz-front-page.png)
 
 #### Introduction
 
-- The introduction sets out a little of the history of the Viking arrival in England, and the further conquest of Norfolk. As such it establishes the rationale for The Viking Experience UK.
+- The introduction sets out a little of the history of the Vikings and how their histories were recorded, and introduces the game.
 
-#### Experience Package Links
+#### Start Button
 
-- The Introduction is followed by links to the three experience packages on offer, each taking the form of a rounded image relevant to each experience.
-
-![Package Links](documentation/images/package-links.png)
-
-- The links are responsive, and re-arrange into two images above one for medium screens, and column for smaller screens.
-
-![Package Links Smaller](documentation/images/package-links-small-screen.png)
-
-#### About Us
-
-- The About Us section provides detail about The Viking Experience UK, including its founders and collaborations with other relevant organisations.
-
-#### Location
-
-- The Location section gives detail of where The Viking Experience UK is based, including the full address, an image of the reception building, and an embedded Google Map of the location.
-
-- The Google Map is interactive, and visitors can click on it for a larger Google Map, directions, and other information provided by Google Maps.
-
-- The section is responsive, and is re-arranged into column format for smaller screens.
-
-![Location](/documentation/images/location.png)
+- There is a clearly coloured yellow start button, which starts the game.
 
 #### Footer
 
 - The Footer is at the base of each page, in a fixed position.
 
-- The Footer has links to the Home Page, Social Media, and the Contact page.
+- The Footer has links to the Home Page, Social Media, the creator's GitHub home page, and Copyright information.
 
-- The links have animations in the form of a bottom line under the relevant link when hovered over.
-
----
-
-### Packages Page
-
-- The Packages page has the same navbar, background image, and footer as the Home Page.
-
-- The page provides detailed information about each of the three experience packages:
-
-#### The Seafaring Experience:
-
-![Seafaring Package](/documentation/images/package-details-seafaring.png)
-
-#### The Camp Experience:
-
-![Camp Package](/documentation/images/package-details-camp.png)
-
-#### The Arts and Crafts Experience:
-
-![Arts and Crafts Package](/documentation/images/package-details-artscrafts.png)
-
-- Each section starts with two images relevant to the package, flanking a table setting out the location, type of activity, duration, and cost of the package.
-
-![Package Intro](/documentation/images/camp-package-details.png)
-
-- Each experience is then described in detail, including detail of the activities, the rationale for the activities (links to the original Viking arrival in Norfolk), and the practical details of what to expect. Each section is accompanied by a relevant image representative of the experience.
-
-- Each section ends with a table setting out the dates of upcoming experience packages, and also the number of spaces available for each event.
-
-- There is then a button that takes the visitor to the booking form, where they can send booking requests or queries about the experience. There are also links back to the Home Page, or back to the top of the Packages page, to make it as easy as possible for the user to navigate around the website. The buttons are responsive, and form into a column for smaller screens.
-
-- The Package sections are responsive, with images re-sizing for tablet-sized screens, and re-arranging into column format for mobile phone sized screens.
+- The links have animations in the form of a colour change and a bottom line under the relevant link when hovered over.
 
 ---
 
-### Contact/Booking Page
+### Game Page
 
-- The Contact/ Booking page (from here referred to as Contact page) has the same navbar, background image, and footer as the Home Page.
+- The Game page, which is a modal activated by the Start Button on the Home Page, has the same navbar, background image, and footer as the Home Page.
 
-- The Contact page contains the full contact details for The Viking Experience UK. The page can be used to send a booking request, specifying experience and dates of interest, or to send a query to the company.
+![Game Page](/documentation/images/viking-quiz-game-page.png)
 
-- The interactive form has four sections:
+- The page consists of a biography of one of five Viking kings, a question relating to that king, a grid of nine possible answers, and a score box with a quit button.
 
-#### Personal Details 
-- With open text fields for Name, E-mail address, and Telephone number. The Name and E-mail address fields are required, and the form will not send if they have not been completed. The required fields are marked with an asterisk and a red border which changes to brown once the field is completed.
+#### Viking Biographies:
 
-![Personal Details](/documentation/images/form-personal-details.png)
+![Viking Biography](/documentation/images/rollo-biography.png)
 
-#### Booking 
-- With dropdown menus with the dates available for each experience, and a checkbox to indicate the experience of interest.
+- Each Viking biography shows the name and date of birth and death of the Viking, an image of the Viking from historical or artistic sources, and a short description of the main achievements of the Viking.
 
-![Booking](/documentation/images/form-booking.png)
+- The Viking biography changes to the next Viking when the Next Question button is clicked.
 
-#### Open Query 
-- With an open text box for any questions or queries for The Viking Experience UK (which can be completed and sent regardless of whether a booking is made).
+- There are five questions in total.
 
-![Open Query](/documentation/images/form-open-query.png)
+#### Question
 
-#### Submission 
-- Sets out the conditions for booking, including a link to the Terms and Conditions page (which opens in a new page), and radio buttons for the visitor's preferred method of contact (e-mail, telephone, or no preference). The method of contact is required, indicated by a red asterisk, and must be completed in order to send the form.
+![Question](/documentation/images/question-screenshot.png)
 
-- There is a button to submit the form.
+- Each Viking biography is accompanied by a question relating to the text in the biography.
 
-![Submit](/documentation/images/form-submit.png)
+- The question changes when the Next Question button is clicked, in tandem with the Viking biography changing.
 
-- The page is responsive, with the sections narrowing for smaller screens.
+#### Answer Grid
 
----
+![Answer Grid](/documentation/images/answer-grid.png)
 
-### Terms and Conditions Page
+- On the right hand side of the screen there is a grid of 9 tiles, each with a possible answer to the question.
 
-- The Terms and Conditions page has the same navbar, background image, and footer as the Home Page.
+- In this version of the game the tiles are static, and do not change as the Vikings and Questions change. A different tile has the correct answer for each Viking.
 
-- The page is accessible through a link on the Contact/ Booking page, and opens in a new window. There are no other links to the Terms and Conditions page.
+- On clicking on a tile, a modal/ popup appears with either feedback that the answer is correct or incorrect.
 
-- The page contains the terms and conditions for booking with The Viking Experience UK.
+##### Answer Feedback popups
 
-![Terms and Conditions](/documentation/images/terms-and-conditions.png)
+![Correct Answer](/documentation/images/correct-answer-popup.png)
 
----
+- The modal consists of feedback that the answer was correct, an animated gif image of a Viking giving the thumbs up, a button for Next Question and a Quit Button.
 
-### Thank You Page
+![Incorrect Answer](/documentation/images/incorrect-answer-popup.png)
 
-- The Thank You page has the same navbar, background image, and footer as the Home Page.
+- As for the Correct Answers, the modal consists of feedback that the answer was incorrect, an animated gif image of a Viking being hit by lightning, a button for Next Question and a Quit Button.
 
-- The page is hidden until the submit button is pressed on the Contact page with all required fields completed. The thank you page has links in the navbar and footer for returning to the main website.
+- Clicking on Next Question opens up a new question window with a new Viking, a new Question, and the same options.
 
-![Thank You](/documentation/images/thank-you-page.png)
+- Clicking on the Quit button brings up a confirmation popup asking the user to confirm that they want to quit the game. If they confirm they are returned to the front page, and if they cancel they are returned to the modal, where they can click Next Question to continue.
+
+![Quit confirmation](/documentation/images/quit-confirmation.png)
+
+- The final, fifth, question brings up a slightly different modal both for the correct and incorrect answers.
+
+![Final Correct Answer](/documentation/images/final-correct-answer.png)
+
+![Final Incorrect Answer](/documentation/images/final-incorrect-answer.png)
+
+- The final modals inform the user that it was the final question, and provides a Finish button which takes the user to the final score page. There is also a button to quit.
+
+#### Score Area
+
+![Score Area](/documentation/images/score-area.png)
+
+- The Score Area consists of a tally of right answers, wrong answers, and a Quit button.
+
+- The scores are updated dynamically when answers are clicked, according to whether the answer is correct or incorrect.
+
+- Correct answers are displayed in green, wrong answers in red.
+
+#### Final Score Screens
+
+- After the final answer has been answered and the user clicks on the Finish button, a final result modal appears with the final score and feedback and an animated git image depending on whether they were successful in the game or not.
+
+- The score threshold set in this game is 3 out of 5 to be successful, so scores between 3 and 5 gives a success final screen whilst scores between 0 and 2 gives the unsuccessful final screen.
+
+![Final Screen -Success](/documentation/images/final-screen-success.png)
+
+![Final Screen -Fail](/documentation/images/final-screen-fail.png)
+
+- From the final screen there is a button to Return to Main Page, returning to the front page where the user can start a new game if they so wish.
 
 ---
 
