@@ -320,23 +320,7 @@ The website displays correctly across the different browsers, and also across di
 
 - After making some adjustments to increase contrast, there were no accessibility errors, with some warnings about the length of some ARIA-label descriptions (the descriptions being on the long side) which I decided do not impair the accessibility of the website.
 
-![Home Page WAVE](/documentation/images/wave-home.png)
-
-#### Packages Page
-
-![Packages Page WAVE](/documentation/images/wave-packages.png)
-
-#### Contact Page
-
-![Contact Page WAVE](/documentation/images/wave-contact.png)
-
-#### Terms and Conditions Page
-
-![Terms and Conditions Page WAVE](/documentation/images/wave-tandc.png)
-
-#### Thank You Page
-
-![Thank You Page WAVE](/documentation/images/wave-thankyou.png)
+![Home Page WAVE](/documentation/images/validator-wave.png)
 
 ---
 
