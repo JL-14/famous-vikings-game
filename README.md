@@ -283,7 +283,9 @@ The website displays correctly across the different browsers, and also across di
 
 - There were 9 warnings when the W3C CSS Validator was run, all relating to external content in the Google Fonts link.
 
-![JavaScript Validator]()
+![JavaScript Validator](/documentation/images/validator-js.png)
+
+- The JS Validator (https://jshint.com/) found 19 warnings, and no errors. The warnings relate to structure rather than functionality, e.g. the placement of functions in the more complex functions -where no alternative has been found. The warnings do not affect user experience.
 
 ---
 
