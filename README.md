@@ -350,11 +350,15 @@ The website displays correctly across the different browsers, and also across di
 5. At the smallest screen sizes (<270px) the text in the Viking biography section becomes too big for the containing box and overflows.
 
 ### Solved Bugs
-- A number of bugs were solved throughout the design of the website, on a running basis.
+- A number of bugs were solved throughout the design of the website, on a running basis. The key tools for finding and addressing bugs were DevTools in Chrome, and the use of commenting out code (ctrl + /) to examine the impact of particular sections of code.
 
-- The greatest number of bugs related to the use of flex-boxes, and were resolved through changing display types and layouts.
+- The most significant bug related to the switch from one Viking to the next (lines 165-179 in the current script.js), where there was duplication of a loop causing the progression of Viking biographies to halt after three iterations. The bug was removed by restructuring the code and moving the vikingIndex++ command to the end of the section.
 
-- There were also bugs related to the use of fixed heights affecting the responsivity of the website, solved through replacing with relative values.
+- A second significant bug was around matching the correct answers on the answer tiles to the question displaying. The issue of matching the question and answer was solved through applying data-labels to the variables and matching the labels rather than innerHTML content.
+
+- The final significant bug related to quitting the game returning to the home page but not resetting the game, so on pressing start the previous game would resume. This was solved through adding code to the event listener to intialise the game.
+
+- There were also bugs related to the use of fixed heights affecting the responsivity of the website, solved through replacing with relative values through the use of the [Unicorn Revealer](https://chrome.google.com/webstore/detail/unicorn-revealer/lmlkphhdlngaicolpmaakfmhplagoaln) extension showing overlapping containers, as well as DevTools.
 
 ---
 
@@ -376,13 +380,15 @@ The website displays correctly across the different browsers, and also across di
 
 - The idea, concept, and content for the website came from me (Jorgen Lovbakke).
 
-- In developing the idea and concept, I consulted "Viking Britain -A History" by Thomas Williams, published in 2017 by William Collins Publishers.
+- In developing the idea and concept, I consulted "The Children of Ash and Elm -A History of the Vikings" by Neil Price, published in 2022 by Penguin Books, and the Heimskringla -Snorre's sagas of the Viking kings, the version consulted was published in Norwegian in 1998 by Gyldendal Publishers. 
 
 - Inspiration for the use of a fixed background image came from the Code Institute's 'Love Running' project.
 
 + #### Media
 
-- Most of the images on the website were downloaded from [iStock](https://www.istockphoto.com/).
+- The background image on the website was downloaded from [iStock](https://www.istockphoto.com/).
+
+- The animated gif images were taken from
 
 -The images not from iStock were:
 * Reception image on Home Page: Clive Perrin / The Viking Longhouse Ancient Technology Centre Cranborne Dorset / CC BY-SA 2.0
