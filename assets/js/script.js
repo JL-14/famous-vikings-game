@@ -39,6 +39,7 @@ const finishButton = document.getElementById("finish-button");
 const finishIncorrectButton = document.getElementById("finish-incorrect-button");
 const returnHomeButton = document.getElementById("return-home");
 const failureHomeButton = document.getElementById("failure-return-home");
+const body = document.getElementById("body");
 
 
 /* Let variables */
@@ -84,8 +85,10 @@ document.addEventListener('DOMContentLoaded', () => {
     nextIncorrectQuitButton.addEventListener('click', confirmQuit);
     instructionsLink.addEventListener('click', () => instructions.style.display = "block");
     instructionsLink.addEventListener('click', () => overlay.style.display = "block");
+    instructionsLink.addEventListener('click', () => body.style.overflow = "hidden");
     closeInstructions.addEventListener('click', () => instructions.style.display = "none");
     closeInstructions.addEventListener('click', () => overlay.style.display = "none");
+    closeInstructions.addEventListener('click', () => body.style.overflow = "visible");
 });
 
 /** Start Game:
@@ -259,6 +262,7 @@ answerButtons.forEach((button) => {
                         finalModalIncorrect.style.display = "none";
                         modal.style.display = "none";
                         incorrectModal.style.display = "none";
+                        body.style.overflow = "hidden";
                     }
                 } else {
                     //Correct final answer, failed game screen

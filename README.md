@@ -240,41 +240,32 @@ The website displays correctly across the different browsers, and also across di
 | --- | --- | --- | --- | --- | --- |
 | Navbar | | | | | |
 | Home | Click on the "Home" link | The user is redirected to the main page | Yes | Yes | - |
-| Packages | Click on the "Packages" link | The user is redirected to the Packages page | Yes | Yes | - |
-| Contact | Click on the "Contact" link | The user is redirected to the contact page | Yes | Yes | - |
-| Logo | Click on the logo | User is redirected to Home page | Yes | Yes | - | - |
+| Instructions | Click on the "Instructions" link | The user is shown the Instructions popup | Yes | Yes | - |
+| Close Instructions button | Click on the Close Instructions button | Instruction popup is closed and user returned to home or game page | Yes | Yes | - |
+| E-mail Us! | Click on the "E-mail Us!" link | The user is redirected to their preferred e-mail client | Yes | Yes | - |
 | Footer | | | | | |
+| Home | Click on the "Home" link | The user is redirected to the main page | Yes | Yes | - | 
 | Facebook link in the footer | Click on the Facebook link | The user is redirected to the Facebook page | Yes | Yes | - |
-| Twitter link in the footer | Click on the Twitter link | The user is redirected to the Twitter page | Yes | Yes | - |
+| Twitter/ X link in the footer | Click on the Twitter/ X link | The user is redirected to the Twitter/ X page | Yes | Yes | - |
 | Instagram link in the footer | Click on the Instagram link | The user is redirected to the Instagram page | Yes | Yes | - |
-| Contact Us link in the footer | Click on the Contact Us link | The user is redirected to the Contact/ Booking page | Yes | Yes | - |
+| GitHub Home Page link in the footer | Click on the GitHub link | The user is redirected to the creator's GitHub page | Yes | Yes | - |
 | Home page | | | | | |
-| Seafaring package link on Home Page | Click on the Seafaring package link | The user is redirected to the Seafaring package on the Packages page | Yes | Yes | - |
-| Camp package link on Home Page | Click on the Camp package link | The user is redirected to the Camp package on the Packages page | Yes | Yes | - |
-| Arts and Crafts package link on Home Page | Click on the Arts and Crafts package link | The user is redirected to the Arts and Crafts package on the Packages page | Yes | Yes | - |
-| E-mail link in Location section | Click on the E-mail link | The user is redirected to the an e-mail client | Yes | Yes | - |
-| Packages page | | | | | |
-| "Go to Contact/ Booking" button under Seafaring package description | Click on the "Go to Contact/ Booking" button | The user is redirected to the contact page | Yes | Yes | - |
-| "Return to Home Page" link under Seafaring package description | Click on the "Return to Home Page" link | The user is redirected to the Home page | Yes | Yes | - |
-| "Return to Top" link under Seafaring package description | Click on the "Return to Top" link | The user is redirected to the top of the Packages page | Yes | Yes | - |
- "Go to Contact/ Booking" button under Camp package description | Click on the "Go to Contact/ Booking" button | The user is redirected to the contact page | Yes | Yes | - |
-| "Return to Home Page" link under Camp package description | Click on the "Return to Home Page" link | The user is redirected to the Home page | Yes | Yes | - |
-| "Return to Top" link under Camp package description | Click on the "Return to Top" link | The user is redirected to the top of the Packages page | Yes | Yes | - |
-| "Go to Contact/ Booking" button under Arts and Crafts package description | Click on the "Go to Contact/ Booking" button | The user is redirected to the Contact page | Yes | Yes | - |
-| "Return to Home Page" link under Arts and Crafts package description | Click on the "Return to Home Page" link | The user is redirected to the Home page | Yes | Yes | - |
-| "Return to Top" link under Arts and Crafts package description | Click on the "Return to Top" link | The user is redirected to the top of the Packages page | Yes | Yes | - |
-| Contact/ Booking page | | | | | |
-| Name input | Enter name | Name is entered and box changes colour from red to brown | Yes | Yes | If user does not enter a name, an error message appears on pressing the "Send !!!" button |
-| Email input | Enter email address | Email is entered and box changes colour from red to brown | Yes | Yes | If user does not enter an email address, an error message appears on pressing the "Send !!!" button |
-| Telephone input | Enter telephone number | Telephone number is entered | Yes | Yes | - |
-| Booking section checkboxes | Click on the checkboxes | The box is selected and displays a tick when clicked | Yes | Yes | - |
-| Booking section date selector (dropbox) | Click on the "Available Seafaring Dates" box (or Camp Dates or Arts and Crafts Dates) | A list of available dates drops down and a date can be selected | Yes | Yes | - |
-| Open text query field | Enter text | Text is entered | Yes | Yes | - |
-| Terms and Conditions link | Click on link | Terms and Conditions are loaded in a new window | Yes | Yes | - |
-| Preferred contact type radio boxes | Click on preferred radio box | Preferred radio box is marked | Yes | Yes | If user does not select a preferred contact type, an error message appears on pressing the "Send !!!" button |
-| "Send !!!" button | Click on the "Send !!!" button | The user is redirected to the Thank You page | Yes | Yes | If any of the required fields (name, email, preferred contact type) have not been completed, an error message appears |
-| E-mail link in Location section | Click on the E-mail link | The user is redirected to the an e-mail client | Yes | Yes | - |
-
+| Start button | Click on the Start button | The game starts and the game page displays | Yes | Yes | - |
+| Game page | | | | | |
+| Correct Answer button | Click on the correct answer | The correct answer popup shows for all 5 questions | Yes | Yes | - |
+| Incorrect Answer buttons | Click on an incorrect answer | The Incorrect answer popup shows for all 8 incorrect options | Yes | Yes | - |
+| Correct Final Answer button | Click on the correct answer for final question | The correct final answer popup appears for all 5 questions | Yes | Yes | - |
+| Incorrect Final Answer button | Click on an incorrect answer for final question | The incorrect final answer popup appears for all 5 questions | Yes | Yes | - |
+| Finish button on Correct Final Answer popup | Click on the Finish button on the Correct Final Answer popup | The Result screen appears | Yes | Yes | - |
+| Finish button on Incorrect Final Answer popup | Click on the Finish button on the Inorrect Final Answer popup | The Result screen appears | Yes | Yes | - |
+| Final Score screen -Successful game | Click on the Finish button on the Final answer screens | When score is 3 or higher the Successful Result screen appears with correct score (N out of 5) | Yes | Yes | - |
+| Final Score screen -Failed game | Click on the Finish button on the Final answer screens | When score is 2 or lower the Failed Result screen appears with correct score (N out of 5) | Yes | Yes | On some screen sizes the Failed Game popup appears low on the page, hiding the Return to Main Page button |
+| Return to Main Page button | Click on Return to Main Page button on Final Score screen | Returns to the Home Page | Yes | Yes | - |
+| Score counters | Click on correct and incorrect answer buttons | The score counters for both correct and incorrect answers update correctly | Yes | Yes | - |
+| Quit button in Score box | Click on Quit button | Popup appears asking user to confirm they want to quit | Yes | Yes | - |
+| Quit button in Correct and Incorrect Answer popup | Click on Quit button | Popup appears asking user to confirm they want to quit | Yes | Yes | - |
+| Quit confirmation popup -Yes | Click on 'OK' to quit game | Returns to Home Page | Yes | Yes | - |
+| Quit confirmation popup -No | Click on 'Cancel' to stay in game | Returns to game screen | Yes | Yes | - |
 ---
 
 ### Validator Testing

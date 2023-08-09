@@ -30,6 +30,7 @@ body {
     color: #fff0db;
     width: 100%;
     margin-bottom: 205px;
+    overflow: visible;
 }
 
 header {
@@ -577,6 +578,7 @@ ol {
     border: 5px solid #402e32;
     border-radius: 0.25rem;
     z-index: 10;
+    overflow: visible;
 }
 
 /* Return Home button */
