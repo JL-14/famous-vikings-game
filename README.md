@@ -64,11 +64,11 @@ The website can be accessed [here](https://jl-14.github.io/famous-vikings-game/)
 
 ### Home Page
 
-- The Home Page introduces the user to the concept of The Viking Experience UK, providing background to the history of Vikings in England (and Norfolk in particular), brief information about the company and the experiences (with links to the Packages page), and information about the location of The Viking Experience UK.
+- The Home Page introduces the user to the concept of the game, providing a little bit of background about the Vikings, and a start button to begin the game.
 
 #### General background and Cover Text
 
-- The general background is an image of five Viking ships approaching shore. The image was chosen as it was thematically highly relevant to the website, and the colour scheme of the image fitted with the colour palette for the website.
+- The general background is a cartoon image of a Viking ship in a bay.
 
 - The background image is fixed, so that the sections appear to scroll over the image.
 

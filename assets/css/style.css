@@ -854,6 +854,10 @@ footer a:hover {
         font-size: 50%;
     }
 
+    #close-instructions {
+        margin-left: -12px;
+    }
+
     .footer {
         flex-direction: column;
         font-size: 80%;

@@ -72,15 +72,15 @@ document.querySelector('#button9').textContent = options[8];
 /* Event Listeners*/
 document.addEventListener('DOMContentLoaded', () => {
     startButton.addEventListener('click', (e) => startGame(e));
-    quitButton.addEventListener('click', (e) => goHome(e));
-    finalQuitButton.addEventListener('click', (e) => goHome(e));
-    finalIncorrectQuitButton.addEventListener('click', (e) => goHome(e));
+    quitButton.addEventListener('click', confirmQuit);
+    finalQuitButton.addEventListener('click', confirmQuit);
+    quitButton.addEventListener('click', confirmQuit);
     nextButton.addEventListener('click', showNextViking);
     nextButton.addEventListener('click', showNextQuestion);
     incorrectNextButton.addEventListener('click', showNextViking);
     incorrectNextButton.addEventListener('click', showNextQuestion);
-    nextQuitButton.addEventListener('click', (e) => goHome(e));
-    nextIncorrectQuitButton.addEventListener('click', (e) => goHome(e));
+    nextQuitButton.addEventListener('click', confirmQuit);
+    nextIncorrectQuitButton.addEventListener('click', confirmQuit);
     instructionsLink.addEventListener('click', () => instructions.style.display = "block");
     instructionsLink.addEventListener('click', () => overlay.style.display = "block");
     closeInstructions.addEventListener('click', () => instructions.style.display = "none");
@@ -109,17 +109,18 @@ const startGame = function (e) {
  * 3. Sets homeDisplay to active and hides gameDisplay
  * 4. Activates confirmation that user wants to quit
  */
-const goHome = function (e) {
-    e.preventDefault();
-    confirm("Are you sure you want to quit?");
-    window.addEventListener('click', () => { location.reload() });
-    if (homeDisplay.style.display === "none" || initialStart === false) {
-        initialStart === true;
-        gameDisplay.style.display = "none";
-        homeDisplay.style.display = "block";
-    } else {
-        homeDisplay.style.display = "none";
-    }
+function confirmQuit() {
+    if (confirm("Are you sure you want to quit?") === true) {
+        window.addEventListener('click', () => { location.reload() });
+        if (homeDisplay.style.display === "none" || initialStart === false) {
+            initialStart === true;
+            gameDisplay.style.display = "none";
+            overlay.style.display = "none";
+            homeDisplay.style.display = "block";
+        } else {
+            homeDisplay.style.display = "none";
+        }
+    } 
 }
 
 /** Answer feedback:
