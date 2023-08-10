@@ -300,7 +300,7 @@ The website displays correctly across the different browsers, and also across di
 ### Performance
 - Using Lighthouse in DevTools on the Chrome browser I checked the performance of the website, which was very good across the board. The only flagged area was linked to the use of gif images which are resource intensive, hence the lower performance score of 87. Alternative image formats will be explored in future versions of the site.
 
-![Website Lighthouse](/documentation/images/lighthouse-home.png)
+![Website Lighthouse](/documentation/images/lighthouse-viking-kings-quiz.png)
 
 ---
 
