@@ -209,8 +209,8 @@ ol {
     justify-content: center;
     align-items: center;
     margin: auto;
-    background-color: rgba(211, 0, 0, 0.9);
-    color: white;
+    background-color: rgba(255, 248, 240, 1);
+    color: black;
     padding: 10px;
     width: 80%;
 }
@@ -349,8 +349,8 @@ ol {
     display: inline-flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: rgba(211, 0, 0, 0.9);
-    color: white;
+    background-color: rgba(255, 248, 240, 1);
+    color: black;
     width: 80%;
     padding: 10px;
     margin: auto;
@@ -363,7 +363,6 @@ ol {
 
 #right {
     color: green;
-    background-color: #fff0db;
     font-size: 110%;
     font-weight: bold;
     padding-right: 10px;
@@ -374,7 +373,6 @@ ol {
 
 #wrong {
     color: red;
-    background-color: #fff0db;
     font-size: 110%;
     font-weight: bold;
     padding-right: 10px;
@@ -384,8 +382,8 @@ ol {
 }
 
 .quit-button {
-    background-color: #fff0db;
-    color: #d30000;
+    background-color: #d30000;
+    color: #fff0db;
     font-weight: bold;
     padding: 2px;
     font-size: 50%;
@@ -493,7 +491,6 @@ ol {
     justify-content: center;
     color: black;
     background: #fffb00;
-    border: 2px solid #5f4c4c;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
@@ -527,7 +524,6 @@ ol {
     justify-content: center;
     color: black;
     background: #fffb00;
-    border: 2px solid #5f4c4c;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
@@ -658,7 +654,6 @@ ol {
     justify-content: center;
     color: black;
     background: #fffb00;
-    border: 2px solid #5f4c4c;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
@@ -691,7 +686,6 @@ ol {
     justify-content: center;
     color: black;
     background: #fffb00;
-    border: 2px solid #5f4c4c;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;

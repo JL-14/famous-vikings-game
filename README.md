@@ -291,7 +291,7 @@ The website displays correctly across the different browsers, and also across di
 
 ![JavaScript Validator](/documentation/images/validator-js.png)
 
-- The JS Validator (https://jshint.com/) found 19 warnings, and no errors. The warnings relate to structure rather than functionality, e.g. the placement of functions in the more complex functions -where no alternative has been found. The warnings do not affect user experience.
+- The JS Validator (https://jshint.com/) found 1 warning and no errors. The warning relates to the use of 'answerIndex[i]' in code matching tiles to question, but it does not appear to affect the user experience.
 
 ---
 
