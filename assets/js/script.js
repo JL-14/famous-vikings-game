@@ -85,13 +85,13 @@ document.addEventListener('DOMContentLoaded', () => {
 const startGame = function (e) {
     e.preventDefault();
     if (gameDisplay.style.display === "none" || initialStart === false) {
-        initialStart === true;
+        initialStart = true;
         homeDisplay.style.display = "none";
         gameDisplay.style.display = "flex";
     } else {
         gameDisplay.style.display = "none";
     }
-}
+};
 
 /** Quit Game:
  * 1. Prevents default setting requiring click before click (i.e. double click) to quit game
@@ -101,9 +101,9 @@ const startGame = function (e) {
  */
 function confirmQuit() {
     if (confirm("Are you sure you want to quit?") === true) {
-        window.addEventListener('click', () => { location.reload() });
+        window.addEventListener('click', () => { location.reload(); });
         if (homeDisplay.style.display === "none" || initialStart === false) {
-            initialStart === true;
+            initialStart = true;
             gameDisplay.style.display = "none";
             overlay.style.display = "none";
             homeDisplay.style.display = "block";
@@ -111,7 +111,7 @@ function confirmQuit() {
             homeDisplay.style.display = "none";
         }
     } 
-}
+};
 
 /** Answer feedback:
  * 1. If answer is correct, modal display is activated and correct answer popup appears
@@ -156,12 +156,12 @@ function finalIncorrectPopup() {
 nextButton.onclick = function () {
     modal.style.display = "none";
     overlay.style.display = "none";
-}
+};
 
 incorrectNextButton.onclick = function () {
     modalIncorrect.style.display = "none";
     overlay.style.display = "none";
-}
+};
 
 /** Move to the next Viking in the list of Vikings (vikingBiogs) when the Button Next Question is clicked:
  * 1. Set display of all vikings to hidden
@@ -195,6 +195,7 @@ showNextQuestion();
 
 /** Match tile to question, calculate and display score, and activate appropriate popup:
  * 1. Create answer index to match questions 1-4 and then separate match for question 5 to display final question popup
+ * 2. Set functions for final result (EndScreen) popups
  * 2. Take the final score (number of correct answers) and write into:
  *      -Right fifth answer, linking to success game screen (4-5 correct answers)
  *      -Right fifth answer, linking to failed game screen (1-3 correct answers)
@@ -207,6 +208,42 @@ if (answerIndex < questions.length) {
     for (let i = 0; i < questions.length; i++) {
         answerIndex[i];
     }
+}
+
+function successEndScreen() {
+    successScreen.style.display = "block";
+    overlay.style.display = "block";
+    finalModal.style.display = "none";
+    finalModalIncorrect.style.display = "none";
+    modal.style.display = "none";
+    modalIncorrect.style.display = "none";
+}
+
+function failureEndScreen() {
+    failureScreen.style.display = "block";
+    overlay.style.display = "block";
+    finalModal.style.display = "none";
+    finalModalIncorrect.style.display = "none";
+    modal.style.display = "none";
+    modalIncorrect.style.display = "none";
+}
+
+function wrongSuccessEndScreen() {
+    successScreen.style.display = "block";
+    overlay.style.display = "block";
+    finalModal.style.display = "none";
+    finalModalIncorrect.style.display = "none";
+    modal.style.display = "none";
+    modalIncorrect.style.display = "none";
+}
+
+function wrongFailureEndScreen() {
+    failureScreen.style.display = "block";
+    overlay.style.display = "block";
+    finalModal.style.display = "none";
+    finalModalIncorrect.style.display = "none";
+    modal.style.display = "none";
+    modalIncorrect.style.display = "none";
 }
 
 answerButtons.forEach((button) => {
@@ -223,7 +260,7 @@ answerButtons.forEach((button) => {
                 incorrectPopup();
             }
             //Set the correct answer for the fifth question, bringing up the appropriate final answer popup
-        } else if (answerIndex = 4) {
+        } else if (answerIndex === 4) {
             let currentQuestion = questions[answerIndex];
             const currentQuestionData = currentQuestion.dataset.viking;
             if (button.textContent === currentQuestionData) {
@@ -242,14 +279,6 @@ answerButtons.forEach((button) => {
                     finalScore.appendChild(resultNode);
                     console.log(result);
                     finishButton.addEventListener('click', successEndScreen);
-                    function successEndScreen() {
-                        successScreen.style.display = "block";
-                        overlay.style.display = "block";
-                        finalModal.style.display = "none";
-                        finalModalIncorrect.style.display = "none";
-                        modal.style.display = "none";
-                        modalIncorrect.style.display = "none";
-                    }
                 } else {
                     //Correct final answer, failed game screen
                     let badResult = document.getElementById("right").innerHTML;
@@ -261,14 +290,6 @@ answerButtons.forEach((button) => {
                     badFinalScore.appendChild(badResultNode);
                     console.log(badResult);
                     finishButton.addEventListener('click', failureEndScreen);
-                    function failureEndScreen() {
-                        failureScreen.style.display = "block";
-                        overlay.style.display = "block";
-                        finalModal.style.display = "none";
-                        finalModalIncorrect.style.display = "none";
-                        modal.style.display = "none";
-                        modalIncorrect.style.display = "none";
-                    }
                 }
             } else {
                 //Final result screen after wrong final answer
@@ -287,15 +308,7 @@ answerButtons.forEach((button) => {
                     const finalScore = document.getElementById("success-final-score");
                     finalScore.appendChild(resultNode);
                     console.log(result);
-                    finishIncorrectButton.addEventListener('click', successEndScreen);
-                    function successEndScreen() {
-                        successScreen.style.display = "block";
-                        overlay.style.display = "block";
-                        finalModal.style.display = "none";
-                        finalModalIncorrect.style.display = "none";
-                        modal.style.display = "none";
-                        modalIncorrect.style.display = "none";
-                    }
+                    finishIncorrectButton.addEventListener('click', wrongSuccessEndScreen);
                 } else {
                     //Wrong final answer, failed game screen
                     const badPara = document.createElement("p");
@@ -305,14 +318,6 @@ answerButtons.forEach((button) => {
                     badFinalScore.appendChild(badResultNode);
                     console.log(badResult);
                     finishIncorrectButton.addEventListener('click', wrongFailureEndScreen);
-                    function wrongFailureEndScreen() {
-                        failureScreen.style.display = "block";
-                        overlay.style.display = "block";
-                        finalModal.style.display = "none";
-                        finalModalIncorrect.style.display = "none";
-                        modal.style.display = "none";
-                        modalIncorrect.style.display = "none";
-                    }
                 }
             }
         } else {
@@ -331,27 +336,27 @@ answerButtons.forEach((button) => {
 returnHomeButton.addEventListener('click', (e) => finalHome(e));
 const finalHome = function (e) {
     e.preventDefault();
-    window.addEventListener('click', () => { location.reload() });
+    window.addEventListener('click', () => { location.reload(); });
     if (homeDisplay.style.display === "none" || initialStart === false) {
-        initialStart === true;
+        initialStart = true;
         gameDisplay.style.display = "none";
         homeDisplay.style.display = "block";
     } else {
         homeDisplay.style.display = "none";
     }
-}
+};
 
 failureHomeButton.addEventListener('click', (e) => failureHome(e));
 const failureHome = function (e) {
     e.preventDefault();
-    window.addEventListener('click', () => { location.reload() });
+    window.addEventListener('click', () => { location.reload(); });
     if (homeDisplay.style.display === "none" || initialStart === false) {
-        initialStart === true;
+        initialStart = true;
         gameDisplay.style.display = "none";
         homeDisplay.style.display = "block";
     } else {
         homeDisplay.style.display = "none";
     }
-}
+};
 
 

@@ -2,8 +2,12 @@
 ---
 # *The Viking Kings Quiz*
 
-The Viking Kings Quiz website lets users play a quiz about famous Viking kings. The quiz presents short biographies of a selection of Viking kings, with a question about each king. The user then selects a tile from a grid of 9 options, and is awarded a point for each correct answer. The quiz is educational, in teaching the user about the Viking kings, and fun with interactive functionalities. The quiz currently consists of five Viking kings.
+The Viking Kings Quiz website lets users play a quiz about famous Viking kings. The quiz presents short biographies of a selection of Viking kings, with a question about each king. The user then selects a tile from a grid of 9 options, and is awarded a point for each correct answer. 
 
+The quiz is educational, in teaching the user about the Viking kings, and fun with interactive functionalities. 
+
+The quiz currently consists of five Viking kings.
+ 
 The website can be accessed [here](https://jl-14.github.io/famous-vikings-game/)
 
 ![Responsive Mockup](/documentation/images/viking-kings-quiz-mockup.png)
@@ -223,7 +227,7 @@ The website can be accessed [here](https://jl-14.github.io/famous-vikings-game/)
 
 - The wireframe for the website was greated using the Balsamiq wireframe tool, creating an initial outline of the website. The initial design was further developed as the website was realised, but the core concept and design remains consistent.
 
-The full wireframe document can be found [here](/documentation/images/balsamiq-wireframes-viking-kings-quiz.pdf)
+- The full wireframe document can be found [here](/documentation/images/balsamiq-wireframes-viking-kings-quiz.pdf)
 ---
 
 ## Testing
@@ -294,8 +298,6 @@ The website displays correctly across the different browsers, and also across di
 ### Performance
 - Using Lighthouse in DevTools on the Chrome browser I checked the performance of the website, which was very good across the board. The only flagged area was linked to the use of gif images which are resource intensive, hence the lower performance score of 87. Alternative image formats will be explored in future versions of the site.
 
-#### Home Page
-
 ![Website Lighthouse](/documentation/images/lighthouse-home.png)
 
 ---
@@ -347,7 +349,9 @@ The website displays correctly across the different browsers, and also across di
 
 4. The overlay behind popup boxes does not stretch below the bottom of the screen, so when scrolling down the lower portion of the screen appears without the overlay.
 
-5. At the smallest screen sizes (<270px) the text in the Viking biography section becomes too big for the containing box and overflows.
+5. On smaller screen sizes the answer grid moves from 3x3 to 4x2 and a single tile at the bottom, and eventually to 9x1 for the smallest screens. The preference would be to keep the 3x3 format and then moving to 9x1.
+
+6. At the smallest screen sizes (<270px) the text in the Viking biography section becomes too big for the containing box and overflows.
 
 ### Solved Bugs
 - A number of bugs were solved throughout the design of the website, on a running basis. The key tools for finding and addressing bugs were DevTools in Chrome, and the use of commenting out code (ctrl + /) to examine the impact of particular sections of code.
