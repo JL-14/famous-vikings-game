@@ -84,6 +84,7 @@ h1 {
     display: flex;
     justify-content: center;
 }
+/*Start button formatting is from https://copy-paste-css.com/ -Next.js template used*/
 #start-button {
     display: flex;
     align-items: center;
