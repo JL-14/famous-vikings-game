@@ -15,19 +15,19 @@ The website can be accessed [here](https://jl-14.github.io/famous-vikings-game/)
 ---
 ## User Stories
 
-### First Time Visitor Goals:
+### First Time Visitor Goals
 
 * On my first visit, I want to easily find out what The Viking Kings Quiz is about.
 * On my first visit, I want to be able to easily navigate through the site, and find instructions on how to play the game.
 * On my first visit, I want to easily be able to play the game.
 * On my first visit, I want to see my score after completing the game.
 
-### Returning Visitor Goals:
+### Returning Visitor Goals
 
 * On my return visit, I want to be able to easily start a new game.
 * On my return visit, I want to be able to play the game to see if I can get all questions right.
 
-### Frequent Visitor Goals:
+### Frequent Visitor Goals
 
 * As a frequent visitor to the site, I want to see whether there is new content and new Viking kings to learn about.
 * As a frequent visitor, I want to play the game again, to see if I can still get the answers right.
@@ -106,7 +106,7 @@ The website can be accessed [here](https://jl-14.github.io/famous-vikings-game/)
 
 - The page consists of a biography of one of five Viking kings, a question relating to that king, a grid of nine possible answers, and a score box with a quit button.
 
-#### Viking Biographies:
+#### Viking Biographies
 
 ![Viking Biography](/documentation/images/rollo-biography.png)
 
@@ -134,7 +134,7 @@ The website can be accessed [here](https://jl-14.github.io/famous-vikings-game/)
 
 - On clicking on a tile, a modal/ popup appears with either feedback that the answer is correct or incorrect.
 
-##### Answer Feedback popups
+#### Answer Feedback popups
 
 ![Correct Answer](/documentation/images/correct-answer-popup.png)
 
