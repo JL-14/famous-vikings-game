@@ -70,7 +70,7 @@ The website can be accessed [here](https://jl-14.github.io/famous-vikings-game/)
 
 ### Home Page
 
-- The Home Page introduces the user to the concept of the game, providing a little bit of background about the Vikings, and a start button to begin the game.
+- The Home Page introduces the user to the concept of the game, providing a little bit of background about the Vikings and how their histories and exploits were recorded. There is a start button to begin the game.
 
 #### General background and Cover Text
 
@@ -78,7 +78,7 @@ The website can be accessed [here](https://jl-14.github.io/famous-vikings-game/)
 
 - The background image is fixed, so that the sections appear to scroll over the image.
 
-- On the Home Page there is a cover text box with a semi-transparent background, with the welcome message motivating visitors to explore more.
+- On the Home Page there is a cover text box with a semi-transparent background.
 
 ![Front Page](/documentation/images/viking-quiz-front-page.png)
 
