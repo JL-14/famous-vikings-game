@@ -1,4 +1,4 @@
-![The Viking Kings Quiz](/documentation/images/viking-quiz-header.png)
+![The Viking Kings Quiz](/documentation/images/viking-quiz-navbar.png)
 ---
 # *The Viking Kings Quiz*
 

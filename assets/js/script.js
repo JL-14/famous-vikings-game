@@ -120,6 +120,7 @@ function confirmQuit() {
  * 4. Separate function for the final question, bringing up final answer popup
  * 5. For a correct answer the 'right' score increases by 1
  * 6. For an incorrect answer the 'wrong' score increases by 1
+ * CREDIT: The code for calculating scores has been taken from the Code Institute 'Love Maths' walkthrough project
  */
 function correctPopup() {
     modal.style.display = "block";
@@ -175,7 +176,6 @@ function showNextViking() {
     vikingBiogs[vikingIndex].style.display = 'inline-flex';
     vikingIndex++;
 }
-
 showNextViking();
 
 /** Change question alongside the change of Viking:
@@ -191,7 +191,6 @@ function showNextQuestion() {
     questions[questionIndex].style.display = 'inline-flex';
     questionIndex++;
 }
-
 showNextQuestion();
 
 /** Match tile to question, calculate and display score, and activate appropriate popup:
@@ -201,6 +200,8 @@ showNextQuestion();
  *      -Right fifth answer, linking to failed game screen (1-3 correct answers)
  *      -Wrong fifth answer, linking to success game screen (4-5 correct answers)
  *      -Wrong fifth answer, linking to failed game screen (1-3 correct answers)
+ * CREDIT: The initial structure for the answerButtons function was suggested by ChatGPT, adapted by me for the project
+ * CREDIT: The code for writing the updated score back into html was taken from the W3C Schools reference website
  */
 if (answerIndex < questions.length) {
     for (let i = 0; i < questions.length; i++) {
