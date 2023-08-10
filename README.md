@@ -339,11 +339,11 @@ The website displays correctly across the different browsers, and also across di
 
 ### Existing Bugs
 
-1. There is a warning in DevTools on Chrome and Firefox browsers stating that: 
+1. There are two warnings in DevTools on Chrome and Firefox browsers stating that: 
 
 "DevTools failed to load source map: Could not load content for chrome-extension://fheoggkfdfchfphceeifdbepaooicaho/sourceMap/chrome/scripts/content_autoplay_detection.js.map: System error: net::ERR_BLOCKED_BY_CLIENT"
 
-- The warning relates to the embedded Google Map in the Location section on the Home Page, and does not affect performance.
+The warning relates to the embedded Google Map in the Location section on the Home Page, and does not affect performance.
 
 2. The W3C CSS Validator returned 9 warnings relating to external third-party content in the code, none of which affect the user experience.
 
