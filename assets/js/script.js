@@ -31,7 +31,6 @@ const returnHomeButton = document.getElementById("return-home");
 const failureHomeButton = document.getElementById("failure-return-home");
 const body = document.getElementById("body");
 
-
 /* Let variables */
 let options = ["Became Duke of Normandy", "Made London Bridge fall down", "Discovered America", "The Last Great Viking", "Established North Sea Empire", "Carried a 6 foot axe", "Had a blue tooth", "Conquered St Petersburg", "Invented the compass"];
 let quitButton = document.getElementById("quit-button");
@@ -110,8 +109,8 @@ function confirmQuit() {
         } else {
             homeDisplay.style.display = "none";
         }
-    } 
-};
+    }
+}
 
 /** Answer feedback:
  * 1. If answer is correct, modal display is activated and correct answer popup appears

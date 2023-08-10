@@ -7,6 +7,8 @@ The Viking Kings Quiz website lets users play a quiz about famous Viking kings. 
 The quiz is educational, in teaching the user about the Viking kings, and fun with interactive functionalities. 
 
 The quiz currently consists of five Viking kings.
+
+Whilst the current game is relatively simple, its format and code lend themselves to being expanded and changed to cover different topics, more indepth write-ups (where the current game uses Viking biographies), and so provides a versatile framework for new and different quizzes and games.
  
 The website can be accessed [here](https://jl-14.github.io/famous-vikings-game/)
 
